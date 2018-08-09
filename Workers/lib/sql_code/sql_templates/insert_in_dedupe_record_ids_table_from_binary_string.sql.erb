@@ -1,0 +1,2 @@
+INSERT INTO "process"."<%= table_name %>"
+SELECT "process".bit_string_to_table(<%= offset %>, $1::bytea) AS id;

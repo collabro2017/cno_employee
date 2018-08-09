@@ -1,0 +1,20 @@
+div class="lookup-selection-header"
+  div.row-fluid
+    div.span8
+      div.row-fluid
+        div.span4
+          span.pull-left 
+            | Centroid:&nbsp;
+          = text_field :from_zip5, :input, type: "number", maxlength: 5, max: 99999, value: "", class: "lookup-filter react-to-keyup hide-spin-button first-filter", data: {react_threshold: 3}
+        div.span8
+          span.pull-left 
+            | Distance:&nbsp;
+          = text_field :distance, :input, type: "number", maxlength: 3, min: 0, value: 5, class: "lookup-filter react-to-keyup fuzzy-filter"
+          | (max = 100)
+
+    div.span4
+      = render partial: 'lookups/bulk_actions'
+
+div.lookup-results
+  - params = {lookup: {select_id: select.id, lookup_type: lookup_class.type}}
+  = async_div_for("/lookups/filtered_values", params: params, spin: true, refresh: false)

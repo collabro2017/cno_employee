@@ -1,0 +1,3 @@
+concreteFieldId = <%= @breakdown.concrete_field.id %>
+$('div#breakdown-drop').append('<%= j render partial: "breakdown", object: @breakdown %>')
+Paloma.locals.counts.addInUseTag(concreteFieldId, '.breakdown')

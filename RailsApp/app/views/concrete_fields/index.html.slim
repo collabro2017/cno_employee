@@ -1,0 +1,5 @@
+div#accordions class="concrete-fields-inner-pane"
+  = render partial: @field_categories, locals: {count: @count, display_type: @display_type, order: @order}
+
+  - if @order.present? && @count.has_radius?
+    = render 'special_concrete_fields'

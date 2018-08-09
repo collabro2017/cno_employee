@@ -1,0 +1,68 @@
+- provide(:title, 'Edit Order')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span7
+      h3
+        = render 'po_number_input'
+    div.span5
+      div.order-wrapper-button
+        div.order-row
+          div#place-order-btn class="place-order-cell"
+            = link_to [:place, @order], class: "btn btn-large btn-primary pull-right", title: "Place Order"  do
+              i class="icon-play icon-white"
+
+div#concrete-fields-pane class="fixed-pad-top fixed-pad-left"
+  = link_to nil, id: 'expand-collapse-pane-link', class: 'pull-right'
+    = fa_icon 'angle-double-right', title: 'Expand Pane', class: 'expand-collapse-icon'
+  = render "concrete_fields/filter_section"
+  div.row-fluid
+    div.span12
+      = async_div_for("/concrete_fields", params: {concrete_field: {order: @order.id, display_type: 'output'}})
+
+= form_for(@order, remote: true) do |f|
+  div#content
+    div#order-workspace class="row-fluid"
+      div.span3
+        div#concrete-fields-pane-ref
+      div.span9
+        div#moving-right-pane class="fixed-pad-top fixed-pad-right"
+          ul#count-design-pane-tabs class="nav nav-tabs"
+            li#order-summary class="active"
+              a#summary-tab-link href="#summary-tab"
+                | Count Summary
+            li#order-output
+              a#output-tab-link href="#output-tab"
+                | Output Layout
+            li#order-sort
+              a#sort-tab-link href="#sort-tab"
+                | Sort By
+            li#order-cap
+              a#cap-tab-link href="#cap-tab"
+                | Cap Order
+          div.tab-content
+            div#summary-tab class="count-tab-pane tab-pane active"
+              div class="row-fluid"
+                div class="pad"
+                  = render partial: 'counts/count_summary', locals: {count: @order.count}
+            div#output-tab class="count-tab-pane tab-pane"
+              div#outputs-drop class="nested-attributes-drop target"
+                - if @order.count.datasource.pii_datasource_id
+                  div.row-fluid
+                      div.span12
+                        div class="output-header dropped-item-header pad"
+                          | PII Data
+                = render @order.outputs          
+              div#outputs-fieldsets
+                = render 'outputs_fieldsets'
+              div#trash-can
+
+            div#sort-tab class="count-tab-pane tab-pane"
+              div#sorts-drop class="nested-attributes-drop target"
+                = render @order.sorts
+              div#sorts-fieldsets
+                = render 'sorts_fieldsets'
+              div#trash-can
+
+            div#cap-tab class="count-tab-pane tab-pane"
+              = render 'order_cap', f: f

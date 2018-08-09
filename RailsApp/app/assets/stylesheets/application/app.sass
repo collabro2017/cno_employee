@@ -1,0 +1,1103 @@
+@import z_index
+
+/*************************** CONCRETE FIELDS PANE *****************************/
+
+/* Related to the positioning */
+#concrete-fields-pane
+    position: fixed
+    top: 103px /*nav-bar + fixed-header + borders*/
+    padding-right: 0.5%
+    background-color: rgb(242,242,242)
+    border-right: 1px solid rgba(220,220,220,1)
+    border-bottom: 1px solid rgba(220,220,220,1)
+    min-height: 150px /* for the spinner */
+    z-index: $z-index-h
+    
+#concrete-fields-pane .slimScrollDiv
+    margin-top: -10px
+
+#concrete-fields-pane .slimScrollRail
+    width: 14px !important
+
+#concrete-fields-pane .slimScrollBar
+    opacity: 0.1 !important
+    width: 14px !important
+    &:hover
+        opacity: 0.2  !important
+    &:active
+        opacity: 0.4  !important
+
+#concrete-fields-pane .slimScrollDiv>#accordions
+    margin-top: 0px
+
+.expand-collapse-icon
+    font-size: 26px !important
+
+.concrete-fields-inner-pane
+    background-color: whitesmoke
+    border-radius: 5px 5px 5px 5px
+    border: 1px solid #e5e5e5
+
+#accordions
+    margin-top: -10px
+    padding: 5px 20px 5px 5px
+
+.accordion-group
+    margin-bottom: 5px
+    background-color: white
+    box-shadow: 1px 1px 1px #ccc
+
+.accordion-heading
+    background-color: rgb(242,242,242)
+
+.accordion-inner
+    box-shadow: 1px 1px 1px #ccc inset
+    background-color: whitesmoke
+    
+/* Related to the advanced filters */
+.filter-options-handle
+    display: block
+    position: relative
+    > div
+        text-align: center
+
+.advanced-filters-toggle
+    font-size: 10.5px
+    &.minimal
+        padding: 1px 7px 0 0
+
+.advanced-filters-pane
+    margin: -15px 0 15px 0
+    &.minimal
+        box-shadow: none
+        margin-bottom: 0px
+        background-color: transparent
+        border-color: transparent
+
+#filter-options
+    font-size: 11px
+    color: #777
+
+#searchbox > i.fa
+    display: none
+    margin-top: 8px
+    margin-left: -25px
+    position: fixed
+    color: rgba(200,0,0,0.3)
+    &.on
+        display: inline
+        &:hover
+            cursor: pointer
+            color: rgba(200,0,0,0.8)
+
+.filter-tag
+    font-size: 13px
+    margin-left: 1px
+    margin-right: 1px
+    &.selectable
+        color: #5bb65b
+    &.breakdown
+        color: #2f96b4
+    &.dedupe
+        color: #aa96c9
+    &.favorite
+        color: #ffc200
+    &.binary
+        color: #F07956
+
+.concrete-fields-tags
+    text-align: right
+
+///////////////////// EXPAND COLLAPSE //////////////////////////////////////////
+
+#concrete-fields-pane.expanded .accordion-heading
+    text-align: center
+
+#concrete-fields-pane.expanded .concrete-fields-tags
+    text-align: left
+
+#concrete-fields-pane.expanded .accordion-inner
+    > div
+        display: inline-block
+        width: 30%
+        margin-left: 2%
+
+#moving-right-pane.collapsed li#order-summary,
+#moving-right-pane.collapsed li#order-cap,
+#moving-right-pane.collapsed li#count-suppress,
+#moving-right-pane.collapsed .select-options-handle,
+#moving-right-pane.collapsed .select-content,
+#moving-right-pane.collapsed .select-expand-collapse
+    display: none
+
+///////////////////// EXPAND COLLAPSE END///////////////////////////////////////
+
+.bold-borders
+    border: 1px solid #939393
+    border-bottom-color: #636363
+
+.run-btn-icon
+    color: #222
+
+/* Related to Drag & Drop */
+.field
+    padding: 2px 2px 2px 2px
+    margin-top: 5px
+    display: block
+    border: 1px solid #e5e5e5
+    border-radius: 5px
+    background-color: white
+    opacity: 1
+    &:hover
+        border-color: rgba(82, 168, 236, 0.8)
+        box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset,rgba(82, 168, 236, 0.6) 0px 0px 8px 0px
+
+.drop-placeholder 
+    background-color: rgba(82, 168, 236, 0.8)
+    opacity: 0.3
+    margin-bottom: 10px
+
+.inactive
+    display: none !important
+
+.add-field-btn
+    font-size: 12px !important
+    line-height: 14px !important
+    opacity: 0.75
+    &:hover
+        color: white
+        opacity: 1
+    &:focus
+        color: white
+        opacity: 1
+
+    &.select
+        background-image: linear-gradient(to bottom, rgb(91, 182, 91), rgb(91, 182, 91))
+        border-color: rgb(91, 182, 91)
+        background-color: rgb(91, 182, 91)
+        color: white
+        &:hover
+            background-color: rgb(91, 182, 91)
+        &:focus
+            background-color: rgb(91, 182, 91)
+    &.dedupe
+        background-image: linear-gradient(to bottom, rgb(95, 75, 126), rgb(95, 75, 126))
+        background-color: rgb(95, 75, 126)
+        border: 1px solid rgb(95, 75, 126)
+        color: white
+        &:hover
+            background-color: rgb(95, 75, 126)
+        &:focus
+            background-color: rgb(95, 75, 126)
+    &.breakdown,
+    &.sort,
+    &.output
+        background-image: linear-gradient(to bottom, rgb(47, 150, 180), rgb(47, 150, 180))
+        border-color: rgb(47, 150, 180)
+        background-color: rgb(47, 150, 180)
+        color: white
+        &:hover
+            background-color: rgb(47, 150, 180)
+        &:focus
+            background-color: rgb(47, 150, 180)
+
+.add-category-btn
+    font-size: 12px !important
+    line-height: 14px !important
+    opacity: 0.75
+    &:hover
+        color: rgb(47, 150, 180)
+        opacity: 1
+    &:focus
+        color: rgb(47, 150, 180)
+        opacity: 1
+    background-image: linear-gradient(to bottom, white, white)
+    border-color: rgb(47, 150, 180)
+    background-color: white
+    color: rgb(47, 150, 180)
+    &:hover
+        background-color: white
+    &:focus
+        background-color: white
+
+
+/******************************************************************************/
+
+
+/********************************* NEW COUNT **********************************/
+.select-datasource.btn
+    margin-bottom: 20px
+    display: inherit !important
+    &:hover
+        background-position: 0px -40px
+    & .text
+        margin-top: 5px
+        text-align: left
+
+.datasource-btn-title
+    font-size: 18px
+    font-weight: strong
+
+.datasource-version
+    color: #777
+    font-style: italic
+
+.datasource-btn-description
+/******************************************************************************/
+
+
+/****************************** RENAME  COUNT *********************************/
+
+.editable-title
+    & .editable-text
+        padding: 5px 1px
+        border-right: 1px solid transparent
+
+    &>.textbox
+        &>.accept-cancel-buttons
+            margin-left: -55px
+            font-size: 24.5px
+            margin-top: 0px
+
+        &.editing
+            &>input
+                padding-right: 60px
+            &>.editable-text
+                display: none
+                visibility: hidden
+
+        &:not(.editing)
+            &>input
+                display: none
+                visibility: hidden
+
+
+    & input
+        margin: -4px 0px 0px -6px
+        font-size: 24.5px
+        height: 30px
+        font-weight: bold
+
+    & .popover-title
+        background-color: rgba(188, 43, 43, 0.8)
+        color: rgba(255,255,255,0.8)
+
+    & .popover-content
+        font-size: 14px
+        background-color: rgba(255,255,255,0.5)
+        color: rgba(188,43,43,1)
+
+.textbox
+    &.editing>input
+        padding-right: 52.5px
+
+    &>.accept-cancel-buttons
+        position: fixed
+        margin-left: -45px
+        font-size: 20px
+        margin-top: 5px
+
+        &>i.fa
+            margin-right: 5px
+            cursor: pointer
+            background-color: white
+        
+        &>i.fa-check-circle
+            color: rgba(91, 182, 91, 0.3)
+            &:hover
+                color: rgba(91, 182, 91, 0.8)
+
+        &>i.fa-times-circle 
+            color: rgba(91, 91, 91, 0.3)
+            &:hover
+                color: rgba(91, 91, 91, 0.8)
+
+    &:not(.editing)
+        &>.accept-cancel-buttons
+            display: none
+            visibility: hidden
+
+.datasource-icon
+    display: inline-block
+    opacity: 0.5
+    padding-left: 5px
+    &>img
+        margin-top: -10px
+
+
+.blinking-cursor
+    &.unedited
+        animation: blink 1.5s linear 0s 10
+        -webkit-animation: blink 1.5s linear 0s 10
+        -moz-animation: blink 1.5s linear 0s 10
+        -ms-animation: blink 1.5s linear 0s 10
+        -o-animation: blink 1.5s linear 0s 10
+    &:hover
+        background-color: white
+        animation: blink 1.5s linear 0s infinite
+        -webkit-animation: blink 1.5s linear 0s infinite
+        -moz-animation: blink 1.5s linear 0s infinite
+        -ms-animation: blink 1.5s linear 0s infinite
+        -o-animation: blink 1.5s linear 0s infinite
+
+@-webkit-keyframes blink
+    0%, 47%
+        border-color: transparent
+    50%, 97%
+        border-color: #000
+    100%
+        border-color: transparent
+
+@-moz-keyframes blink
+    0%, 47%
+        border-color: transparent
+    50%, 97%
+        border-color: #000
+    100%
+        border-color: transparent
+
+@-ms-keyframes blink
+    0%, 47%
+        border-color: transparent
+    50%, 97%
+        border-color: #000
+    100%
+        border-color: transparent
+
+@-o-keyframes blink
+    0%, 47%
+        border-color: transparent
+    50%, 97%
+        border-color: #000
+    100%
+        border-color: transparent
+
+@-keyframes blink
+    0%, 47%
+        border-color: transparent
+    50%, 97%
+        border-color: #000
+    100%
+        border-color: transparent
+
+
+/******************************************************************************/
+
+/******************************** FILE UPLOAD *********************************/
+.fileinput-button
+    position: relative
+    overflow: hidden
+
+.fileinput-button input
+    position: absolute
+    top: 0
+    right: 0
+    margin: 0
+    opacity: 0
+    -ms-filter: 'alpha(opacity=0)'
+    font-size: 200px
+    direction: ltr
+    cursor: pointer
+
+.user-files-container
+    margin-top: 10px
+
+
+/* Fixes for IE < 8 */
+@media screen\9
+    .fileinput-button input
+        filter: alpha(opacity=0)
+        font-size: 100%
+        height: 100%
+
+td>div.row
+    margin-left: 0
+
+
+/* Kill progress bar animation */
+.bar.no-transition
+    transition: none
+
+
+tr.removed
+    opacity: 0.5
+
+/******************************************************************************/
+
+
+/********************** MULTI COLUMN SELECT RELATED ***************************/
+
+.multi-column-select>span
+    margin-right: 3%
+    vertical-align: middle
+
+    .select-option-text
+        display: inherit
+        overflow: inherit
+        text-overflow: inherit
+        white-space: inherit
+
+    &:last-child
+        margin-right: 0%    
+    a
+        visibility: hidden
+
+.multi-column-select:hover
+    a
+        visibility: visible
+    .select-option-text
+        max-width: 80%
+        display: inherit
+        overflow: inherit
+        text-overflow: inherit
+        white-space: inherit
+
+.multi-column-group
+    .select-header.dropped-item-header
+        color: #009000
+        background-color: rgba(204, 204, 204, 0.75)
+
+/******************************************************************************/
+
+/******************************** NOT USED??? *********************************/
+
+// This section is reserved for placing stuff that we think is not being used
+
+/******************************************************************************/
+
+#breakdown-result
+    padding: 10px 10px 10px 10px
+    margin-top: 15px
+    border-radius: 10px
+    border: 1px solid #CCC
+
+#selects-drop, #outputs-drop, #dedupe-drop, #sorts-drop
+    padding: 10px 10px 30px 10px
+
+#breakdown-drop
+    padding: 10px
+    min-height: 90px
+
+.target
+    border: 2px dashed #EFEFEF
+    background-color: #FFF
+    overflow: auto
+    border-radius: 10px
+    &.drop-ready
+        border: 2px dashed #CCC
+
+.dropped-item-header
+    border-radius: 5px
+    text-align: center
+    font-weight: bold
+    cursor: move
+
+.dropped-item-header.select-header
+    background-color: rgba(91, 182, 91, 0.75)
+    border: 1px solid rgba(91, 182, 91, 1)
+
+.dropped-item-header.breakdown-header, .dropped-item-header.output-header, .dropped-item-header.sort-header
+    background-color: rgba(47, 150, 180, 0.75)
+    border: 1px solid rgba(47, 150, 180, 1)
+    color: white
+
+.dropped-item-header.dedupe-header
+    background-color: rgba(95, 75, 126, 0.75)
+    border: 1px solid rgba(95, 75, 126, 1)
+    color: white
+    .has-switch
+        display: none
+
+#dedupe-drop > div.dedupe:not(.ui-sortable-helper):first-child
+    &:before
+        content: "Criteria:"
+        display: block
+        margin-bottom: 5px
+    &:after
+        display: block
+        margin-bottom: 5px
+        padding-top: 10px
+        border-top: 1px solid #ccc
+
+.has-switch span.switch-primary, .has-switch span.switch-left , .has-switch span.switch-right
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#ccc))
+    color: black
+    font-weight: normal
+
+.select-header .row-fluid [class*="span"]
+    min-height: 20px !important
+
+.dedupe-header .row-fluid [class*="span"]
+    min-height: 20px !important
+
+.exclude-switch
+    cursor: pointer
+    opacity: 0.7
+    &:hover
+        text-decoration: none
+        opacity: 1
+
+.exclude-wrapper
+    text-align: left
+    font-size: 18px
+
+.exclusion-on-text
+    vertical-align: middle
+    display: inline-block
+    color: rgb(250, 78, 78)
+    font-size: 11px
+
+.exclusion-on
+    vertical-align: middle
+    margin-right: 2%
+    display: inline-block
+    color: rgb(250, 78, 78)
+    font-weight: bold
+
+.exclusion-off
+    vertical-align: middle
+    display: inline-block
+    margin-right: 2%
+    color: #333
+    font-weight: bold
+
+.total-records
+    text-align: right
+    cursor: pointer
+    color: black
+    font-weight: normal
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+        color: black
+
+.popover-title
+    font-weight: bold
+
+.popover-content
+    font-weight: normal
+
+.can-link
+    margin-top: 5px
+
+.select-content
+    display: table
+    margin: 0px 5px 0px 5px
+    border: 1px solid #dddddd
+    background-color: whitesmoke
+
+    &>.nav-tabs
+        display: table-cell
+        margin: 0px -1px 0px 3px
+        padding: 10px 0px 5px 0px
+        min-width: 40px
+
+        &>li > a
+            min-width: 0px
+            margin-right: -1px
+            margin-bottom: 3px
+
+    &>.tab-content
+        display: table-cell
+        padding: 15px 20px 10px 20px
+        border-left: 1px solid #dddddd
+        background-color: white
+        vertical-align: top
+        width: 100%
+
+.select-options  > div
+    background-color: rgba(255, 255, 255, 0.5)
+
+.select-all-none-links
+    text-align: right
+    color: #888
+    margin: 0px 0px 5px 0px
+    padding: 10px 0px 5px 0px
+    border-bottom: 1px solid #DDD
+    &.left
+        text-align: left
+
+.select-all-none-links > ul
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+.lookup-selection-header
+    text-align: left
+    color: #888
+    margin: 0px 0px 5px 0px
+    padding: 10px 0px 5px 0px
+    border-bottom: 1px solid #DDD
+
+.lookup-links
+    cursor: pointer
+    &.inner
+        cursor: default
+
+.dropdown-menu
+    &.right
+        left: auto
+        right: 0
+
+.checkbox-columns
+    -moz-column-width: 250px
+    -moz-column-gap: 20px
+    -webkit-column-width: 250px
+    -webkit-column-gap: 20px
+    column-width: 250px
+    column-gap: 20px
+    > .select-option
+        width: 250px
+
+.checkbox-columns-wide
+    -moz-column-width: 350px
+    -moz-column-gap: 20px
+    -webkit-column-width: 350px
+    -webkit-column-gap: 20px
+    column-width: 350px
+    column-gap: 20px
+    > .select-option
+        width: 350px
+
+.checkbox-columns-narrow
+    -moz-column-width: 100px
+    -moz-column-gap: 20px
+    -webkit-column-width: 100px
+    -webkit-column-gap: 20px
+    column-width: 100px
+    column-gap: 20px
+    > .select-option
+        width: 100px
+
+.select-option
+    display: inline-block
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    color: #666
+
+input:checked + .select-option-text
+    color: black
+
+.lookup-label
+    display: inline-block
+
+.btn-range, .btn-order-cap
+    margin-left: 1%
+
+div#range-text span, span#total-cap-current
+    font-weight: bold
+
+.blanks-criterion-tab-link
+    padding-bottom: 0px !important
+    padding-top: 16px !important
+
+.blank-btn
+    width: 80%
+    text-align: center
+    &:focus
+        outline: none
+
+.select-options-handle
+    display: block
+    margin: 0px 5px 0px 5px
+    position: relative
+    min-height: 20px
+    border: 1px solid #DDD
+    border-top: 0px
+    border-radius: 0px 0px 3px 3px
+    background-color: rgba(225, 225, 225, 0.5)
+    > div
+        position: absolute
+
+.select-options-summary
+    width: 95%
+    color: #888
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    padding-left: 5px
+
+.select-options-arrow
+    width: 100%
+    text-align: center
+    background-image: -webkit-linear-gradient(left, rgba(240, 240, 240, 0) 45%, rgba(240, 240, 240, 1) 48%, rgba(240, 240, 240, 1) 52%, rgba(240, 240, 240, 0) 55%)
+    background-image: -ms-linear-gradient(left, rgba(240, 240, 240, 0) 45%, rgba(240, 240, 240, 1) 48%, rgba(240, 240, 240, 1) 52%, rgba(240, 240, 240, 0) 55%)
+    background-image: linear-gradient(left, rgba(240, 240, 240, 0) 45%, rgba(240, 240, 240, 1) 48%, rgba(240, 240, 240, 1) 52%, rgba(240, 240, 240, 0) 55%)
+
+.expand-select-header
+    display: block
+    float: left
+    opacity: 0.2
+    filter: alpha(opacity=20)
+
+.expand-select-header:hover 
+    text-decoration: none
+    cursor: pointer
+    opacity: 0.4
+    filter: alpha(opacity=40)
+
+.collapse-select-header
+    display: block
+    float: left
+    opacity: 0.2
+    filter: alpha(opacity=20)
+
+.collapse-select-header:hover 
+    text-decoration: none
+    cursor: pointer
+    opacity: 0.4
+    filter: alpha(opacity=40)
+
+.result-table, .order-wrapper-button
+    float: right
+    min-height: 60px
+    display: table
+    border-spacing: 10px 0px
+    border-right: 1px solid rgb(220,220,220)
+
+.count-result-row
+    display: table-row
+    height: 100%
+    color: #666
+
+.count-result-text
+    font-size: large
+    text-align: right
+    min-width: 64px
+    
+.count-result-cell, .place-order-cell
+    display: table-cell
+    vertical-align: middle
+    min-width: 40px
+
+.count-time
+    color: #aaa
+
+.dirty-count-icon
+    font-size: 12px !important
+    vertical-align: top
+    -webkit-animation: color_change 1s infinite alternate
+    -moz-animation: color_change 1s infinite alternate
+    -ms-animation: color_change 1s infinite alternate
+    -o-animation: color_change 1s infinite alternate
+    animation: color_change 1s infinite alternate
+
+@-webkit-keyframes color_change
+    from
+        color: rgba(255,153,0,1)
+    to
+        color: rgba(255,153,0,0.5)
+
+@-moz-keyframes color_change
+    from
+        color: rgba(255,153,0,1)
+    to
+        color: rgba(255,153,0,0.5)
+
+@-ms-keyframes color_change
+    from
+        color: rgba(255,153,0,1)
+    to
+        color: rgba(255,153,0,0.5)
+
+@-o-keyframes color_change
+    from
+        color: rgba(255,153,0,1)
+    to
+        color: rgba(255,153,0,0.5)
+
+@keyframes color_change
+    from
+        color: rgba(255,153,0,1)
+    to
+        color: rgba(255,153,0,0.5)
+
+
+.breakdown-result-row, .order-row
+    display: table-row
+    height: 100%
+    color: #666
+
+.order-action
+    text-align: center
+    color: #666
+    height: 100%
+    margin-top: -1px
+    padding: 5px 5px 0 5px
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+
+.order-action:hover
+    background-color: #222
+    color: #e5e5e5
+
+.order-action:hover > a
+    color: #5bb65b
+
+.order-action > a:hover
+    color: #399329
+
+.order-selected-fields
+    display: block
+    border-top: 1px solid #e5e5e5
+    
+.order-header
+    background-color: #e5e5e5
+    color: #222
+    border: 1px solid #222
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    text-align: center
+    font-weight: bold
+    font-size: medium
+
+.order-content
+    border-left: 1px solid #222
+    border-right: 1px solid #222
+    border-bottom: 1px solid #222
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    margin-bottom: 10px
+
+.order-status
+    // .fa
+    display: inline-block
+    font: normal normal normal 14px/1 FontAwesome
+    font-size: inherit
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+
+    // .fa-question
+    &:before
+        content: "\f128"
+    
+    &.working
+        color: rgba(43, 43, 188, 0.8)
+        // .fa-spin
+        -webkit-animation: fa-spin 2s infinite linear
+        animation: fa-spin 2s infinite linear
+        // .fa-spinner
+        &:before
+            content: "\f113"
+    
+    &.queued
+        color: rgba(43, 43, 43, 0.8)
+        // .fa-spin
+        -webkit-animation: fa-spin 2s infinite linear
+        animation: fa-spin 2s infinite linear
+        // .fa-spinner
+        &:before
+            content: "\f110"
+    
+    &.failed
+        color: rgba(188, 43, 43, 0.8)
+        // .fa-frown-o
+        &:before
+            content: "\f119"
+    
+    &.killed
+        color: rgba(188, 43, 43, 0.8)
+        // .fa-smile-o
+        &:before
+            content: "\f00d"
+
+    &.completed
+        color: rgba(43, 188, 43, 0.8)
+        // .fa-smile-o
+        &:before
+            content: "\f118"
+
+/* COUNT SHOW PAGE */
+
+.show-count-header
+    background-color: #e5e5e5
+    color: #222
+    border: 1px solid #222
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    text-align: center
+    font-weight: bold
+    font-size: medium
+
+.show-count-content
+    padding: 2%
+    border-left: 1px solid #222
+    border-right: 1px solid #222
+    border-bottom: 1px solid #222
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 5px
+    margin-bottom: 10px
+
+/* END COUNT SHOW PAGE */
+
+/* COMPANY RELATED  */
+
+$red: rgba(188, 43, 43, 0.8)
+$slightly-red: rgba(188, 43, 43, 0.4)
+
+.company-new-form, .company-edit-form
+    margin-top: 30px
+
+.mark-errors
+    position: absolute
+    display: inline
+    cursor: pointer
+    margin-top: -2.5%
+    margin-left: 14%
+    font-size: 20px
+    color: $slightly-red
+    &:hover
+        color: $red
+
+    + .popover > .popover-title
+        background-color: $red
+        color: rgba(255,255,255,0.8)
+
+    + .popover > .popover-content
+        background-color: rgba(255,255,255,0.5)
+        color: rgba(188,43,43,1)
+
+/* END OF COMPANY */
+
+/* DATASOURCE INDEX PAGE */
+
+#restricted-companies-form
+    margin-bottom: 5%
+
+#remove-all-companies
+    border-top: 1px solid #ccc
+    margin-top: 5%
+
+.remove-restricted-company-icon
+    color: $slightly-red
+    &:hover
+        color: $red
+
+.allowed-company
+    margin-bottom: 2%
+
+.outdated-datasource
+    margin-left: 1%
+    margin-right: 1%
+    color: #FF9900
+
+/* END OF DATASOURCE INDEX PAGE*/
+
+.code-fork
+    margin-right: 2%
+
+.lock
+    margin-left: 2%
+    margin-right: 2%
+
+.btn-xlarge
+    padding: 18px 28px
+    font-size: 22px
+    line-height: normal
+    -webkit-border-radius: 8px
+    -moz-border-radius: 8px
+    border-radius: 8px
+
+.right-divisor
+    border-right: 1px solid #e5e5e5
+
+.top-divisor
+    border-top: 1px solid #e5e5e5
+    padding-top: 1%
+
+.spinner
+    margin-top: 10%
+    margin-right: auto
+    margin-left: auto
+
+.select-close
+    cursor: pointer
+    margin-left: 5%
+    color: black
+    opacity: 0.5
+
+.order-sort
+    cursor: pointer
+    margin-right: 5%
+    color: black
+
+.fa-order-sort-on
+    color: white
+
+.fa-order-sort-off
+    color: black
+    opacity: 0.5
+
+.select-expand-collapse
+    cursor: pointer
+    opacity: 0.7
+    color: #333
+    &:hover
+        color: #333
+        opacity: 1
+
+.select-close:hover
+    color: red
+
+.badge-orders
+    background-color: #3a87ad
+
+.badge-files
+    background-color: #468847
+
+.nav-tabs .badge
+    line-height: 12px
+    vertical-align: text-bottom
+    font-size: 10px
+
+.suppression-orders-heading
+    border: 2px solid #3a87ad
+    border-radius: 4px
+
+.suppression-files-heading
+    border: 2px solid #468847
+    border-radius: 4px
+
+.suppression-orders-list, .suppression-files-list
+    background-color: white
+    box-shadow: none
+
+.suppression-order, .suppression-file
+    > input
+        margin-top: 0px
+
+.criteria-select
+    > select
+        background-color: #f4f4f4
+        border: 1px solid #a4a4a4
+
+.suppression-order, .suppression-file
+    color: #08C
+
+input:checked 
+    + .suppression-order-text, + .suppression-file-text
+        color: #005580
+
+.btn-resend
+    margin-left: 10px
+    margin-bottom: 10px
+
+.btn-link, .btn-link:hover
+    text-decoration: none
+    color: white
+
+.btn-link-container
+    cursor: pointer
+
+.user-new-form form>div:nth-child(6)>div
+    display: inline-block 
+
+.resend-link
+    margin-left: 2%
+
+.restricted-count-icon
+    margin-left: 2%
+    margin-right: 2%
+    color: #FF9900

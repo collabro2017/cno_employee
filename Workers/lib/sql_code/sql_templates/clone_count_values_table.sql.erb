@@ -1,0 +1,13 @@
+TRUNCATE "process"."<%= domain %>_count<%= new_count_id %>_values";
+
+INSERT INTO "process"."<%= domain %>_count<%= new_count_id %>_values" 
+(SELECT_ID,INTEGER_VALUE,STRING_VALUE,INPUT_METHOD,LOOKUP_PARAMS)
+SELECT (
+  CASE 
+<% old_selects.zip(new_selects).each do |from, to| %>
+  WHEN SELECT_ID = <%= from.select_id %> THEN <%= to.select_id %>
+<% end %>
+END
+)::integer AS SELECT_ID,INTEGER_VALUE,STRING_VALUE,INPUT_METHOD,LOOKUP_PARAMS
+FROM "process"."<%= domain %>_count<%= old_count_id %>_values"
+WHERE SELECT_ID IN (<%= old_selects.map(&:select_id).join(',') %>);

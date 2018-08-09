@@ -1,0 +1,8 @@
+div class="select-content tabbable tabs-left"
+  ul class="nav nav-tabs"    
+    - input_methods.each do |input_method|
+      = select_vertical_tabs(select, input_method)
+
+  div.tab-content
+    - input_methods.each do |input_method|
+      = select_vertical_tabs_content(select, input_method)

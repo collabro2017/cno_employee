@@ -1,0 +1,7 @@
+- cf_id = sort.concrete_field.present? ? sort.concrete_field.id : nil
+
+= div_for(sort, class: "deletable", data: {cf_id: "#{cf_id}" }) do
+  div.row-fluid
+    div.span12
+      div id="descending_#{sort.id}"
+        = render partial: 'sorts/sort_direction_toggle', locals: {sort: sort}

@@ -1,0 +1,48 @@
+- @counts.each do |count|
+  - allowed = count.allowed_for_user?(current_user.id)
+
+  tr.data-row
+    td
+      = count.count_id
+    - if allowed
+      - if count.locked?
+        td
+          = link_to count.name, count_path(count.id)
+          = fa_icon('lock', title: 'Locked', class: 'lock')
+      - else
+        td = link_to count.name, edit_count_path(count.id)
+      td
+        = link_to new_clone_count_path(count.id)
+          = fa_icon('code-fork', title: 'Clone')
+    - else
+      td #{count.name}
+      td = fa_icon('code-fork', title: 'Clone')
+
+    td
+      = count.datasource_name
+      - unless allowed
+        = fa_icon('warning', title: 'Access to datasource is restricted', class: 'restricted-count-icon')
+
+    td
+      = count.datasource.version
+      - if count.outdated?
+        = fa_icon('clock-o', title: 'Datasource is outdated', class: 'outdated-datasource')
+
+    td = count.user_name
+
+    td title="#{count.most_recent_job_updated_at}"
+      = last_run_at(count)
+    td title="#{tidy_result(count.result)}" class="text-right"
+      = tidy_result(count.result, human: true)
+      - if count.dirty?
+        |&nbsp; 
+        = fa_icon('warning', title: 'Count has changed!')
+
+tr class='hidden data-row'
+  td
+    = hidden_field_tag :sort_column, @filter_params[:sort_column]
+    = hidden_field_tag :sort_direction, @filter_params[:sort_direction]
+    = hidden_field_tag :page, @filter_params[:page]
+
+  td.pagination-wrapper
+    = will_paginate if @counts.any?

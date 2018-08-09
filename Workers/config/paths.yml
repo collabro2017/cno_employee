@@ -1,0 +1,14 @@
+development:
+  central_ds_input_path: '/tmp/cno/central_ds/input'
+  central_ds_output_path: '/tmp/cno/central_ds/output'
+  node_ds_input_path: '/tmp/cno/node_ds/input'
+  node_ds_output_path: '/tmp/cno/node_ds/output'
+  bit_strings_dir: '/tmp/central_ds/data/binary'
+
+production:
+  central_ds_input_path: '/mnt/ebs/input'
+  central_ds_output_path: '/mnt/ebs/output'
+  node_ds_input_path: '/mnt/ebs/input'
+  node_ds_output_path: '/mnt/ebs/output'
+  bit_strings_dir: '/mnt/ebs/data/binary'
+

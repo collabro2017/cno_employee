@@ -1,0 +1,70 @@
+div.row-fluid
+  div#searchbox
+    input#textbox type="text" class="span12" placeholder="Filter by field name"
+    = fa_icon "times", title: "Clear text"
+
+div.row-fluid
+  div.span12
+    div class="advanced-filters-pane concrete-fields-inner-pane minimal pad"
+      div.row-fluid
+        div.span12
+          a class="advanced-filters-toggle pull-right minimal"
+            span.monospace +
+            | &nbsp;advanced filters&nbsp;
+            span class="filter-tag favorite" style="display:none"
+              = fa_icon "star"
+            span class="filter-tag binary" style="display:none"
+              = fa_icon "flag"
+            span class="filter-tag selectable" style="display:none"
+              = fa_icon "tag"
+            span class="filter-tag breakdown" style="display:none"
+              = fa_icon "tag"
+            span class="filter-tag dedupe" style="display:none"
+              = fa_icon "tag"
+
+      div.row-fluid id="filter-options" style="display:none"
+        div.span12
+          div.row-fluid
+            div.span12
+              | Filter by fields being used in:
+          div.row-fluid
+            div.span2
+              button [
+                class="filter-option btn btn-mini btn-block"
+                data-toggle="button"
+                data-selector=".favorite"
+                title="Favorite"
+              ]
+                = fa_icon "star", class: "filter-tag favorite"
+            div.span2
+              button [
+                class="filter-option btn btn-mini btn-block"
+                data-toggle="button"
+                data-selector=".filter-tag.binary"
+                title="Binary"
+              ]
+                = fa_icon "flag", class: "filter-tag binary"
+            div.span2
+              button [
+                class="filter-option btn btn-mini btn-success btn-block"
+                data-toggle="button"
+                data-selector=".filter-tag.selectable"
+                title="Select"
+              ]
+                | S
+            div.span2
+              button [
+                class="filter-option btn btn-mini btn-info btn-block"
+                data-toggle="button"
+                data-selector=".filter-tag.breakdown"
+                title="Breakdown"
+              ]
+                | BD
+            div.span2
+              button [
+                class="filter-option btn btn-mini btn-dedupe btn-block"
+                data-toggle="button"
+                data-selector=".filter-tag.dedupe"
+                title="Dedupe"
+              ]
+                | D

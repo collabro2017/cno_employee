@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title #{CNO::RailsApp.config.custom.browser_title} | #{yield(:title)}
+    
+    = stylesheet_link_tag \
+      "landing/landing", \ 
+      media: "all", \
+      "data-turbolinks-track" => true
+    = javascript_include_tag \
+      "landing/landing", \
+      "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = render "layouts/shim"
+
+  body
+    / Div to wrap the main content and flush footer
+    div#wrap
+      = render partial: "shared/flash_messages"
+      div#main
+        == yield
+    = render "layouts/footer"

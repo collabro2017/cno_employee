@@ -1,0 +1,5 @@
+SELECT "datafiles"."<%= field_values_table_name %>"."id"
+FROM "datafiles"."<%= field_values_table_name %>"
+<% unless condition.nil? %>
+  <%= render_partial "#{condition.name}_value_ids_condition", values %>
+<% end %>

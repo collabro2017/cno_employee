@@ -1,0 +1,383 @@
+Full Name
+Address Line 1
+Phone
+Area Code
+Local Phone
+City
+State
+Zip5
+Zip + 4
+Zip + 4 + Delivery Point Bar Code
+Delivery Point Bar Code
+Carrier Route
+County
+Metropolitan Statistical Area
+Latitude
+Longitude
+Timezone
+Census Tract
+Census Block Group
+Census Block
+First Name
+Last Name
+Gender
+Age
+Full Name 2
+First Name 2
+Last Name 2
+Gender 2
+Age 2
+Full Name 3
+First Name 3
+Last Name 3
+Gender 3
+Age 3
+Full Name 4
+First Name 4
+Last Name 4
+Gender 4
+Age 4
+Full Name 5
+First Name 5
+Last Name 5
+Gender 5
+Age 5
+Full Name 6
+First Name 6
+Last Name 6
+Gender 6
+Age 6
+Full Name 7
+First Name 7
+Last Name 7
+Gender 7
+Age 7
+Full Name 8
+First Name 8
+Last Name 8
+Gender 8
+Age 8
+Generations In Household
+Marital Status In The Hhld
+Veteran In Household
+Young Adult In Household
+Senior Adult In Household
+Christian Families
+Working Woman
+African American Professionals
+Dwelling Type
+Property Type
+Years Since Home Was Built
+Estimated Home Value
+Estimated Income
+Net Worth
+Community Reinvestment Act
+Infered Credit
+Lines Of Credit
+Available New Credit
+Membership Clubs
+American Express Gold Or Premium
+American Express Regular
+Discover Gold Or Premium
+Discover Regular
+Gasoline Or Retail Card Gold Or Premium
+Gasoline Or Retail Card Regular
+Mastercard Gold Or Premium
+Mastercard Regular
+Visa Gold Or Premium
+Visa Regular
+Bank Card Holder
+Gas Or Department Or Retail Card Holder
+Travel Or Entertainment Card Holder
+Credit Card Holder Unknown Type
+Premium Card Holder
+Upscale Card Holder
+Credit Card User
+Credit Card New Issue
+Bank Card Presence In Household
+Ownership Or Rent
+Years In Residence
+Building Air Conditioning Type
+Property Fuel Type
+Property Sewer Type
+Property Water Type
+Loan To Value
+Current Age Of Mortgage
+Purchase Date
+Purchase Price
+First Mortgage Amount
+Second Mortgage Amount
+First Mortgage Date
+Second Recent Mortgage Date
+First Mortgage Loan Type Code
+Second Mortgage Loan Type Code
+First Mortgage Loan Type Code
+Second Mortgage Loan Type Code
+First Lender Name
+Second Recent Lender Name
+Automotive Auto Parts And Accessories Buyer
+Apparel Women's Buyer
+Apparel Women's Petite Buyer
+Apparel Women's Plus Sizes Buyer
+Young Women's Apparel Buyer
+Apparel Men's Buyer
+Apparel Men's Big And Tall Buyer
+Young Men's Apparel Buyer
+Apparel Children's Buyer
+Health And Beauty Buyer
+Beauty And Cosmetics Buyer
+Jewelry Buyer
+Luggage Buyer
+Books And Magazines Magazines Buyer
+Books And Music Books Buyer
+Books And Music Books Audio Buyer
+Reading General Buyer
+Reading Religious And Inspirational Buyer
+Reading Science Fiction Buyer
+Reading Magazines Buyer
+Reading Audio Books Buyer
+Reading Financial Newsletter Subscribers Buyer
+Reading Grouping Buyer
+History And Military Interest
+Current Affairs And Politics Interest
+Religious And Inspirational Interest
+Science And Space Interest
+Magazines Interest
+Home Living Interest
+Do It Yourself Living Interest
+Sporty Living Interest
+Upscale Living Interest
+Cultural And Artistic Living Interest
+Highbrow Interest
+High Tech Living Interest
+Common Living Interest
+Professional Living Interest
+Broader Living Interest
+Antiques Buyer
+Art Interest
+Theater And Performing Arts Interest
+Arts Interest
+Musical Instruments Interest
+Children's Apparel Infants And Toddlers Buyer
+Children's Learning And Activity Toys Buyer
+Children's Products General Baby Care Buyer
+Children's Products General Back To School Buyer
+Children's Products General Buyer
+Children's Interests Buyer
+Collectibles General Buyer
+Collectibles Stamps Buyer
+Collectibles Coins Buyer
+Collectibles Arts Buyer
+Collectibles Antiques Buyer
+Collector Avid Buyer
+Collectibles And Antiques Grouping Buyer
+Collectibles Sports Memorabilia Buyer
+Military Memorabilia And Weaponry Buyer
+Lifestyles Interests And Passions Collectibles
+Cooking And Food Grouping Interest
+Foods Natural Buyer
+Food Wines Buyer
+Cooking Gourmet Interest
+Cooking General Interest
+Computing And Home Office General Buyer
+Dvds And Videos Buyer
+Tv Video And Movie Watcher
+Electronics Computing And Home Office Buyer
+High End Appliances Buyer
+Intend To Purchase Hdtv And Satellite Dish
+Music Home Stereo Interest
+Music Player Interest
+Music Collector
+Music Avid Listener
+Movie Collector
+Tv Cable Subscriber
+Games Video Games Interest
+Tv Satellite Dish Subscriber
+Computers Interest
+Games Computer Games Interest
+Consumer Electronics Interest
+Movie And Music Grouping Interest
+Electronics And Computers Grouping Interest
+Telecommunications Interest
+Travel Grouping Interest
+Travel Interest
+Travel Domestic Interest
+Travel International Interest
+Travel Cruise Vacations Interest
+Auto And Motorcycle Racing Spectator
+Interest Spectator
+Football Spectator
+Baseball Spectator
+Basketball Spectator
+Hockey Spectator
+Soccer Spectator
+Tennis Interest
+Golf Interest
+Snow Skiing Interest
+Scuba Diving Interest
+Motorcycling Interest
+Nascar Interest
+Boating And Sailing Interest
+Sports And Leisure Interest
+Sports Grouping Interest
+Online Purchasing Indicator
+Value Priced General Merchandise Interest
+Sewing Knitting And Needlework Interest
+Woodworking Interest
+Photography Interest
+Aviation Interest
+House Plants Interest
+Crafts Interest
+Home And Garden Interest
+Gardening Interest
+Gardening Interest 2
+Home Improvement Grouping Interest
+Lifestyles Interests And Passions Rafts And Hobbies
+Photography And Video Equipment Interest
+Home Furnishings And Decorating Interest
+Home Improvement Interest
+Intend To Purchase Home Improvement Interest
+Gaming Interest
+Games Board Games And Puzzles Interest
+Gaming Casino Interest
+Sweepstakes And Contests Interest
+Pets Interest
+Equestrian Interest
+Other Pet Owner
+Donor Type 1
+Donor Type 2
+Donor Type 3
+Donor Type 4
+Donor Type 5
+Donation And Contribution
+Mail Order Donor
+Charitable Donation
+Animal Welfare Charitable Donation
+Arts Or Cultural Charitable Donation
+Children's Charitable Donation
+Environment Or Wildlife Charitable Donation
+Environmental Issues Charitable Donation
+Health Charitable Donation
+International Aid Charitable Donation
+Political Charitable Donation
+Political Conservative Charitable Donation
+Political Liberal Charitable Donation
+Religious Charitable Donation
+Veteran's Charitable Donation
+Other Types Of Charitable Donations
+Community And Charities
+Ethnic
+Ethnic Confidence
+Ethnic Group
+Language
+Religion
+Hispanic Country Of Origin
+Assimilation
+Education
+Education Online
+Occupation
+Business Owner
+Cellular Phone
+Cellular Carrier
+Auto Year 1
+Auto Make 1
+Auto Model 1
+Auto Year 2
+Auto Make 2
+Auto Model 2
+Auto Year 3
+Auto Make 3
+Auto Model 3
+Auto Year 4
+Auto Make 4
+Auto Model 4
+Auto Year 5
+Auto Make 5
+Auto Model 5
+Motorcycle Year
+Motorcycle Make
+Motorcycle Model
+Mobile Home Year
+Mobile Home Class
+Personal Water Craft Year
+Personal Water Craft Make
+Personal Water Craft Model
+Modeled Insurance Expiration Date
+Boat Manufacturer
+Boat Year
+Boat Standard Use
+Boat Hull Shape
+Boat Hull Mat
+Propulsion Type
+Boat Fuel
+Boat Type
+Boat Size Class
+Computer Owned
+Applied For Pay Day Loan
+Home Based Business
+Career Improvement
+Career
+College Student
+Applied for Debt Consolidation
+Gamblers Present
+Health Enthusiast
+Exercise Running And Jogging Interest
+Exercise Walking Interests
+Exercise Aerobic Interest
+Dieting And Weight Loss Interest
+Health And Medical Interest
+Self Improvement Interest
+Personal Investment Interest
+Real Estate Investment Interest
+Stocks And Bonds Investment Interest
+Investing And Finance Grouping Interest
+Foreign Investment Interest
+Estimated Residential Properties Owned
+Money Seekers
+Business Opportunity Seeker
+Outdoorsmen Present
+Hunting Interest
+Fishing Interest
+Camping And Hiking Interest
+Magazine Subscriber
+Do It Yourself Home
+Do It Yourself Auto
+Ailment
+Presence Of Children
+Single Parent
+Age 0 To 2 Male Count
+Age 0 To 2 Female Count
+Age 0 To 2 Unknown Gender Count
+Age 3 To 5 Male Count
+Age 3 To 5 Female Count
+Age 3 To 5 Unknown Gender Count
+Age 6 To 10 Male Count
+Age 6 To 10 Female Count
+Age 6 To 10 Unknown Gender Count
+Age 11 To 15 Male Count
+Age 11 To 15 Female Count
+Age 11 To 15 Unknown Gender Count
+Age 16 To 17 Male Count
+Age 16 To 17 Female Count
+Age 16 To 17 Unknown Gender Count
+Grandchildren Present
+Racing Enthusiast
+Tobacco User
+Alcohol User
+Vision Impaired
+Insurance Purchaser
+Vehicle Maintenance Diligent
+Online Ticket Purchaser
+Movie Ticket Purchaser
+Technology Rank
+Household Expenditures Total
+Household Expenditures Utilities
+Household Expenditures Food
+Household Expenditures Alcohol
+Household Expenditures Apparel
+Household Expenditures Transportation
+Household Expenditures Health Care
+Household Expenditures Retail
+Household Expenditures Non Retail
+Household Expenditures Gifts
+Household Expenditures Misc

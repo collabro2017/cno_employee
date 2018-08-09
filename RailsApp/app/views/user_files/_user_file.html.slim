@@ -1,0 +1,23 @@
+tr data-file-id="#{user_file.id}" class="#{'removed' unless user_file.deleted_at.nil?}"
+  td
+    - if user_file.deleted_at.nil?
+        a href="#{user_file.download_url}"
+          = fa_icon 'download', title: 'Download File'
+  td
+    = user_file.name
+  td
+    = user_file.user.email
+  td title="#{user_file.uploaded_at}"
+    = human_date(user_file.uploaded_at)
+  - if user_file.used?
+      td
+        = fa_icon 'trash'
+        = user_file.used_by
+  - elsif user_file.deleted_at.nil?
+      td
+        = link_to soft_destroy_user_file_path(user_file), method: :delete, data: { confirm: 'Are you sure?' }, remote: :true, class: 'remove-link'
+          = fa_icon 'trash', title: 'Remove File'
+  - else
+      td title="#{user_file.deleted_at}"
+        = human_date(user_file.deleted_at)
+

@@ -1,0 +1,115 @@
+// UI Elements
+//  ___________________________________________________________________________
+// | navbar       [__primary alert___________________________x]   [_______V_]  |
+// |--------------------------------------------------------------| user    |--|
+// | header                                                       | options |  |
+// |--------------------------------------------------------------|_________|--|
+// | secondary alerts                                                        X |
+// |---------------------------------------------------------------------------|
+// | left pane   | right pane                                                  |
+// |  _________  |    ----------------------------------------------------     |
+// | |  _____  | |   |____________________________________________________|    |
+// | | |_____| | |   |                                                    |    |
+// | | |_____|<---- draggable field                                       |    |
+// | | |_____| | |   |----------------------------------------------------|    |
+// | | |_____| | |   |                                                    |    |
+// | | |_____| | |   |                                                    |    |
+// | | |_____| | |   |____________________________________________________|    |
+// | | |_____| | |                                                             |
+// | | |_____| | |    ----------------------------------------------------     |
+// | | |_____| | |   |____________________________________________________|    |
+// | |         | |   |                                                    |    |
+// | |_________| |   | dropped field                            ________  |    |
+// |     ^       |   |-----------------------------------------| select |-|    |
+// |     |       |   |                                         | options| |    |
+// |     |       |   |                                         |________| |    |
+// | delete      |   |____________________________________________________|    |
+// | drop zone   |                                                             |
+// |           _______                                                         |
+// |          |_______| <---- dragging field                                   |
+// |             |_____________________________________________________________|
+// |             |                                                   footer    |
+// |_____________|_____________________________________________________________|
+// 
+//
+// Z Indexes:
+//   a) user options & primary alerts
+//   b) navbar
+//   c) header + secondary alerts 
+//   d) dragging field
+//   e) select options & delete drop zone
+//   f) static field (draggable & dropped)
+//   g) left pane
+//   h) footer
+//   i) right pane
+
+
+// Variables
+$z-index-a: 1000
+$z-index-b: 900
+$z-index-c: 800
+$z-index-d: 700
+$z-index-e: 600
+$z-index-f: 500
+$z-index-g: 400
+$z-index-h: 300
+$z-index-i: 200
+
+
+// Mixins
+@mixin z-index-a
+  z-index: $z-index-a
+
+@mixin z-index-b
+  z-index: $z-index-b
+
+@mixin z-index-c
+  z-index: $z-index-c
+
+@mixin z-index-d
+  z-index: $z-index-d
+
+@mixin z-index-e
+  z-index: $z-index-e
+
+@mixin z-index-f
+  z-index: $z-index-f
+
+@mixin z-index-g
+  z-index: $z-index-g
+
+@mixin z-index-h
+  z-index: $z-index-h
+
+@mixin z-index-i
+  z-index: $z-index-i
+
+
+// Classes
+.z-index-a
+  @include z-index-a
+
+.z-index-b
+  @include z-index-b
+
+.z-index-c
+  @include z-index-c
+
+.z-index-d
+  @include z-index-d
+
+.z-index-e
+  @include z-index-e
+
+.z-index-f
+  @include z-index-f
+
+.z-index-g
+  @include z-index-g
+
+.z-index-h
+  @include z-index-h
+
+.z-index-i
+  @include z-index-i
+

@@ -1,0 +1,2 @@
+- @errors.messages.each_key do |field|
+  = render partial: 'shared/popover_errors', locals: {errors: @errors[field], field: field}

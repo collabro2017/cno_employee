@@ -1,0 +1,20 @@
+//= require paloma_core.js
+//= require ./_locals.js
+//= require ./_filters.js
+//= require ./alerts/_manifest.js
+//= require ./breakdowns/_manifest.js
+//= require ./clones/_manifest.js
+//= require ./company/_manifest.js
+//= require ./concrete_fields/_manifest.js
+//= require ./counts/_manifest.js
+//= require ./datasources/_manifest.js
+//= require ./dedupes/_manifest.js
+//= require ./forms/_manifest.js
+//= require ./jobs/_manifest.js
+//= require ./lookups/_manifest.js
+//= require ./orders/_manifest.js
+//= require ./selects/_manifest.js
+//= require ./sessions/_manifest.js
+//= require ./users/_manifest.js
+
+//= require ./two_factor_auth/_manifest.js

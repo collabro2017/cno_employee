@@ -1,0 +1,9 @@
+development: 
+  redis_host: mem_ds:6379
+  connection_retry_delay: 5
+test: 
+  redis_host: localhost:6379
+  connection_retry_delay: 5
+production: 
+  redis_host: mem_ds:6379
+  connection_retry_delay: 30

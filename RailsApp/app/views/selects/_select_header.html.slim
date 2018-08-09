@@ -1,0 +1,22 @@
+div class="select-header dropped-item-header pad"
+  div class="row-fluid"
+    div.span2
+      div.exclude-wrapper id="exclude_#{select.id}"
+        = render partial: 'selects/select_exclude_toggle', locals: {select: select}
+
+    div class="span4 offset2"
+      div #{select.caption}
+
+    div class="span2 offset2"
+      a [
+          class="select-close pull-right"
+          href="#"
+          title="Remove"
+        ]
+        = fa_icon 'times'
+
+      a [
+          class="select-expand-collapse pull-right"
+          title="Collapse"
+        ]
+        = fa_icon 'angle-double-up'

@@ -1,0 +1,13 @@
+- caption = output.concrete_field.present? ? output.caption : 'Distance' 
+= div_for(output, class: "deletable") do
+  div.row-fluid
+    div.span12
+      div class="output-header dropped-item-header pad"
+        | #{caption}
+        a [
+            class="select-close pull-right"
+            href="#"
+            title="Remove"
+          ]
+          = fa_icon 'times'
+

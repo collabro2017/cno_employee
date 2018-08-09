@@ -1,0 +1,10 @@
+class <%= migration_class_name %> < ActiveRecord::Migration
+  def up
+    drop_view :<%= view_name %>
+  end
+
+  def down
+    create_view :<%= view_name %>, load_sql(<%= last_sql_number %>, '<%= view_name %>')
+  end
+end
+

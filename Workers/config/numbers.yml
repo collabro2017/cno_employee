@@ -1,0 +1,16 @@
+development:
+  aws_expire_time: 120
+  batch_size: 10_000
+  key_expire_time: 300
+  padding: 3
+  status_poll_frequency: <%=1.0 / 5.0%>
+  total_nodes: 2
+
+production:
+  aws_expire_time: 7_200
+  batch_size: 100_000
+  key_expire_time: 300
+  status_poll_frequency: <%=1.0 / 5.0%>
+  padding: 3
+  total_nodes: 10
+

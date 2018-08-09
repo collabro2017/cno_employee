@@ -1,0 +1,9 @@
+var toReplace = $("#select_<%= @select.id %>")
+
+if(toReplace.hasClass('multi-column-select')) {
+  toReplace = toReplace.closest('.multi-column-group')
+}
+
+toReplace.next().remove()
+toReplace.replaceWith('<%= j render partial: "selects/multi_column_select" , locals: {enum: @enum} %>')
+

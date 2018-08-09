@@ -1,0 +1,54 @@
+- provide(:title, "PO # #{@order.po_number} details")
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div class="span12"
+      div class="count-header pad"
+        div.row-fluid
+          div.span4
+            h2
+              | PO # #{@order.po_number} details
+              
+div#content class="pad"
+  div class="row-fluid"
+    div class="span6 offset3 pad"
+      
+      div class="order-header"
+        | Status&nbsp;
+      div#order-result
+        = async_div_for("#{order_path(@order.id)}/__order_result")
+      div class="order-header"
+        | Count
+      div class="order-content pad"
+        | Name:&nbsp;
+        = link_to @order.count.name, count_path(@order.count.id)
+        br
+        | Datasource:&nbsp;
+        = @order.count.datasource.caption
+        br
+        | Selects:&nbsp;
+        ul
+          - @order.count.selects.each do |select|
+            li
+              | #{select.concrete_field.caption}: #{select.summary}
+      div class="order-header"
+        | Output Layout
+      div class="order-content pad"
+        ul
+          - if @order.count.datasource.pii_datasource_id
+            li
+              | PII Data
+          - @order.outputs.each do |output|
+            li
+              = output.concrete_field.present? ? "#{output.caption}" : 'Distance'
+      div class="order-header"
+        | Output Order by
+      div class="order-content pad"
+        ul
+          - @order.sorts.each do |sort|
+            li
+              - direction = sort.descending? ? 'Desc' : 'Asc'
+              - caption = sort.concrete_field.present? ? "#{sort.caption}" : 'Distance'
+              | #{caption} | (#{direction})
+
+

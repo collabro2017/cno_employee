@@ -1,0 +1,3 @@
+select = $("#select_<%= @select.id %>")
+select.find(".can-link")
+  .html('<%= j render partial: "select_link_toggle", locals: {select: @select} %>')

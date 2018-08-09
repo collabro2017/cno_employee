@@ -1,0 +1,26 @@
+span.editable-title
+  span.textbox
+    = text_field(:count, :name, class: 'input-xxlarge', maxlength: 128, form: "edit_count_#{@count.id}")
+    span.accept-cancel-buttons
+      = fa_icon 'check-circle', title: 'Accept'
+      = fa_icon 'times-circle', title: 'Cancel'
+    span [
+      class="editable-text blinking-cursor unedited"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title=""
+      data-original-title="Rename"
+    ]
+      = "#{@count.name}"
+| &nbsp;
+small
+  i
+    | using&nbsp;
+  b
+    | #{@count.datasource.caption}&nbsp;
+  span.datasource-version = "#{@count.datasource.version}"
+  - if @count.outdated?
+    span = fa_icon('clock-o', title: 'Datasource is outdated', class: 'outdated-datasource')
+  div.datasource-icon
+    - image_location = image_url(@count.datasource.image_location)
+    = image_tag(image_location, size: "40x40")

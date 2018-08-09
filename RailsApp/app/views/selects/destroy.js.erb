@@ -1,0 +1,29 @@
+var current, group, size, survivorHtml
+current = $('#select_<%= @select.id %>')
+group = current.closest('.multi-column-group')
+
+if(
+    (typeof group !== 'undefined') && (group.size() > 0) &&
+    (group.find('.multi-column-select').size() <= 2)
+  ) {
+  <% if @select.linked_to_next? %>
+    survivorHtml = '<%= j (render partial: "select", object: @select.count.selects.find_by(position: @select.position)) %>'
+  <% elseif @select.previous.present? %>
+    survivorHtml = '<%= j (render partial: "select", object: @select.previous) %>'
+  <% else %>
+    survivorHtml = 'Error trying to destroy a linked select that is not linked'
+  <% end %>
+  group.replaceWith(survivorHtml)
+} else {
+  current.remove()
+}
+
+
+// Show/hide link icons
+<% @select.count.selects.each do |s| %>
+  <% if s.can_link? %>
+    $('.can-link[data-select-id="<%= s.id %>"]').removeClass('hidden');
+  <% else %>
+    $('.can-link[data-select-id="<%= s.id %>"]').addClass('hidden');
+  <% end %>
+<% end %>

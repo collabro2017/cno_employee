@@ -1,0 +1,63 @@
+div class="select multi-column-group"
+  div.row-fluid
+    div.span12
+      div class="select-header dropped-item-header pad"
+        div class="row-fluid"
+          div class="span4 offset4"
+            div Multi-column Select
+
+          div class="span2 offset2"
+            a [
+                class="select-expand-collapse pull-right"
+                title="Collapse"
+                id="select-header"
+              ]
+              = fa_icon 'angle-double-up'
+
+
+      div.select-content class="tabbable tabs-left"
+        ul class="nav nav-tabs"
+          li.active
+            a [
+                class="multi-column-checkboxes"
+                data-toggle="tab"
+                data-toggle2="tooltip"
+                data-placement="right"
+                title="Select"
+              ]
+              = fa_icon 'check-square-o'
+
+        div.tab-content
+          div [
+              class="tab-pane active"
+            ]
+            div.checkbox-columns-wide
+
+              - enum.continue_each do |select|
+
+                label[
+                    id="select_#{select.id}"
+                    class="multi-column-select select-option"
+                    title="#{select.caption} = #{select.binary_on_value}"
+                    data-cf-id="#{select.concrete_field.id}"
+                  ]
+                  input[
+                      class="checkbox"
+                      type="checkbox"
+                      value="#{select.binary_on_value}"
+                      checked=(select.saved_binary_value == select.binary_on_value)
+                    ]
+                  | &nbsp;
+                  span.select-option-text 
+                    | #{select.caption} = #{select.binary_on_value}
+                  span.unlink
+                    a title='Unlink from multi-column group' href='#'
+                      = fa_icon 'unlink'
+                  span.remove-multi-column
+                    a title='Remove from count' href='#'
+                      = fa_icon 'trash-o'
+
+                - break unless select.linked_to_next?
+
+      = render partial: "selects/select_link_to_next", locals: {select: enum.peek}
+

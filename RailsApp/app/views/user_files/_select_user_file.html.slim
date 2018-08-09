@@ -1,0 +1,15 @@
+tr data-file-id="#{select_user_file.id}"
+  td
+    label.user-file title='Click to use file'
+      input[
+          class='checkbox'
+          type='checkbox'
+          value='#{select_user_file.id}'
+          checked=select_user_file.selects.include?(select)
+        ]
+      | &nbsp;
+      span.user-file-text
+        | #{select_user_file.name}
+  td = select_user_file.user.name
+  td = select_user_file.uploaded_at
+

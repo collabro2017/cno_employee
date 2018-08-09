@@ -1,0 +1,23 @@
+<% if @order.previous_changes.key?('po_number') %>
+  $('.editable-title').html('<%= j render 'po_number_input' %>');
+  Paloma.locals.orders.setTextboxTooltips();
+<% end %>
+
+<% if @order.previous_changes.keys.any? { |key| /cap/ =~ key } %>
+  $('#caps-tab').html('<%= j render 'order_cap' %>');
+  Paloma.locals.orders.setTextboxTooltips();
+<% end %>
+
+<% if @order.outputs_changed? %>
+  $('#outputs-drop').html('<%= j render @order.outputs %>')
+  $('#outputs-fieldsets').html('<%= j render "outputs_fieldsets" %>');
+<% end %>
+
+<% if @order.sorts_changed? %>
+  $('#sorts-drop').html('<%= j render @order.sorts %>')
+  $('#sorts-fieldsets').html('<%= j render "sorts_fieldsets" %>');
+<% end %>
+
+<% @order.errors.full_messages.each do |msg| %>
+  Paloma.locals.alerts.setAlert('header-wrapper', '<%= msg %>', 'error');
+<% end %>

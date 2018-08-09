@@ -1,0 +1,19 @@
+span.editable-title
+  | PO#&nbsp;
+  span.textbox
+    = text_field(:order, :po_number, class: 'input-xxlarge', maxlength: 16, form: "edit_order_#{@order.id}")
+    span.accept-cancel-buttons
+      = fa_icon "check-circle", title: "Accept"
+      = fa_icon "times-circle", title: "Cancel"
+    span [
+      class="editable-text blinking-cursor unedited"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Edit PO number"
+    ]
+      - if @order.po_number.present? 
+        = @order.po_number
+      - else
+        span.pseudo
+          | (click to set)
+

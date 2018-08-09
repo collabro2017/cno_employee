@@ -1,0 +1,18 @@
+- allowed = count.allowed_for_user?(current_user.id)
+tr.dash-tr
+  td
+    = count.name
+    = fa_icon('lock', title: 'Locked', class: 'lock') if count.locked?
+    - unless allowed
+      = fa_icon('warning', title: 'Access to datasource is restricted', class: 'restricted-count-icon')
+
+  td.dash-td title=count.most_recent_job_updated_at
+    = last_run_at(count)
+    br = tidy_result(count.result, human: true)
+  
+  td.dash-td-right
+    - if allowed
+      - if count.locked?
+        = link_to(fa_icon('eye'), count)
+      - else
+        = link_to(fa_icon('pencil'), edit_count_path(count.id))

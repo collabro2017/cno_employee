@@ -1,0 +1,4 @@
+html = '<%= j render partial: 'datasources/restricted_companies_form', locals: {datasource: @datasource, unrestricted_companies: @datasource.companies.order(:name)} %>'
+$('#restricted-companies-form').replaceWith(html)
+
+Paloma.locals.datasources.attachModalEvents('<%= @datasource.id %>')

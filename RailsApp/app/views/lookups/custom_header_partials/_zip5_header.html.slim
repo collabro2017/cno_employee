@@ -1,0 +1,25 @@
+- first_filter = lookup_class.first_filter_column
+- fuzzy_filter = lookup_class.fuzzy_filter_column
+div class="lookup-selection-header"
+  div.row-fluid
+    div.span6
+      div.row-fluid
+        div.span6
+          span.pull-left
+            | #{first_filter.capitalize}&nbsp;
+
+          / TO-DO: Declare this somewhere else
+          - query = lookup_class.unscoped.select(first_filter).distinct.order("#{first_filter} asc")
+          = collection_select lookup_class.type, first_filter, query, first_filter , first_filter, {include_blank: '(ALL)'}, {class: 'first-filter'}
+        div.span6
+          span.pull-left 
+            | #{fuzzy_filter.capitalize}&nbsp;
+          = text_field fuzzy_filter, :input, value: "", class: "fuzzy-filter"
+
+    div.span6
+      = render partial: 'lookups/bulk_actions'
+
+div.lookup-results
+  - params = {lookup: {select_id: select.id, lookup_type: lookup_class.type}}
+  = async_div_for("/lookups/filtered_values", params: params)
+

@@ -1,0 +1,53 @@
+$filter-opaque: #333333
+$filter-soft: rgba(229,229,229,0.75)
+$dedupe-opaque: rgb(95, 75, 126)
+$dedupe-soft: rgba(95, 75, 126, 0.75)
+$simple-opaque: #5bb65b
+$simple-soft: rgba(91, 182, 91, 0.75)
+$breakdown-opaque: #2f96b4
+$breakdown-soft: rgba(47, 150, 180, 0.75)
+
+.sql
+  margin-top: 1%
+  margin-bottom: 1%
+
+.query
+  color: #333333
+  border-radius: 0px 0px 3px 3px
+  &.filter
+    border-right: 1px solid $filter-opaque
+    border-bottom: 1px solid $filter-opaque
+    border-left: 1px solid $filter-opaque
+  &.dedupe
+    border-right: 1px solid $dedupe-opaque
+    border-bottom: 1px solid $dedupe-opaque
+    border-left: 1px solid $dedupe-opaque
+  &.simple
+    border-right: 1px solid $simple-opaque
+    border-bottom: 1px solid $simple-opaque
+    border-left: 1px solid $simple-opaque
+  &.breakdown
+    border-right: 1px solid $breakdown-opaque
+    border-bottom: 1px solid $breakdown-opaque
+    border-left: 1px solid $breakdown-opaque
+
+.sub-query
+  padding: 1%
+.header
+  text-align: center
+  font-weight: bold
+  &.filter
+    border: 1px solid $filter-opaque
+    background-color: $filter-soft
+  &.dedupe
+    margin-bottom: 1%
+    color: white
+    border: 1px solid $dedupe-opaque
+    background-color: $dedupe-soft
+  &.simple
+    border: 1px solid $simple-opaque
+    background-color: $simple-soft
+  &.breakdown
+    margin-bottom: 1%
+    border: 1px solid $breakdown-opaque
+    background-color: $breakdown-soft

@@ -1,0 +1,5 @@
+$('#access_level_modal > .modal-body > div.row-fluid > .span6.offset3')
+  .html("<%= j render partial: 'datasources/access_level_form', object: @datasource%>")
+$('#access_level_modal').modal({ keyboard: true })
+
+Paloma.locals.datasources.attachModalEvents('<%= @datasource.id %>')

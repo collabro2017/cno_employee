@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+ruby '2.2.1'
+
+gem 'activesupport', '~> 4.0.3'
+gem 'aws-sdk', '~> 1.59.1'
+gem 'pg', '~> 0.17.1' 
+gem 'resque', '1.24.1' # Do not upgrade to 1.25.X until issue #1122 is fixed.
+gem 'resque-status', '~> 0.4.3'
+gem 'sequel', '~> 4.13.0'
+gem 'yell', '~> 2.0.5'
+gem 'yard', '~> 0.8.7.6'
+gem 'murmurhash3'
+
+group :test do
+  gem 'fakefs', '~> 0.6.7', require: ['fakefs/safe', 'fakefs/spec_helpers']
+  gem 'mock_redis', '~> 0.14.0'
+  gem 'rspec', '~> 3.2.0'
+end
+

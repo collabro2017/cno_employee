@@ -1,0 +1,10 @@
+select = $("#select_<%= @select.id %>")
+min = select.find("#select-date-text-fields").data('min')
+max = select.find("#select-date-text-fields").data('max')
+
+select.find("input#from_<%= @select.id %>").val(min)
+select.find("input#to_<%= @select.id %>").val(max)
+
+select.find(".select-options-summary").html('<%= @select.summary %>')
+select.find("#populated_select_<%= @select.id %>")
+  .html('<%= j render partial: "selects/vertical_tab_content/populated", locals: {select: @select} %>')

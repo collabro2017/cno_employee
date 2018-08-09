@@ -1,0 +1,42 @@
+- provide(:title, 'All jobs')
+
+div#main
+  div#header-wrapper
+    div#header  
+      div.row-fluid
+        div.span12
+            div#count-title
+              h3
+                | All jobs&nbsp;
+
+  div#content class="pad"
+    div class="row-fluid"
+      div class="span12 pad"
+        - if @jobs.count == 0
+            div No jobs to display
+        - else
+          table class="table table-hover"
+            tr
+              th.text-center Type
+              th.text-center Count
+              th.text-center Result
+              th.text-center Status
+              th.text-center User
+              th.text-center Last Update
+
+              - @jobs.each do |job|
+                tr
+                  td = job.type.demodulize
+                  td = job.count ? job.count.name : "N/A"
+                  - if job.type && !["Jobs::Order","Jobs::Clone"].include?(job.type) && job.respond_to?(:result) && job.result.present?
+                    td = number_with_delimiter(job.result)
+                  - else
+                    td N/A
+                  td = job.status
+                  td = job.user.name
+                  td title="#{job.updated_at}"
+                    = human_date(job.updated_at) 
+                  / td = link_to 'Show', job
+                  / td = link_to 'Edit', edit_job_path(job)
+                  / td = link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete
+          = will_paginate

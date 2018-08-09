@@ -1,0 +1,4 @@
+<% if @dedupe.count.jobs.any? %>
+  $('.completed-result>.dirty').removeClass('hidden')
+<% end %>
+<%= yield %>

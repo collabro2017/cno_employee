@@ -1,0 +1,50 @@
+- provide(:title, 'All users')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+        div#count-title
+          h3
+            | All users&nbsp;
+
+div#content class="pad"
+  div class="row-fluid"
+    div class="span12 pad"
+      - if current_user.sysadmin? || current_user.admin?
+        = button_to "Create new", { action: "new" }, method: "get", class: "btn-primary"
+
+      - if @users.count == 0
+          div No users to display
+      - else
+        table class="table table-hover"
+          tr
+            - if current_user.sysadmin? || current_user.admin?
+              th
+            th.text-center Name
+            th.text-center E-Mail
+            th.text-center Status
+            - if current_user.sysadmin?
+              th.text-center Company
+
+            - @users.each do |user|
+              tr
+                - if current_user.sysadmin? || current_user.admin?
+                  td 
+                    = link_to "Edit", edit_user_path(user)
+                td
+                  = user.name
+                  - if user.admin?
+                    | &nbsp;
+                    = fa_icon('key', title: 'Company Admin')
+                td
+                  = user.email
+                td
+                  = user.status.to_s.capitalize
+                  - if current_user.sysadmin? || current_user.admin?
+                    - if user.status == 'pending'
+                      = link_to resend_activation_email_user_path(user.id), class: 'resend-link'
+                        = fa_icon 'mail-forward', title: 'Resend Activation Email'
+                - if current_user.sysadmin?
+                  td
+                    = user.company.name
+      = will_paginate

@@ -1,0 +1,25 @@
+/ The @counts_user_file declaration is needed because of the way the 
+/ collection_select helper works. It looks for the INSTANCE varialbe with the
+/ name specified in the first parameter
+
+- @counts_user_file = suppression_user_file.counts_user_file_for_count(count)
+
+tr.data-row data-file-id="#{suppression_user_file.id}" data-counts-user-file-id ="#{@counts_user_file.id if @counts_user_file.present?}"
+  td
+    label.suppression-file title='Click to use file'
+      input[
+          class='checkbox'
+          type='checkbox'
+          value='#{suppression_user_file.id}'
+          checked=@counts_user_file.present?
+        ]
+      | &nbsp;
+      span.suppression-file-text
+        | #{suppression_user_file.name}
+  td = suppression_user_file.user.name
+  td = suppression_user_file.uploaded_at
+  td
+    div.criteria-select
+      - previous = @counts_user_file.present? ? @counts_user_file.concrete_field_id : ''
+      = collection_select(:counts_user_file, :concrete_field_id, count.datasource.concrete_fields.with_source_fields, :id, :caption, {}, {:id=>"criteria_#{suppression_user_file.id}", :class=>"#{@counts_user_file.present? ? '' : 'invisible'}", "data-previous" => previous})
+

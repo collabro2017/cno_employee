@@ -1,0 +1,7 @@
+SELECT "datafiles"."<%= node_field_table_name %>"."value_id", "datafiles"."<%= node_field_table_name %>"."id"
+FROM "datafiles"."<%= node_field_table_name %>"
+INNER JOIN "process"."<%= node_breakdown_record_ids_table_name %>"
+ON "datafiles"."<%= node_field_table_name %>"."id" = "process"."<%= node_breakdown_record_ids_table_name %>"."id"
+GROUP BY "datafiles"."<%= node_field_table_name %>"."value_id", "datafiles"."<%= node_field_table_name %>"."id"
+ORDER BY "datafiles"."<%= node_field_table_name %>"."value_id"
+

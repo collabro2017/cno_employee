@@ -1,0 +1,24 @@
+var current = $("#select_<%= @select.id %>") 
+var group = current.closest('.multi-column-group')
+var size = group.find('.multi-column-select').size()
+var unlinkedHtml = '<%= j (render partial: "select", object: @select) %>'
+
+if(size > 2) {
+  current.remove()
+  group.find('.can-link').attr("data-select-id", <%= @select.previous.id %>)
+  group.after(unlinkedHtml)
+} else {
+  group.replaceWith(
+    '<%= j (render partial: "select", object: @select.previous) %>',
+    unlinkedHtml
+  );
+}
+
+// Show/hide link icons
+<% @select.count.selects.each do |s| %>
+  <% if s.can_link? %>
+    $('.can-link[data-select-id="<%= s.id %>"]').removeClass('hidden');
+  <% else %>
+    $('.can-link[data-select-id="<%= s.id %>"]').addClass('hidden');
+  <% end %>
+<% end %>

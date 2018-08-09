@@ -1,0 +1,3 @@
+html = '<%= j render partial: "jobs/breakdown_result", object: self.count.last_breakdown_job.result, locals: { run_at: self.count.tidy_last_breakdown_run_at(true) } %>'
+$('#breakdown-result').replaceWith(html);
+$('#breakdown-tab:not(:has(#breakdown-result))').append(html);

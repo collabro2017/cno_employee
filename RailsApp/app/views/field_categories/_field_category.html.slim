@@ -1,0 +1,7 @@
+= div_for(field_category, class: "accordion-group draggable ui-draggable", data:{field_category_id: "#{field_category.id}"}) do
+  div.accordion-heading
+    div.row-fluid
+      = generate_field_category_accordion(field_category, order, display_type)
+  = content_tag_for(:div, field_category, :collapse, class: "accordion-body collapse") do
+    div class="accordion-inner"
+      = render partial: field_category.sorted_concrete_fields_from_datasource(count.datasource, display_type), locals: {count: count, display_type: display_type}

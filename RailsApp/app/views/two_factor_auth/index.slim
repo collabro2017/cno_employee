@@ -1,0 +1,29 @@
+div#content
+  div.row-fluid
+    div.span12
+      div.row-fluid
+        div.span4
+        div.span4
+          div#signin-form class='signin-signup'
+            div.auth-code-notification
+              | A verification code was sent to #{@masked_email}. Please check your email 
+              | and enter verification code to continue logging in.
+
+            - if flash[:notice].present?
+              div.sign-in-error
+                = fa_icon "bell-o", text: "#{flash[:notice]}"
+
+            = form_tag("/two_factor_auth", {:method => :post}) do              
+              = text_field_tag :auth_code, "", placeholder: "Code"
+              = hidden_field_tag :auth_token, @auth_token    
+              br
+              = check_box_tag(:remember_me)
+              = label_tag(:remember_me, "Remember me on this device")
+              
+              = link_to "Request a new verification code", {controller: "two_factor_auth", action: "resend_code", auth_token: @auth_token}, method: :post
+              br
+              = link_to "Need Assistance?", "#!"
+              br
+              br      
+              
+              = submit_tag 'Sign In', class: 'btn-info'

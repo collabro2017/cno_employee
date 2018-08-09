@@ -1,0 +1,6 @@
+= div_for(concrete_field, class: 'field', title: concrete_field.description) do
+  div.row-fluid
+    div.span8 = concrete_field.caption
+    div.span2 = cf_tags(count, concrete_field)
+    div.span2
+      = add_concrete_field_button(@count, concrete_field, display_type, 'pull-right')

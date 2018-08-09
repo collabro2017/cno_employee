@@ -1,0 +1,31 @@
+- if @job.present?
+  = div_for(@job, data: {status: @job.status.to_s}) do
+    - status_caption = @job.status.to_s.titleize
+
+    - if @job.active?
+      div#clone-status class='align-center' data-is-active='true' 
+        | Please wait while the cloning process finishes  
+        - active_icon = (@job.status == 'queued') ? 'spinner' : 'cog'
+        = fa_icon "#{active_icon} spin", title: status_caption
+    - else
+      - if @job.status == :failed || @job.status == :created
+        div#clone-status class='align-center'
+          | There was an error trying to clone selected values from&nbsp;
+          = link_to count_path(@count.parent)
+            | #{@count.parent.name}
+          br
+          | Would you like to:&nbsp;
+          = link_to ignore_clone_count_path(@count), method: 'patch', title: "Continue and ignore those values"
+            | Continue
+          | &nbsp;or&nbsp;
+          = link_to retry_clone_count_path(@count), method: 'patch', title: "Try to clone them again"
+            | Try again
+          | ?
+      - elsif @job.status == :completed
+        div#clone-status  class="hidden"
+
+  div#retry-clone-polling class="hidden"
+    div class="align-center"
+      | Check for job status&nbsp;
+      = link_to '#', id: 'retry-clone-polling-link'
+        = fa_icon('refresh', title: 'Refresh')

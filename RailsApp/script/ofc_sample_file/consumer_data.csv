@@ -1,0 +1,384 @@
+Position,Field Name,Field Description,Selection,Category,Priority,Output,Notes,Length,Start,End
+Field_1,Full Name of Member 1,Head of Household Full Name,N,,,D,,50,1,50
+Field_2,House Number and Street Name,Address - House number and street Name,N,,,D,,74,51,124
+Field_3,Contact Phone Number,Landline Phone Number,S,HH,1,O,"Use as ""Phone Available"" Flag Y or N",10,125,134
+Field_4,Phone Number Area Code,Phone Number Area Code,Y,Geo,1,N,,5,135,139
+Field_5,Phone number without area code,Phone number not including Area Code,N,,,N,,10,140,149
+Field_6,City,Residence City,Y,Address,1,D,,50,150,199
+Field_7,State,Residence State,Y,Address,1,D,,30,200,229
+Field_8,ZIP,Residence Zip Code,Y,Address,1,D,,12,230,241
+Field_9,Zip + 4,Residence Zip dove plus 4 digit extension,S,Address,2,D,combine with zip,21,242,262
+Field_10,Zip + 4 + Delivery Point Bar Code,Residence Zip dove plus 4 digit extension and Delivery Point Bar Code,N,,,N,,30,263,292
+Field_11,Delivery Point Bar Code,Delivery Point Bar Code Seperated from Zip Code,N,,,D,,15,293,307
+Field_12,Carrier Route,Postal Carrier Route,S,Address,2,D,combine with zip,10,308,317
+Field_13,County,Residence County,S,Address,1,O,"use the 3 digit code, combine with state",21,318,338
+Field_14,Metropolitan Statistical Area,Residence Metrpolitan Statistical Are,Y,Address,3,O,,30,339,368
+Field_15,LATITUDE,LATITUDE,S,,,O,Use with radius,9,369,377
+Field_16,LONGITUDE,LONGITUDE,S,,,O,Use with radius,11,378,388
+Field_17,timezone,timezone,Y,Address,3,O,,5,389,393
+Field_18,CENSUS TRACT,CENSUS TRACT,Y,Address,3,O,,6,394,399
+Field_19,CENSUS BLOCK GROUP,CENSUS BLOCK GROUP,Y,Address,3,O,,1,400,400
+Field_20,CENSUS BLOCK,CENSUS BLOCK,Y,Address,3,O,,3,401,403
+Field_21,First Name,Head of Household First Name,N,,,D,,46,404,449
+Field_22,Last Name,Head of Household Last Name,N,,,D,,50,450,499
+Field_23,Gender,Head of Household Gender,Y,HH,1,D,,1,500,500
+Field_24,Age,Head of Household Age Range (See Sheet 2 for breakdown),Y,HH,1,O,,7,501,507
+Field_25,Member 2 Full Name,Member 2 Full Name,N,People in hh?,,O,,38,508,545
+Field_26,Member 2 First Name,Member 2 First Name,N,,,O,,20,546,565
+Field_27,Member 2 Last Name,Member 2 Last Name,N,,,O,,20,566,585
+Field_28,Member 2 Gender,Member 2 Gender,Y,HH,1,O,,1,586,586
+Field_29,Member 2 Age,Member 2 Age,Y,HH,,O,,7,587,593
+Field_30,Member 3 Full Name,Member 3 Full Name,N,,,O,,38,594,631
+Field_31,Member 3 First Name,Member 3 First Name,N,,,O,,20,632,651
+Field_32,Member 3 Last Name,Member 3 Last Name,N,,,O,,20,652,671
+Field_33,Member 3 Gender,Member 3 Gender,N,,,O,,1,672,672
+Field_34,Member 3 Age,Member 3 Age,N,,,O,,7,673,679
+Field_35,Member 4 Full Name,Member 4 Full Name,N,,,O,,40,680,719
+Field_36,Member 4 First Name,Member 4 First Name,N,,,O,,19,720,738
+Field_37,Member 4 Last Name,Member 4 Last Name,N,,,O,,20,739,758
+Field_38,Member 4 Gender,Member 4 Gender,N,,,O,,1,759,759
+Field_39,Member 4 Age,Member 4 Age,N,,,O,,7,760,766
+Field_40,Member 5 Full Name,Member 5 Full Name,N,,,O,,34,767,800
+Field_41,Member 5 First Name,Member 5 First Name,N,,,O,,20,801,820
+Field_42,Member 5 Last Name,Member 5 Last Name,N,,,O,,20,821,840
+Field_43,Member 5 Gender,Member 5 Gender,N,,,O,,1,841,841
+Field_44,Member 5 Age,Member 5 Age,N,,,O,,7,842,848
+Field_45,Member 6 Full Name,Member 6 Full Name,N,,,O,,30,849,878
+Field_46,Member 6 First Name,Member 6 First Name,N,,,O,,16,879,894
+Field_47,Member 6 Last Name,Member 6 Last Name,N,,,O,,20,895,914
+Field_48,Member 6 Gender,Member 6 Gender,N,,,O,,1,915,915
+Field_49,Member 6 Age,Member 6 Age,N,,,O,,7,916,922
+Field_50,Member 7 Full Name,Member 7 Full Name,N,,,O,,22,923,944
+Field_51,Member 7 First Name,Member 7 First Name,N,,,O,,14,945,958
+Field_52,Member 7 Last Name,Member 7 Last Name,N,,,O,,14,959,972
+Field_53,Member 7 Gender,Member 7 Gender,N,,,O,,1,973,973
+Field_54,Member 7 Age,Member 7 Age,N,,,O,,7,974,980
+Field_55,Member 8 Full Name,Member 8 Full Name,N,,,O,,21,981,1001
+Field_56,Member 8 First Name,Member 8 First Name,N,,,O,,14,1002,1015
+Field_57,Member 8 Last Name,Member 8 Last Name,N,,,O,,11,1016,1026
+Field_58,Member 8 Gender,Member 8 Gender,N,,,O,,1,1027,1027
+Field_59,Member 8 Age,Member 8 Age,N,,,O,,7,1028,1034
+Field_60,GENERATIONS IN HOUSEHOLD,Number of generations living at household,Y,HH,1,O,,1,1035,1035
+Field_61,MARITAL STATUS IN THE HHLD,"Marital status (Single, Married, Divorced)",Y,HH,1,O,,16,1036,1051
+Field_62,VETERAN IN HOUSEHOLD,Wartime veteran living in household,Y,HH,2,O,,1,1052,1052
+Field_63,YOUNG ADULT IN HOUSEHOLD,Adult aged 18 - 25 living in household,Y,HH,2,O,,1,1053,1053
+Field_64,SENIOR ADULT IN HOUSEHOLD,Adult aged 65+ living in household,Y,HH,2,O,,1,1054,1054
+Field_65,CHRISTIAN FAMILIES,Religious christian family,Y,General,2,O,,1,1055,1055
+Field_66,WORKING WOMAN,Female holding management level and above position in the workplace,Y,General,2,O,,1,1056,1056
+Field_67,AFRICAN AMERICAN PROFESSIONALS,African American with management level and of above position in the work place,Y,General,2,O,,1,1057,1057
+Field_68,Dwelling Type,"Dwelling Definition (Single family, Multi family, etc…)",Y,HH,1,O,,22,1058,1079
+Field_69,PROPERTY TYPE,See Genearl Field Definitions,Y,General,2,O,,41,1080,1120
+Field_70,Years since home was built,Age of home structure,Y,HH,1,O,,15,1121,1135
+Field_71,Estimated Home Value,Home value (Based on Assessed value),Y,HH / Financial,1,O,,20,1136,1155
+Field_72,Estimated Income,Household Income (Derived from survey data. Both online and offline sourcing / Value Range),Y,HH / Financial,1,O,,6,1156,1161
+Field_73,Net Worth,Net Worth (Derived from survey data and calculated based on known assets for validity / Value Range),Y,Financial,2,O,,7,1162,1168
+Field_74,COMMUNITY REINVESTMENT ACT ,CRA Classification Code -See sheet 2 for breakdown,Y,General,5,O,,15,1169,1183
+Field_75,Infered_Credit,Inferred Credit Rank (Values) ,Y,Financial,2,O,,1,1184,1184
+Field_76,LINES OF CREDIT,Inferred lines of available credit (Numeric value 0 -10),Y,Financial,2,O,,1,1185,1185
+Field_77,AVAILABLE NEW CREDIT,Inferred availaible credit (Dollar Value in ranges),Y,Financial,2,O,,1,1186,1186
+Field_78,MEMBERSHIP CLUBS,"Indicator Field (Populated with ""X"" if present)",Y,General,3,O,,1,1187,1187
+Field_79,AMERICAN EXPRESS GOLD/PREMIUM,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1188,1188
+Field_80,AMERICAN EXPRESS REGULAR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1189,1189
+Field_81,DISCOVER GOLD/PREMIUM,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1190,1190
+Field_82,DISCOVER REGULAR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1191,1191
+Field_83,GASOLINE OR RETAIL CARD GOLD/PREMIUM,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1192,1192
+Field_84,GASOLINE OR RETAIL CARD REGULAR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1193,1193
+Field_85,MASTERCARD GOLD/PREMIUM,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1194,1194
+Field_86,MASTERCARD REGULAR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1195,1195
+Field_87,VISA GOLD/PREMIUM,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1196,1196
+Field_88,VISA REGULAR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1197,1197
+Field_89,BANK CARD HOLDER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1198,1198
+Field_90,GAS/DEPARTMENT/RETAIL CARD HOLDER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1199,1199
+Field_91,TRAVEL AND ENTERTAINMENT CARD HOLDER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1200,1200
+Field_92,CREDIT CARD HOLDER - UNKNOWN TYPE,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1201,1201
+Field_93,PREMIUM CARD HOLDER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1202,1202
+Field_94,UPSCALE (DEPARTMENT STORE) CARD HOLDER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1203,1203
+Field_95,CREDIT CARD USER,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1204,1204
+Field_96,CREDIT CARD - NEW ISSUE,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1205,1205
+Field_97,BANK CARD - PRESENCE IN HOUSEHOLD,"Indicator Field (Populated with ""X"" if present)",Y,Financial,2,O,,1,1206,1206
+Field_98,Ownership/Rent,Owner or Renter Indicator,Y,HH,1,O,,10,1207,1216
+Field_99,Number of years in residence,Years of family in household,Y,HH,2,O,,15,1217,1231
+Field_100,AIR CONDITIONING,Air Conditioning type - See Genearl Field Definitions,Y,Property,5,O,,21,1232,1252
+Field_101,Fuel,See Genearl Field Definitions,Y,Property,5,O,,16,1253,1268
+Field_102,SEWER,See Genearl Field Definitions,Y,Property,5,O,,10,1269,1278
+Field_103,WATER,See Genearl Field Definitions,Y,Property,5,O,,10,1279,1288
+Field_104,LOAN TO VALUE ,Loan to Value ratio of home (Value is based on assesed value),Y,Property,3,O,,3,1289,1291
+Field_105,Current age of mortgage,Years since mortgage started,Y,Property,3,O,,15,1292,1306
+Field_106,PURCHASE DATE  ,Date of home purchase (CCYYMMDD),Y,Property,3,O,,8,1307,1314
+Field_107,PURCHASE PRICE,Purchase price of home (Dollar amount),Y,Property,3,O,,11,1315,1325
+Field_108,1st MORTGAGE AMOUNT,First mortgage amount (Dollar Amount Range),Y,Property,3,O,,8,1326,1333
+Field_109,2ND MORTGAGE AMOUNT,Second mortgage amount (Dollar Amount Range),Y,Property,3,O,,8,1334,1341
+Field_110,1st MORTGAGE DATE,Date of first mortgage,Y,Property,3,O,,8,1342,1349
+Field_111,2ND RECENT MORTGAGE DATE,Date of second mortgage,Y,Property,3,O,,8,1350,1357
+Field_112,1ST MORTGAGE LOAN TYPE CODE,See Genearl Field Definitions,Y,Property,3,O,,30,1358,1387
+Field_113,2ND MORTGAGE LOAN TYPE CODE,See Genearl Field Definitions,Y,Property,3,O,,30,1388,1417
+Field_114,1ST MORTGAGE LOAN TYPE CODE,See Genearl Field Definitions,Y,Property,3,O,,30,1418,1447
+Field_115,2ND MORTGAGE LOAN TYPE CODE,See Genearl Field Definitions,Y,Property,3,O,,30,1448,1477
+Field_116,1ST LENDER NAME,Lender Name on Mortgage 1 - See Lender Descriptions Tab 5,Y,Property,3,O,,10,1478,1487
+Field_117,2ND RECENT LENDER NAME,Lender Name on Mortgage 2 - See Lender Descriptions Tab 5,Y,Property,3,O,,10,1488,1497
+Field_118,"AUTOMOTIVE, AUTO PARTS AND ACCESSORIES ","Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1498,1498
+Field_119,APPAREL - WOMEN'S,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1499,1499
+Field_120,APPAREL - WOMEN'S - PETITE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1500,1500
+Field_121,APPAREL - WOMEN'S - PLUS SIZES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1501,1501
+Field_122,YOUNG WOMEN'S APPAREL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1502,1502
+Field_123,APPAREL - MEN'S,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1503,1503
+Field_124,APPAREL - MEN'S - BIG AND TALL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1504,1504
+Field_125,YOUNG MEN'S APPAREL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1505,1505
+Field_126,APPAREL HILDREN'S,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1506,1506
+Field_127,HEALTH AND BEAUTY,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1507,1507
+Field_128,BEAUTY/COSMETICS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1508,1508
+Field_129,JEWELRY,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1509,1509
+Field_130,LUGGAGE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1510,1510
+Field_131,BOOKS AND MAGAZINES - MAGAZINES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1511,1511
+Field_132,BOOKS AND MUSIC - BOOKS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1512,1512
+Field_133,BOOKS AND MUSIC - BOOKS - AUDIO,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1513,1513
+Field_134,READING - GENERAL,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1514,1514
+Field_135,READING - RELIGIOUS / INSPIRATIONAL,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1515,1515
+Field_136,READING - SCIENCE FICTION,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1516,1516
+Field_137,READING - MAGAZINES,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1517,1517
+Field_138,READING - AUDIO BOOKS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1518,1518
+Field_139,READING - FINANCIAL NEWSLETTER SUBSCRIBERS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1519,1519
+Field_140,READING GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1520,1520
+Field_141,HISTORY / MILITARY,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1521,1521
+Field_142,CURRENT AFFAIRS / POLITICS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1522,1522
+Field_143,RELIGIOUS / INSPIRATIONAL,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1523,1523
+Field_144,SCIENCE / SPACE,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1524,1524
+Field_145,MAGAZINES,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1525,1525
+Field_146,HOME LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1526,1526
+Field_147,DIY LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1527,1527
+Field_148,SPORTY LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1528,1528
+Field_149,UPSCALE LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1529,1529
+Field_150,CULTURAL/ARTISTIC LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1530,1530
+Field_151,HIGHBROW,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1531,1531
+Field_152,HIGH-TECH LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1532,1532
+Field_153,COMMON LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1533,1533
+Field_154,PROFESSIONAL LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1534,1534
+Field_155,BROADER LIVING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1535,1535
+Field_156,ANTIQUES,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1536,1536
+Field_157,ART,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1537,1537
+Field_158,THEATER / PERFORMING ARTS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1538,1538
+Field_159,ARTS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1539,1539
+Field_160,MUSICAL INSTRUMENTS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,1540,1540
+Field_161,CHILDREN'S APPAREL - INFANTS AND TODDLERS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1541,1541
+Field_162,CHILDREN'S LEARNING AND ACTIVITY TOYS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1542,1542
+Field_163,CHILDREN'S PRODUCTS - GENERAL - BABY CARE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1543,1543
+Field_164,CHILDREN'S PRODUCTS - GENERAL - BACK-TO-SCHOOL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1544,1544
+Field_165,CHILDREN'S PRODUCTS - GENERAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1545,1545
+Field_166,CHILDREN'S INTERESTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1546,1546
+Field_167,COLLECTIBLES - GENERAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1547,1547
+Field_168,COLLECTIBLES - STAMPS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1548,1548
+Field_169,COLLECTIBLES - COINS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1549,1549
+Field_170,COLLECTIBLES - ARTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1550,1550
+Field_171,COLLECTIBLES - ANTIQUES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1551,1551
+Field_172,COLLECTOR - AVID,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1552,1552
+Field_173,COLLECTIBLES AND ANTIQUES GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1553,1553
+Field_174,COLLECTIBLES - SPORTS MEMORABILIA,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1554,1554
+Field_175,MILITARY MEMORABILIA/WEAPONRY,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1555,1555
+Field_176,"LIFESTYLES, INTERESTS AND PASSIONS COLLECTIBLES ","Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1556,1556
+Field_177,COOKING / FOOD GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1557,1557
+Field_178,FOODS - NATURAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1558,1558
+Field_179,FOOD - WINES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1559,1559
+Field_180,COOKING - GOURMET,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1560,1560
+Field_181,COOKING - GENERAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1561,1561
+Field_182,COMPUTING/HOME OFFICE - GENERAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1562,1562
+Field_183,DVDS/VIDEOS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1563,1563
+Field_184,ELECTRONICS AND COMPUTING - TV/VIDEO/MOVIE WATCHER,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1564,1564
+Field_185,"ELECTRONICS, COMPUTING AND HOME OFFICE ","Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1565,1565
+Field_186,HIGH END APPLIANCES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1566,1566
+Field_187,INTEND TO PURCHASE - HDTV/SATELLITE DISH,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1567,1567
+Field_188,MUSIC - HOME STEREO,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1568,1568
+Field_189,MUSIC PLAYER,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1569,1569
+Field_190,MUSIC COLLECTOR,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1570,1570
+Field_191,MUSIC - AVID LISTENER,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1571,1571
+Field_192,MOVIE COLLECTOR,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1572,1572
+Field_193,TV - CABLE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1573,1573
+Field_194,GAMES - VIDEO GAMES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1574,1574
+Field_195,TV - SATELLITE DISH,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1575,1575
+Field_196,COMPUTERS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1576,1576
+Field_197,GAMES - COMPUTER GAMES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1577,1577
+Field_198,CONSUMER ELECTRONICS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1578,1578
+Field_199,MOVIE / MUSIC GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1579,1579
+Field_200,ELECTRONICS / COMPUTERS GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1580,1580
+Field_201,TELECOMMUNICATIONS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1581,1581
+Field_202,TRAVEL GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1582,1582
+Field_203,TRAVEL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1583,1583
+Field_204,TRAVEL - DOMESTIC,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1584,1584
+Field_205,TRAVEL - INTERNATIONAL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1585,1585
+Field_206,TRAVEL - CRUISE VACATIONS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1586,1586
+Field_207,SPECTATOR SPORTS - AUTO / MOTORCYCLE RACING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1587,1587
+Field_208,SPECTATOR SPORTS - TV SPORTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1588,1588
+Field_209,SPECTATOR SPORTS - FOOTBALL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1589,1589
+Field_210,SPECTATOR SPORTS - BASEBALL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1590,1590
+Field_211,SPECTATOR SPORTS - BASKETBALL,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1591,1591
+Field_212,SPECTATOR SPORTS - HOCKEY,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1592,1592
+Field_213,SPECTATOR SPORTS - SOCCER,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1593,1593
+Field_214,TENNIS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1594,1594
+Field_215,GOLF,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1595,1595
+Field_216,SNOW SKIING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1596,1596
+Field_217,SCUBA DIVING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1597,1597
+Field_218,MOTORCYCLING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1598,1598
+Field_219,NASCAR,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1599,1599
+Field_220,BOATING / SAILING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1600,1600
+Field_221,SPORTS AND LEISURE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1601,1601
+Field_222,SPORTS GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1602,1602
+Field_223,ONLINE PURCHASING INDICATOR,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1603,1603
+Field_224,VALUE-PRICED GENERAL MERCHANDISE,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1604,1604
+Field_225,SEWING / KNITTING / NEEDLEWORK,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1605,1605
+Field_226,WOODWORKING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1606,1606
+Field_227,PHOTOGRAPHY,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1607,1607
+Field_228,AVIATION,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1608,1608
+Field_229,HOUSE PLANTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1609,1609
+Field_230,CRAFTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1610,1610
+Field_231,HOME AND GARDEN,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1611,1611
+Field_232,GARDENING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1612,1612
+Field_233,GARDENING2,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1613,1613
+Field_234,HOME IMPROVEMENT GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1614,1614
+Field_235,"LIFESTYLES, INTERESTS AND PASSIONS RAFTS/HOBBIES ","Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1615,1615
+Field_236,PHOTOGRAPHY AND VIDEO EQUIPMENT,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1616,1616
+Field_237,HOME FURNISHINGS / DECORATING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1617,1617
+Field_238,HOME IMPROVEMENT,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1618,1618
+Field_239,INTEND TO PURCHASE - HOME IMPROVEMENT,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1619,1619
+Field_240,GAMING,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1620,1620
+Field_241,GAMES - BOARD GAMES / PUZZLES,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1621,1621
+Field_242,GAMING - CASINO,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1622,1622
+Field_243,SWEEPSTAKES / CONTESTS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1623,1623
+Field_244,PETS,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1624,1624
+Field_245,EQUESTRIAN,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1625,1625
+Field_246,OTHER PET OWNER,"Indicator Field (Populated with ""X"" if present)",Y,Purchasing,5,O,,1,1626,1626
+Field_247,Donor_Type1,See Genearl Field Definitions,Y,Financial,5,O,,13,1627,1639
+Field_248,Donor_Type2,See Genearl Field Definitions,Y,Financial,5,O,,13,1640,1652
+Field_249,Donor_Type3,See Genearl Field Definitions,Y,Financial,5,O,,9,1653,1661
+Field_250,Donor_Type4,See Genearl Field Definitions,Y,Financial,5,O,,9,1662,1670
+Field_251,Donor_Type5,See Genearl Field Definitions,Y,Financial,5,O,,9,1671,1679
+Field_252,DONATION/CONTRIBUTION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1680,1680
+Field_253,MAIL ORDER DONOR,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1681,1681
+Field_254,CHARITABLE  DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1682,1682
+Field_255,ANIMAL WELFARE  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1683,1683
+Field_256,ARTS OR CULTURAL CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1684,1684
+Field_257,CHILDREN'S  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1685,1685
+Field_258,ENVIRONMENT OR WILDLIFE  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1686,1686
+Field_259,ENVIRONMENTAL ISSUES  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1687,1687
+Field_260,HEALTH  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1688,1688
+Field_261,INTERNATIONAL AID  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1689,1689
+Field_262,POLITICAL  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1690,1690
+Field_263,POLITICAL - CONSERVATIVE  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1691,1691
+Field_264,POLITICAL - LIBERAL  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1692,1692
+Field_265,RELIGIOUS  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1693,1693
+Field_266,VETERAN'S  CHARITABLE DONATION,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1694,1694
+Field_267,OTHER TYPES OF CHARITABLE DONATIONS,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1695,1695
+Field_268,COMMUNITY / CHARITIES,"Indicator Field (Populated with ""X"" if present)",Y,Financial,5,O,,1,1696,1696
+Field_269,ETHNIC,See Ethnic Descriptions Sheet,Y,HH,2,O,,26,1697,1722
+Field_270,ETHNIC-CONFIDENCE,See Ethnic Descriptions Sheet,Y,HH,2,O,,1,1723,1723
+Field_271,Ethnic Group,See Ethnic Descriptions Sheet,Y,HH,2,O,,34,1724,1757
+Field_272,LANGUAGE,See Ethnic Descriptions Sheet,Y,HH,2,O,,45,1758,1802
+Field_273,RELIGION,See Ethnic Descriptions Sheet,Y,HH,3,O,,16,1803,1818
+Field_274,HISPANIC COUNTRY OF ORIGIN,See Ethnic Descriptions Sheet,Y,HH,3,O,,18,1819,1836
+Field_275,ASSIMILATION,See Ethnic Descriptions Sheet,Y,HH,2,O,,36,1837,1872
+Field_276,EDUCATION,See Ethnic Descriptions Sheet,Y,HH,2,O,,43,1873,1915
+Field_277,EDUCATION ONLINE,See Ethnic Descriptions Sheet,Y,HH,2,O,,1,1916,1916
+Field_278,OCCUPATION,See Occupation Sheet,Y,HH,2,O,,3,1917,1919
+Field_279,BUSINESS OWNER,"Indicator Field (Populated with ""X"" if present)",Y,General,3,O,,27,1920,1946
+Field_280,Cellular Phone Number,Wireless Cellular Phone Number,Y,HH,3,O,May have restrictions,16,1947,1962
+Field_281,Cellular Carrier,Wireless Cellular Carrier,Y,HH,3,O,,50,1963,2012
+Field_282,Auto_Year1,Automobile Year of Vehicle 1,S,HH,2,O,Probably set this to scan all of the auto fields,4,2013,2016
+Field_283,Auto_Make1,Automobile Make of Vehicle 1,S,HH,2,O,,24,2017,2040
+Field_284,Auto_Model1,Automobile Model of Vehicle 1,S,HH,2,O,,26,2041,2066
+Field_285,Auto_Year2,Automobile Year of Vehicle 2,S,HH,2,O,,4,2067,2070
+Field_286,Auto_Make2,Automobile Make of Vehicle 2,S,HH,2,O,,19,2071,2089
+Field_287,Auto_Model2,Automobile Model of Vehicle 2,S,HH,2,O,,25,2090,2114
+Field_288,Auto_Year3,Automobile Year of Vehicle 3,S,HH,2,O,,4,2115,2118
+Field_289,Auto_Make3,Automobile Make of Vehicle 3,S,HH,2,O,,19,2119,2137
+Field_290,Auto_Model3,Automobile Model of Vehicle 3,S,HH,2,O,,25,2138,2162
+Field_291,Auto_Year4,Automobile Year of Vehicle 4,S,HH,2,O,,4,2163,2166
+Field_292,Auto_Make4,Automobile Make of Vehicle 4,S,HH,2,O,,18,2167,2184
+Field_293,Auto_Model4,Automobile Model of Vehicle 4,S,HH,2,O,,22,2185,2206
+Field_294,Auto_Year5,Automobile Year of Vehicle 5,S,HH,2,O,,4,2207,2210
+Field_295,Auto_Make5,Automobile Make of Vehicle 5,S,HH,2,O,,15,2211,2225
+Field_296,Auto_Model5,Automobile Model of Vehicle 5,S,HH,2,O,,19,2226,2244
+Field_297,Moto_Year,Motorcycle Year,Y,HH,3,O,,4,2245,2248
+Field_298,Moto_Make,Motorcycle Make,Y,HH,3,O,,26,2249,2274
+Field_299,Moto_Model,Motorcycle Model,Y,HH,3,O,,10,2275,2284
+Field_300,MH_Year,Mobile Home Year,Y,HH,3,O,,4,2285,2288
+Field_301,MH_Class,Mobile Home Class,Y,HH,3,O,,13,2289,2301
+Field_302,PWC_Year,Personal Watercraft Year,Y,HH,3,O,,1,2302,2302
+Field_303,PWC_Make,Personal Watercraft Make,Y,HH,3,O,,1,2303,2303
+Field_304,PWC_Model,Personal Watercraft Model,Y,HH,3,O,,1,2304,2304
+Field_305,Model_Xdate,Modelled Insurance Expiration Date,Y,HH,3,O,,2,2305,2306
+Field_306,Boat_Man,See Watercraft Sheet,Y,HH,3,O,,60,2307,2366
+Field_307,Boat_Year,See Watercraft Sheet,Y,HH,3,O,,4,2367,2370
+Field_308,STD_Use,See Watercraft Sheet,Y,HH,3,O,,1,2371,2371
+Field_309,Hull_Shape,See Watercraft Sheet,Y,HH,3,O,,2,2372,2373
+Field_310,Hull_Mat,See Watercraft Sheet,Y,HH,3,O,,1,2374,2374
+Field_311,Prop_Type,See Watercraft Sheet,Y,HH,3,O,,1,2375,2375
+Field_312,Boat Fuel,See Watercraft Sheet,Y,HH,3,O,,1,2376,2376
+Field_313,Boat_Type,See Watercraft Sheet,Y,HH,3,O,,1,2377,2377
+Field_314,Size_Class,See Watercraft Sheet,Y,HH,3,O,,1,2378,2378
+Field_315,Comp_Own,Computer owned and in the Household,Y,General,4,O,,1,2379,2379
+Field_316,PayDayApp,Has applied for a Pay Day Loan in the last 180 days,Y,Financial,1,O,,1,2380,2380
+Field_317,Home Based Business,An Incorporated Business located at the Home Address,Y,General,2,O,,1,2381,2381
+Field_318,CAREER IMPROVEMENT,See General Field Definitions,Y,General,3,O,,1,2382,2382
+Field_319,CAREER,See General Field Definitions,Y,General,3,O,,1,2383,2383
+Field_320,College Student,College Student present within the household,Y,General,3,O,,1,2384,2384
+Field_321,Debt Cons,Has applied for a Debt Consolidation in the last 180 days,Y,General,3,O,,1,2385,2385
+Field_322,Gamblers,Land Based or Online Gambler present within the household,Y,Interests,5,O,,1,2386,2386
+Field_323,Health Enthusiast,"Health Enthusiast (Active Gym Member, Heathy Eater)",Y,Interests,5,O,,1,2387,2387
+Field_324,EXERCISE - RUNNING / JOGGING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2388,2388
+Field_325,EXERCISE - WALKING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2389,2389
+Field_326,EXERCISE - AEROBIC,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2390,2390
+Field_327,DIETING / WEIGHT LOSS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2391,2391
+Field_328,HEALTH/MEDICAL,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2392,2392
+Field_329,SELF IMPROVEMENT,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2393,2393
+Field_330,INVESTMENTS - PERSONAL,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2394,2394
+Field_331,INVESTMENTS - REAL ESTATE,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2395,2395
+Field_332,INVESTMENTS - STOCKS / BONDS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2396,2396
+Field_333,INVESTING / FINANCE GROUPING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2397,2397
+Field_334,INVESTMENTS - FOREIGN,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2398,2398
+Field_335,INVESTMENT - ESTIMATED RESIDENTIAL PROPERTIES OWNED,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,3,2399,2401
+Field_336,MONEY SEEKERS,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2402,2402
+Field_337,BizOp,Business Opportunity Seeker,Y,Interests,5,O,,1,2403,2403
+Field_338,Outdoorsmen,Hunter/Fisher/Camping in Household,Y,Interests,5,O,,1,2404,2404
+Field_339,HUNTING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2405,2405
+Field_340,FISHING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2406,2406
+Field_341,CAMPING / HIKING,"Indicator Field (Populated with ""X"" if present)",Y,Interests,5,O,,1,2407,2407
+Field_342,Mag Subscriber,Currently has a Magazine Subscription,Y,Interests,5,O,,1,2408,2408
+Field_343,DIY_Home,Do-It Yourself Home - Household that does general home maintence rather than hiring a contractor,Y,Interests,5,O,,1,2409,2409
+Field_344,DIY_Auto,Do-It Yourself Auto - Handles general maintenance of vehicle rather than taking to a mechanic,Y,Interests,5,O,,1,2410,2410
+Field_345,Ailment,Chronic pain sufferer,Y,Interests,5,O,,1,2411,2411
+Field_346,Presence_of_Children,Children under 18 years of age present in the household,Y,HH,1,O,,1,2412,2412
+Field_347,SINGLE PARENT,"Indicator Field (Populated with ""X"" if present)",Y,HH,3,O,,1,2413,2413
+Field_348,Age 00 - 02 Male,Number of children present in the household within age range,Y,HH,2,O,,1,2414,2414
+Field_349,Age 00 - 02 Female,Number of children present in the household within age range,Y,HH,2,O,,1,2415,2415
+Field_350,Age 00 - 02 Unknown Gender,Number of children present in the household within age range,Y,HH,2,O,,1,2416,2416
+Field_351,Age 03 - 05 Male,Number of children present in the household within age range,Y,HH,2,O,,1,2417,2417
+Field_352,Age 03 - 05 Female,Number of children present in the household within age range,Y,HH,2,O,,1,2418,2418
+Field_353,Age 03 - 05 Unknown Gender,Number of children present in the household within age range,Y,HH,2,O,,1,2419,2419
+Field_354,Age 06 - 10 Male,Number of children present in the household within age range,Y,HH,2,O,,1,2420,2420
+Field_355,Age 06 - 10 Female,Number of children present in the household within age range,Y,HH,2,O,,1,2421,2421
+Field_356,Age 06 - 10 Unknown Gender,Number of children present in the household within age range,Y,HH,2,O,,1,2422,2422
+Field_357,Age 11 - 15 Male,Number of children present in the household within age range,Y,HH,2,O,,1,2423,2423
+Field_358,Age 11 - 15 Female,Number of children present in the household within age range,Y,HH,2,O,,1,2424,2424
+Field_359,Age 11 - 15 Unknown Gender,Number of children present in the household within age range,Y,HH,2,O,,1,2425,2425
+Field_360,Age 16 - 17 Male,Number of children present in the household within age range,Y,HH,2,O,,1,2426,2426
+Field_361,Age 16 - 17 Female,Number of children present in the household within age range,Y,HH,2,O,,1,2427,2427
+Field_362,Age 16 - 17 Unknown Gender,Number of children present in the household within age range,Y,HH,2,O,,1,2428,2428
+Field_363,GRANDCHILDREN,Grandchild present in household,Y,HH,5,O,,1,2429,2429
+Field_364,Racing_Enthusiast,"Has displayed interest in a form of racing (F1, NHRA, IHRA, NASCAR, etc…)",Y,Interests,5,O,,1,2430,2430
+Field_365,Tobacco_User,Smoker in the household,Y,Interests,5,O,,1,2431,2431
+Field_366,Alcohol_User,Alcohol Drinker in the household,Y,Interests,5,O,,1,2432,2432
+Field_367,Vision_Impaired,Glasses/Contact user in the household,Y,Interests,5,O,,1,2433,2433
+Field_368,Insurance_Purchaser_Flag,"Insurance policy holder (Does not include Home or Auto insurance) (This is a modeled field, using socio - economic status, Income/Net-worth, and Census Block ID) ",Y,Financial,5,O,,1,2434,2434
+Field_369,Vehicle_Maintenance,Keeps regular maintenance of vehicle,Y,Interests,5,O,,1,2435,2435
+Field_370,Online_Ticket_Purchaser,"Has purchased tickets online within the last 18 months (Concerts, sporting Events, etc…)",Y,Interests,5,O,,1,2436,2436
+Field_371,Movie_Ticket_Purchaser,Has Purchased Movie tickets online within the last 18 months,Y,Interests,5,O,,1,2437,2437
+Field_372,Technology_Rank,Rank of 1 - 10 on how up to date a household is with technology ,Y,Interests,5,O,,3,2438,2440
+Field_373,HH_Exp_Total,Total Houhold Expenditures - Modeled Field,Y,Interests,5,O,,6,2441,2446
+Field_374,HH_Exp_Utilities,Household Expenditures for Utilities,Y,Interests,5,O,,5,2447,2451
+Field_375,HH_Exp_Food,Household Expenditures for Food,Y,Interests,5,O,,5,2452,2456
+Field_376,HH_Exp_Alcohol,Household Expenditures for Alcohol,Y,Interests,5,O,,5,2457,2461
+Field_377,HH_Exp_Apparel,Household Expenditures for Apparel,Y,Interests,5,O,,5,2462,2466
+Field_378,HH_Exp_Transportation,Household Expenditures for transportation,Y,Interests,5,O,,6,2467,2472
+Field_379,HH_Exp_Health_Care,Household Expenditures for Health Care,Y,Interests,5,O,,5,2473,2477
+Field_380,HH_Exp_Retail,Household Expenditures for Retail,Y,Interests,5,O,,5,2478,2482
+Field_381,HH_Exp_Non_Retail,Household Expenditures for Non Retail,Y,Interests,5,O,,5,2483,2487
+Field_382,HH_Exp_Gifts,Household Expenditures for Gifts,Y,Interests,5,O,,5,2488,2492
+Field_383,HH_Exp_Misc,Household Expenditures for Misc,Y,Interests,5,O,,6,2493,2498

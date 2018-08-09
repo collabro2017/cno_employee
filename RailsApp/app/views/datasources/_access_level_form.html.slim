@@ -1,0 +1,5 @@
+= form_for(@datasource) do |f|
+  div.form-element
+    = label_tag :access_level, 'Access Level'
+    = collection_select(:datasource, :access_level, AccessLevel.all, :access_level, :access_level_for_display)
+    = render 'restricted_companies_form', {datasource: @datasource, unrestricted_companies: @datasource.companies.order(:name)}

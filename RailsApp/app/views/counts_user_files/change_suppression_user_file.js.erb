@@ -1,0 +1,15 @@
+<% if @counts_user_file.present? %>
+  <% if @counts_user_file.count.jobs.any? %>
+    $('.completed-result>.dirty').removeClass('hidden')
+  <% end %>
+
+  <% if @user_file.present? %>
+    $("#suppress-tab tr[data-file-id=<%= @user_file.id %>]")
+      .updateData("counts-user-file-id", <%= @counts_user_file.id %>)
+      .find('select')
+        .updateData("previous", <%= @counts_user_file.concrete_field_id %>)
+  <% end %>
+
+  Paloma.locals.counts.updateSuppressionBadge('files', <%= @counts_user_file.count.user_files.count %>)
+<% end %>
+

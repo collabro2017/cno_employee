@@ -1,0 +1,23 @@
+- allowed = order.allowed_for_user?(current_user.id)
+tr.dash-tr
+  - if allowed
+    td
+      = link_to "PO #{order.id}", order_path(order)
+    td.dash-td-center
+      = order.ftp_url? ? link_to(fa_icon('download'), order.ftp_url) : ''
+    td.dash-td-center
+      = order.s3_url? ? link_to(fa_icon('cloud-download'), order.s3_url) : ''
+
+  - else
+    td
+      | PO #{order.id}
+      = fa_icon('warning', title: 'Access to datasource is restricted', class: 'restricted-count-icon') 
+    td
+    td
+
+  - job = order.jobs.last if order.jobs.any?
+  td.dash-td-center
+    - if job.present?
+      i class="order-status #{job.status}" title="#{job.status}"
+  td.dash-td-right
+    = link_to fa_icon('pencil'), edit_order_path(order) if allowed

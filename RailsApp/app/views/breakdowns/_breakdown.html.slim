@@ -1,0 +1,12 @@
+= div_for(breakdown, class: "deletable", data: {cf_id: "#{breakdown.concrete_field.id}" }) do
+  div.row-fluid
+    div.span12
+      div class="breakdown-header dropped-item-header pad"
+        | #{breakdown.caption}
+
+        a [
+            class="select-close pull-right"
+            href="#"
+            title="Remove"
+          ]
+          = fa_icon 'times'

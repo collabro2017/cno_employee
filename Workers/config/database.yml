@@ -1,0 +1,53 @@
+# Global common config
+common: &common
+  adapter: postgres
+  encoding: unicode
+  pool: 1 
+
+# Common Central Datastore DB config
+central_datastore_db_common: &central_datastore_db_common
+  username: <%= ENV['APP_DB_USER'] %>
+  schema_search_path: datafiles
+
+# Common Node Datastore DB config
+node_datastore_db_common: &node_datastore_db_common
+  username: <%= ENV['APP_DB_USER'] %>
+  schema_search_path: datafiles
+
+# By environment:
+development:
+  central_datastore:
+    <<: *common
+    <<: *central_datastore_db_common
+    host: localhost
+    password: <%= ENV['APP_DB_PASS'] %>
+    database: central_datastore_development
+
+  node_datastore:
+    <<: *common
+    <<: *node_datastore_db_common
+    host: localhost
+    password: <%= ENV['APP_DB_PASS'] %>
+    database: node_datastore_development
+
+test:
+  central_datastore:
+    <<: *common
+    <<: *central_datastore_db_common
+    database: central_datastore_test
+
+  node_datastore:
+    <<: *common
+    <<: *node_datastore_db_common
+    database: node_datastore_test
+
+production:
+  central_datastore:
+    <<: *common
+    <<: *central_datastore_db_common
+    database: central_datastore
+
+  node_datastore:
+    <<: *common
+    <<: *node_datastore_db_common
+    database: node_datastore

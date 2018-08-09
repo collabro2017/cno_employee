@@ -1,0 +1,6 @@
+div.binary-select-content
+  = label_tag nil, nil, class: "select-option", title: "#{select.caption} = #{select.binary_on_value}"
+    = tag :input, class: 'checkbox', type: 'checkbox', value: select.binary_on_value, checked: (select.saved_binary_value === select.binary_on_value)
+    | &nbsp;
+    span.select-option-text
+      | #{select.caption} = #{select.binary_on_value}

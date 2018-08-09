@@ -1,0 +1,3 @@
+= yield
+- if form.object.present? && form.object.errors[field].present?
+  = set_popover_error_message(form, field)

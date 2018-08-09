@@ -1,0 +1,1 @@
+$('#<%= @concrete_field.id %>-select-options-tab').html("<%= j(render partial: 'select_options/select_options_group', object: @concrete_field.select_options, locals: {group_id: @concrete_field.id, checked_ones: @values}) %>")

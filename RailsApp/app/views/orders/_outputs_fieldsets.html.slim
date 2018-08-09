@@ -1,0 +1,4 @@
+= fields_for @order do |f|
+  = f.fields_for(:outputs) do |output_fields|
+    = render 'output_fields', f: output_fields
+  = link_to_add_fields "Add", f, :outputs, true

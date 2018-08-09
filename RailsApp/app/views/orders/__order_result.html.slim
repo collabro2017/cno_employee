@@ -1,0 +1,34 @@
+div class="order-content pad"
+  - if @job.active?
+    div
+      | #{@job.status.to_s.titleize}&nbsp;
+      = fa_icon "spinner spin"
+      / | &nbsp;#{@job.total_time}
+  - elsif @job.status == :pending
+    div
+      = fa_icon "warning"
+      | Order job failed upon enqueuing it
+  - else
+    div
+      | #{@job.status.to_s.titleize} after #{ @job.total_time }
+
+  div#retry-order-polling class='hidden'
+    | Check job status&nbsp;
+    = link_to '#', id: 'retry-order-polling-link'
+      = fa_icon "refresh", class: "cursor-pointer"
+
+- if @job.status == :completed
+  div class="order-header"
+    | Links
+  div class="order-content pad"
+    | Click&nbsp;
+    - if @job.order && @job.order.s3_url
+      a href="#{@job.order.s3_url}"
+        | here
+    | &nbsp;to download directly.
+    br
+    | Click&nbsp;
+    - if @job.order && @job.order.s3_url
+      a href="#{@job.order.ftp_url}"
+        | here
+    | &nbsp;to download via FTP.

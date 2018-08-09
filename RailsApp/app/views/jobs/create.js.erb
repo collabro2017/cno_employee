@@ -1,0 +1,16 @@
+jobParams = {
+  is_active: <%= @job.active? %>,
+  status: '<%= @job.status %>',
+  job_id: <%= @job.id %>
+}
+
+locals = Paloma.locals
+locals.counts.updateJobStatus(jobParams)
+locals.jobs.pollActiveJob(jobParams, locals.counts)
+
+<% if @job.status == 'created' %>
+  locals.alerts.setAlert(
+    'header-wrapper',
+    'Count job failed upon enqueuing it', 'error'
+  )
+<% end %>

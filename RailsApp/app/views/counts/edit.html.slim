@@ -1,0 +1,42 @@
+- provide(:title, 'Edit Count')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div.span7
+        = div_for(@count) do
+
+          div#count-title
+            h3
+              = link_to new_clone_count_path(@count.id)
+                = fa_icon('code-fork', title: 'Clone', class: 'code-fork')
+              = render 'count_name_input'
+      div.span3
+        = render partial: "run_button_area", count: @count
+      div.span2
+        div class="order-action pull-right" id="order-link"
+          | Ready to place an order? Click&nbsp;
+          = link_to "here!", orders_path(order: {count: @count, user: current_user}), method: :post, remote: true
+
+div#concrete-fields-pane class="fixed-pad-top fixed-pad-left"
+  = link_to nil, id: 'expand-collapse-pane-link', class: 'pull-right'
+    = fa_icon 'angle-double-right', title: 'Expand Pane', class: 'expand-collapse-icon'
+  = render partial: "concrete_fields/filter_section"
+  div.row-fluid
+    div.span12
+      = async_div_for("/concrete_fields", params: {concrete_field: {count: @count.id, display_type: 'select'}})
+
+div#content class="fixed-pad-top"
+  div#count-workspace class="row-fluid"
+    div.span3
+      div#concrete-fields-pane-ref
+    div.span9
+      div#moving-right-pane class="fixed-pad-right"
+        div.row-fluid
+          div.span12
+            - clone_job = @count.clone_job
+            - if clone_job.present? && (clone_job.active? || clone_job.status == :failed || clone_job.status == :created)
+              div#dropzone-lock data-status="#{clone_job.status}" data-id="#{clone_job.id}"
+                = async_div_for("#{count_path(@count.id)}/__clone_status", params: {}, spin: true)
+            - else
+              = render partial: 'count_edit_content_tab'

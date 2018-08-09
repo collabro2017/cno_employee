@@ -1,0 +1,32 @@
+- provide(:title, 'All files')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+        div#count-title
+          h3
+            | All files&nbsp;
+
+div#content class="pad"
+  div class="row-fluid"
+    div id='files-manager' class="span12 pad"
+      div class='row-fluid upload-file-header'
+        div class='span1'
+          span class="btn btn-success fileinput-button"
+            = fa_icon 'upload'
+            input [
+              name="file"
+              type="file"
+              title="Click to upload a new file"
+              class="file-upload"
+              data-url="#{current_user_s3_direct_post.url}"
+              data-host="#{current_user_s3_direct_post.url.host}"
+              data-form-data="#{current_user_s3_direct_post.fields.to_json}"
+            ]
+        div class='span11 progress-bar hidden'
+          div.progress
+            div.bar
+
+      div.user-files-list
+        = async_div_for("/user_files/__user_files", params: {}, spin: false)
+

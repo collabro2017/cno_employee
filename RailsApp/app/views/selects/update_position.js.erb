@@ -1,0 +1,9 @@
+// Show/hide link icons
+<% @select.count.selects.each do |s| %>
+  <% if s.can_link? %>
+    $('.can-link[data-select-id="<%= s.id %>"]').removeClass('hidden');
+  <% else %>
+    $('.can-link[data-select-id="<%= s.id %>"]').addClass('hidden');
+  <% end %>
+<% end %>
+

@@ -1,0 +1,39 @@
+- provide(:title, 'Show Count')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div.span7
+        = div_for(@count) do
+          div#count-title
+            h3
+              = link_to new_clone_count_path(@count.id)
+                = fa_icon('code-fork', title: 'Clone', class: 'code-fork')
+              span class="editable-title"
+                span
+                  | #{@count.name}
+              | &nbsp;
+              - if @count.locked?
+                = fa_icon('lock', title: 'Locked', class: 'lock')
+              small
+                i
+                  | using&nbsp;
+                b
+                  | #{@count.datasource.caption}&nbsp;
+                span.datasource-version
+                  | #{@count.datasource.version}
+                - if @count.outdated?
+                  span = fa_icon('clock-o', title: 'Datasource is outdated', class: 'outdated-datasource')
+                div.datasource-icon
+                  - image_location = image_url(@count.datasource.image_location)
+                  = image_tag(image_location, size: "40x40")
+      div.span5
+        div.pull-right
+          - if @order
+            | To see an order generated for this count&nbsp;
+            = link_to 'click here', @order
+
+div#content.pad
+  div.row-fluid
+    div class='span6 offset3 pad'
+      = render partial: 'count_summary', locals: {count: @count}

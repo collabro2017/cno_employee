@@ -1,0 +1,11 @@
+- if select.exclude
+  a.exclude-switch title="Select"
+    div.exclusion-on
+      = fa_icon 'toggle-on'
+    div.exclusion-on-text
+      | EXCLUDING
+
+- else
+  a.exclude-switch title="Exclude"
+    div.exclusion-off
+      = fa_icon 'toggle-off'

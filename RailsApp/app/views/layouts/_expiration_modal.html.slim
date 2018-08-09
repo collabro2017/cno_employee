@@ -1,0 +1,9 @@
+div id="expiration-modal" class="modal hide fade align-center" tabindex="-1" role="dialog" aria-labelledby="expiration-modal-label" aria-hidden="true"
+  div class="modal-body"
+    div#expiration-message 
+      |You have been inactive for&nbsp;
+      = session_minutes
+      | &nbsp;minutes, your session is going to expire in:
+    div#expiration-timer
+    div#expiration-confirm
+      = button_to 'Keep me signed in', '', remote: true, class: 'btn btn-info fixed-margin-top', id: 'expiration-confirm-btn'

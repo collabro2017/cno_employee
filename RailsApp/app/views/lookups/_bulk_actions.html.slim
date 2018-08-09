@@ -1,0 +1,47 @@
+span.pull-right
+  div class="dropdown active"
+    a class="dropdown-toggle lookup-links" toggle="dropdown"
+      span
+        | none
+    ul class="dropdown-menu right"
+      li
+        a [
+          data-action='remove'
+          data-all-pages='true'
+          class='bulk-action lookup-links inner'
+        ]
+          | All pages
+      li
+        a [
+          data-action='remove'
+          data-all-pages='false'
+          class='bulk-action lookup-links inner'
+        ]
+          | Current page
+
+span.pull-right 
+  | &nbsp;or&nbsp;
+
+span.pull-right
+  div class="dropdown active"
+    a class="dropdown-toggle lookup-links" toggle="dropdown"
+      span
+        | all
+    ul class="dropdown-menu right"
+      li
+        a [
+          data-action='add'
+          data-all-pages='true'
+          class='bulk-action lookup-links inner'
+        ]
+          | All pages
+      li
+        a [
+          data-action='add'
+          data-all-pages='false'
+          class='bulk-action lookup-links inner'
+        ]
+          | Current page
+span.pull-right
+  | Check&nbsp;
+

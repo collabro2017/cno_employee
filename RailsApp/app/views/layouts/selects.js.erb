@@ -1,0 +1,4 @@
+<% if @select.count.jobs.any? %>
+  $('.completed-result>.dirty').removeClass('hidden')
+<% end %>
+<%= yield %>

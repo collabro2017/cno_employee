@@ -1,0 +1,40 @@
+- cf_present = sort.concrete_field.present?
+- type = 'numeric'
+- type = 'alpha' if cf_present && sort.concrete_field.db_data_type != 'integer'
+- caption = cf_present ? sort.concrete_field.caption : 'Distance'
+
+- if sort.descending?
+    div class="sort-header dropped-item-header pad descending"
+      div [
+          class="order-sort pull-left"
+          title="Descending"
+        ]
+        = fa_icon "sort-#{type}-asc order-sort-off"
+        | &nbsp;
+        = fa_icon 'toggle-on'
+        | &nbsp;
+        = fa_icon "sort-#{type}-desc order-sort-on"
+      | #{caption}
+      a [
+          class="select-close pull-right"
+          title="Remove"
+        ]
+        = fa_icon 'times'
+
+- else
+    div class="sort-header dropped-item-header pad"
+      div [
+          class="order-sort pull-left"
+          title="Ascending"
+        ]
+        = fa_icon "sort-#{type}-asc order-sort-on"
+        | &nbsp;
+        = fa_icon 'toggle-on flip-horizontal'
+        | &nbsp;
+        = fa_icon "sort-#{type}-desc order-sort-off"
+      | #{caption}
+      a [
+          class="select-close pull-right"
+          title="Remove"
+        ]
+        = fa_icon 'times'

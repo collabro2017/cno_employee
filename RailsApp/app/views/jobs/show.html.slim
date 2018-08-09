@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Type:
+  = @job.type
+p
+  strong Count:
+  = @job.count
+p
+  strong Count  result:
+  = @job.count__result
+p
+  strong Status:
+  = @job.status
+p
+  strong Sql:
+  = @job.sql
+
+= link_to 'Edit', edit_job_path(@job)
+'|
+= link_to 'Back', jobs_path

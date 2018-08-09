@@ -1,0 +1,5 @@
+SELECT "datafiles"."<%= node_field_table_name %>"."id"
+FROM "datafiles"."<%= node_field_table_name %>"
+INNER JOIN "process"."<%= node_selected_value_ids_table_name %>"
+ON "datafiles"."<%= node_field_table_name %>"."value_id" = "process"."<%= node_selected_value_ids_table_name %>"."id"
+ORDER BY "datafiles"."<%= node_field_table_name %>"."id"

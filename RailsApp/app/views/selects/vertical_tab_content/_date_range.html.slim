@@ -1,0 +1,14 @@
+= content_tag_for(:div, select, :date_range, class: "tab-pane") do
+  div.row-fluid
+    div.span6
+      div#select-date-text-fields data-min=select.valid_min.to_date data-max=select.valid_max.to_date data-range=year_range(select)
+        div#date-fields
+          | From&nbsp;
+          = text_field "from", select.id, value: select.from.to_date, maxlength: 10, class: "date-input"
+          | &nbsp;to&nbsp;
+          = text_field "to", select.id, value: select.to.to_date, maxlength: 10, class: "date-input"
+        
+    div.span6
+      div#select-date-buttons
+        = button_tag "Save", {id: "save_date", class: "btn btn-default btn-date pull-left"}
+        = button_tag "Reset", {id: "reset_date", class: "btn btn-default btn-date pull-left"}

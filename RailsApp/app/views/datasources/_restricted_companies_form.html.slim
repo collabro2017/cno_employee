@@ -1,0 +1,21 @@
+- klass = datasource.access_level == 'restricted' ? '' : 'hidden'
+
+div#restricted-companies-form class="#{klass}"
+  = label_tag :restricted_companies, 'Companies'
+  = text_field_tag :restricted_companies, nil, {autocomplete: 'off', placeholder: 'Type a company name'}
+  
+  - if unrestricted_companies.any?
+    div#allowed-companies
+      h4 Companies with access:
+      - unrestricted_companies.each do |company|
+        div.allowed-company
+          div.row-fluid
+            div.span9
+              = "#{company.name.capitalize}"
+            div.span3
+              |&nbsp;
+              - drc = DatasourceRestrictedCompany.where(company: company, datasource: datasource).first
+              = link_to datasource_restricted_company_path(drc, datasource_restricted_company: {datasource_id: datasource.id} ), method: :delete, remote: true
+                = fa_icon 'times', title: 'Delete', class: 'remove-restricted-company-icon'
+    div#remove-all-companies
+      = link_to 'Delete all', destroy_all_by_datasource_datasource_restricted_companies_path(datasource_restricted_company: {datasource_id: datasource.id}), method: :delete, remote: true 

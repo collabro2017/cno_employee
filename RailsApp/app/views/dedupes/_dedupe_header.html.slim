@@ -1,0 +1,15 @@
+div class="dedupe-header dropped-item-header pad"
+  div class="row-fluid"
+    div.span2
+      = dedupe_switch(dedupe)
+      
+    div class="span8"
+      | #{dedupe.caption}
+
+    div.span2
+      a [
+          class="select-close pull-right"
+          href="#"
+          title="Remove"
+        ]
+        = fa_icon 'times'

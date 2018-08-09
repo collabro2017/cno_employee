@@ -1,0 +1,27 @@
+- provide(:title, 'New Company')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div#count-title
+        h3
+          | Create a new company
+                
+div#content class="pad"
+  div.row-fluid
+    div.span12
+      div.row-fluid
+        div.span4
+        div.span4
+          div class='company-new-form'
+            = form_for(@company) do |f|
+              div.form-element
+                = f.label :name, 'Name', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :name} do
+                  = f.text_field :name, class: 'form'
+              div.form-element
+                = f.label :code, 'Code', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :code} do
+                  = f.text_field :code, class: 'form'
+              div.form-element
+                = f.submit 'Create', class: 'btn btn-primary'

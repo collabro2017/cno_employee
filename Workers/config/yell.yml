@@ -1,0 +1,20 @@
+development:
+  :adapters:
+    - :datefile:
+        :filename: 'log/development.log'
+    - :stdout:
+        :level: 'gte.debug'
+
+production:
+  :adapters:
+    - :datefile:
+        :level: 'gte.warn'
+        :filename: 'log/errors.log'
+        :keep: 5
+    - :datefile:
+        :filename: 'log/production.log'
+        :keep: 5
+    - :sns_adapter:
+        :level: 'gte.warn'
+        :topic_name: <%= ENV['APP_NAME'] %>
+

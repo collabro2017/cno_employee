@@ -1,0 +1,23 @@
+- provide(:title, 'New Clone Count')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div#count-title
+        h3 New clone
+                
+div#content.pad
+  div.row-fluid
+    div class="span8 offset2 pad"
+      div.sub-header
+        - if @datasources.any?
+          h4 Select a datasource for the clone
+
+          = form_for(@count, url: {action: :clone}, method: :post) do |f|
+            = f.hidden_field :user, value: current_user.id
+            = f.hidden_field :datasource
+            - @datasources.each do |datasource|
+              = render partial: 'datasources/datasource_button', object: datasource
+
+        - else
+          | No datasources are available.

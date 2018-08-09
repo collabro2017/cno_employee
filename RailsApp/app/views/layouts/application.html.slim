@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title #{CNO::RailsApp.config.custom.browser_title} | #{yield(:title)}
+    
+    = stylesheet_link_tag \
+      "application/application", \ 
+      media: "all", \
+      "data-turbolinks-track" => true
+    = javascript_include_tag \
+      "application", \
+      "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = render "layouts/shim"
+
+  body
+    / Div to wrap the main content and flush footer
+    div#wrap
+      = render partial: "layouts/expiration_modal", locals: { session_minutes: CNO::RailsApp.config.custom.expiration.session_minutes }
+      = render "layouts/navbar"
+      = render partial: "shared/flash_messages"
+      = yield(:header)
+      div#main
+        == yield
+      div#ajax-errors class="hidden"
+    = render "layouts/footer"

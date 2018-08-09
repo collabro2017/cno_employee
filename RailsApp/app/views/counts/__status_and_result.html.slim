@@ -1,0 +1,44 @@
+- if @job.present?
+  = div_for(@job, data: {status: @job.status.to_s}) do
+    - if @job.active?
+      div class='count-result-text align-center'
+        = fa_icon "#{(@job.status == 'queued') ? 'spinner' : 'cog'} spin", title: status_caption(@count)
+      div#count-elapsed-time class='align-right' data-created-at='#{@job.created_at}' data-is-active='true' 
+        = @job.total_time
+    - else
+      - if @job.status == :failed
+        div class='count-result-text align-center'
+          = fa_icon 'frown-o', title: status_caption(@count)
+      - elsif @job.status == :completed
+        div class="count-result-text align-right"
+          div.completed-result
+            - if @count.result
+              = number_with_delimiter(@count.result)
+              span.dirty class="#{@count.dirty? ? '' : 'hidden'}"
+                = fa_icon 'asterisk', class: 'dirty-count-icon', title: 'Count has changed since last run'
+            - else
+              = fa_icon "question", title: "#{status_caption(@count)} but there was an error and the result was not saved"
+      - elsif @job.status == :created
+        div class='count-result-text align-center'
+          = fa_icon 'warning', title: 'Failed to enqueue job'
+
+      div#count-elapsed-time class='align-right' data-is-active='false'
+        = @job.total_time
+
+  div#retry-count-polling class="hidden"
+    div [
+      class="count-result-text align-center polling-status-tooltip"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      data-original-title="Click here to continue checking the count status"
+    ]
+      = link_to '#', id: 'retry-count-polling-link'
+        = fa_icon 'refresh'
+    div#last-count-time class='align-right count-time'
+
+
+- else
+  div class='count-result-text align-left'
+    = fa_icon 'hand-o-left', title: 'Click the run button for running a count'
+  div
+    | Never been run

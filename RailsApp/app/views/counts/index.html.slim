@@ -1,0 +1,23 @@
+- provide(:title, 'All counts')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div#count-title
+        h3
+          | All counts&nbsp;
+
+div#content class="pad"
+  div class="row-fluid"
+    div class="span12 pad"
+      = button_to "Create new", { action: "new" }, method: "get", class: "btn-primary"
+      - if @counts.to_a.size == 0
+        div There are no counts to display. Click on the 'Create new' button to create your first count.
+      - else
+        = form_tag counts_path, method: "get", id: 'filter_form', remote: true do
+
+          table class="table table-hover"
+            = render partial: 'counts/index_header'
+            = render partial: "counts/index_table"
+          div.pagination-placeholder
+            = will_paginate

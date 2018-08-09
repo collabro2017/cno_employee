@@ -1,0 +1,20 @@
+= content_tag_for(:div, select, :number_range, class: "tab-pane") do
+  div.row-fluid
+    div.span6
+      - min = (select.concrete_field.min || 0)
+      - max = (select.concrete_field.max || 9_999_999_999)
+
+      div#select-range-text-fields data-min=min data-max=max
+        div#range-fields
+          | From&nbsp;
+          = text_field "from", nil, value: select.from, maxlength: 10, min: min, max: max, class: "range-input hide-spin-button", type: 'number'
+          | &nbsp;to&nbsp;
+          = text_field "to", nil, value: select.to, maxlength: 10, min: min, max: max, class: "range-input hide-spin-button", type: 'number'
+        div#possible-ranges
+          div The minimum possible value: #{min}
+          div The maximum possible value: #{max}
+
+    div.span6
+      div#select-range-buttons
+        = button_tag "Save", {id: "save_range", class: "btn btn-default btn-range pull-left"}
+        = button_tag "Reset", {id: "reset_range", class: "btn btn-default btn-range pull-left"}

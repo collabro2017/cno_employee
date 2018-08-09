@@ -1,0 +1,7 @@
+= div_for(select, class: "deletable", data: {cf_id: "#{select.concrete_field.id}" } ) do
+  div.row-fluid
+    div.span12
+      = render partial: "selects/select_header", locals: {select: select}
+      = render partial: 'selects/select_content', locals: {select: select, input_methods: select.input_methods}
+      = render partial: 'selects/summary', locals: {select: select}
+      = render partial: "selects/select_link_to_next", locals: {select: select}

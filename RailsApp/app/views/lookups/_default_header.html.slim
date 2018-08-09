@@ -1,0 +1,13 @@
+div class="lookup-selection-header"
+  div.row-fluid
+    div.span6
+      div.row-fluid
+        div.span6
+          span.pull-left 
+            | Filter:&nbsp;
+          = text_field lookup_class.fuzzy_filter_column, :input, value: "", class: "fuzzy-filter"
+    div.span6
+      = render partial: 'lookups/bulk_actions'
+div.lookup-results
+  - params = {lookup: {select_id: select.id, lookup_type: lookup_class.type}}
+  = async_div_for("/lookups/filtered_values", params: params)

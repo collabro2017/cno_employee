@@ -1,0 +1,24 @@
+= content_tag_for(:div, select, :populated, class: "tab-pane") do
+  div.row-fluid
+    div.span9
+      - is_active = (select.has_ranges? or select.has_values?)
+
+      div#blanks-radio style="#{active_blanks_option(!is_active)}"
+        div
+          | Base your select criteria
+          strong &nbsp;exclusively&nbsp;
+          | on "Field is populated vs Field is not populated"
+        br
+        div.btn-group data-toggle='buttons-toggle'
+          button type="button" class="btn set blank-btn #{active_radio_button(select, 'blanks')}" value='blanks' title='Select non populated values' Field is not populated
+          button type="button" class="btn set blank-btn #{active_radio_button(select, 'non_blanks')}" value='non_blanks' title='Select only populated values' Field is populated
+        
+      div#blanks-toggle style="#{active_blanks_option(is_active)}"
+        div
+          | Include
+          strong &nbsp;non populated values&nbsp;
+          | in addition to your current select criteria
+        br
+        div.btn-group data-toggle='buttons-toggle'
+          button type="button" class="btn toggle blank-btn #{active_toggle_button(select)}" value='blanks' title='Select only non populated values' Field is not populated
+          button type="button" class='btn blank-btn' value='non_blanks' title='Not available with the current select criteria' disabled='disabled' Field is populated

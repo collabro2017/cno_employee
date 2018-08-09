@@ -1,0 +1,8 @@
+- provide :title, @user.name
+
+div class="no-header-content pad"
+  div class="row-fluid"
+    div.span4
+      = render partial: 'dashboard/last_counts', locals: { user: @user }
+    div.span4
+      = render partial: 'dashboard/last_orders', locals: { user: @user }

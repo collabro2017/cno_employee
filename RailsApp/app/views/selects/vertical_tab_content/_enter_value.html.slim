@@ -1,0 +1,4 @@
+= content_tag_for(:div, select, :enter_value, class: "tab-pane") do
+  = text_area_tag("enter_values_#{select.id}", "", size: "40x8", class: "span12 enter-values-input", maxlength: "16384")
+  = button_tag id: "#{select.id}-enter-values-save", class: 'btn btn-default pull-right enter-values-save', disabled: true
+    | Save

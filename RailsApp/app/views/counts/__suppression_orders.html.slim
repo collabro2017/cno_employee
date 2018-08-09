@@ -1,0 +1,36 @@
+table class="table table-hover"
+  tr.header-row
+    th.text-center
+      | Order
+    th.text-center
+      | Owner
+    th.text-center
+      | Date
+    th.text-center
+      | Total Records
+    th
+  - @orders.each do |order|
+    - if order.jobs.last.present? && order.jobs.last.status == :completed
+      tr.data-row
+        td
+          label.suppression-order title='Click to use as suppression'
+            input[
+                class='checkbox'
+                type='checkbox'
+                value='#{order.id}'
+                checked=order.suppressing_in_count?(@count.id)
+              ]
+            | &nbsp;
+            span.suppression-order-text
+              | PO #{order.id}
+        td = order.user.name
+        td = order.last_successful_job.completed_at
+        td
+          - if order.count.present? && order.count.result?
+            = order.count.result
+          - else
+            = 'N/A'
+        td
+          = link_to(order, target: '_blank', title: 'Open in a new tab') do
+            = fa_icon('external-link')
+

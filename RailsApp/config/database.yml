@@ -1,0 +1,97 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 1 
+
+
+################################################################################
+# App Database connections
+################################################################################
+app_common: &app_common
+  <<: *common
+  #host: <%= ENV['APP_DB'] %> 
+
+development_common: &development_common
+  <<: *app_common
+  schema_search_path: model
+  database: app_development
+  #host: dpdaccessdev.c1sw9m6ppi0k.us-west-2.rds.amazonaws.com
+  host: <%= ENV['APP_DB_HOST'] %>
+  port: 5432
+  username: <%= ENV['APP_DB_USER'] %> 
+  password: <%= ENV['APP_DB_PASS'] %> 
+  
+test_common: &test_common
+  <<: *app_common
+  database: app_test
+
+production_common: &production_common
+  <<: *app_common
+  schema_search_path: model
+  database: app
+
+# Connecting as 'superb' (superuser)
+
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: dpdaccess
+  pool:     5
+  username: mohsin
+  password: 
+  template: template0
+
+test:
+  <<: *test_common
+
+# Connecting as 'cno' (for production)
+production:
+  <<: *production_common
+  username: cno
+  password: <%= ENV['CNO_APP_DB_PW'] %>
+
+# Connecting as 'scheman' for manipulating the schema (in production)
+scheman_production:
+  <<: *production_common
+  username: scheman
+  password: <%= ENV['SCHEMAN_APP_DB_PW'] %>
+
+
+################################################################################
+# Central Datastore (datafiles & process schemas) connections
+################################################################################
+
+central_datastore_common: &central_datastore_common
+  <<: *common
+  schema_search_path: public
+
+central_datastore_development_common: &central_datastore_development_common
+  <<: *central_datastore_common
+  database: central_datastore_development
+
+central_datastore_test_common: &central_datastore_test_common
+  <<: *central_datastore_common
+  database: central_datastore_test
+
+central_datastore_production_common: &central_datastore_production_common
+  <<: *central_datastore_common
+  database: central_datastore
+
+# Connecting as 'cno' (default)
+central_datastore_cno_common: &central_datastore_cno_common
+  username: ubuntu
+  password: <%= ENV['CNO_CENTRAL_DATASTORE_DB_PW'] %>
+
+central_datastore_development:
+  <<: *central_datastore_cno_common
+  <<: *central_datastore_development_common
+
+central_datastore_test:
+  <<: *central_datastore_cno_common
+  <<: *central_datastore_test_common
+
+central_datastore_production:
+  <<: *central_datastore_cno_common
+  <<: *central_datastore_production_common
+

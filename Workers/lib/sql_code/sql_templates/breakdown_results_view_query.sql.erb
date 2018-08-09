@@ -1,0 +1,22 @@
+SELECT <%= value_columns_as_text %>, "Total" FROM (
+  SELECT <%= formatted_value_columns %> ,"process"."<%= breakdown_results_table_name %>"."total" AS "Total"
+  FROM "process"."<%= breakdown_results_table_name %>"
+  <% field_info.each do |info| %>
+    INNER JOIN "datafiles"."<%= info[:table_name] %>"
+    ON "process"."<%= breakdown_results_table_name %>"."<%= info[:field_name] %>" = "datafiles"."<%= info[:table_name] %>"."id"
+      <% if info[:field_name] == 'zip5' && has_radius? %>
+        LEFT JOIN "process"."<%= count_values_table %>" AS cv ON cv.integer_value = "datafiles"."<%= info[:table_name] %>".value
+          AND cv.select_id IN (<%= active_selects.map(&:select_id).join(',') %>)
+        LEFT JOIN "datafiles"."<%= zip5_distance_table %>" AS zd ON zd.to_zip5 = cv.integer_value
+          AND cv.lookup_params->>'centroid' = zd.from_zip5::TEXT
+          AND cv.input_method = 'zip5_distance'
+      <% end %>
+  <% end %>
+  ORDER BY
+    <%= (1..field_info.size).to_a.map { |i| "#{i} NULLS FIRST"} .join(',') %>
+) T1
+UNION ALL
+SELECT <%= last_row_columns %>,
+"process"."<%= breakdown_results_table_name %>"."total" AS "Total"
+FROM "process"."<%= breakdown_results_table_name %>"
+WHERE <%= field_info.map { |info| "process.#{breakdown_results_table_name}.#{info[:field_name]} IS NULL" }.join(' AND ') %>

@@ -1,0 +1,6 @@
+var partial = "<%= j(render partial: 'counts/index_table', object: @counts) %>"
+Paloma.locals.counts.updateIndexTable(partial)
+Paloma.locals.counts.updateIndexHeader()
+Paloma.locals.counts.updatePaginationSection()
+Paloma.locals.counts.updateUrl(<%= @filter_params.to_json.html_safe %>)
+

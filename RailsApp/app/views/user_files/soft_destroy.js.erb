@@ -1,0 +1,2 @@
+Paloma.locals.alerts.setAlert('header-wrapper', '<%= flash.now[:success] %>', 'success')
+$('tr[data-file-id=<%= @user_file.id %>]').replaceWith('<%= j render partial: 'user_file', object: @user_file, locals: {select: nil} %>')

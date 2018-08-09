@@ -1,0 +1,17 @@
+div class="dash-pad dash-border"
+  div.row-fluid
+    div.span12
+      div.dash-header
+        | Recent Counts&nbsp;
+        = link_to fa_icon('plus', class: ''), new_count_path
+  div
+    - if @user_counts.empty?
+      div No counts to display
+    - else
+      table.dash-table
+        tr
+          td
+          td
+          td
+        - @user_counts.each do |user_count|
+          = render partial: 'users/user_count', locals: {count: user_count}

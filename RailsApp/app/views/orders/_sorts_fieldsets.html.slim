@@ -1,0 +1,4 @@
+= fields_for @order do |f|
+  = f.fields_for(:sorts) do |sort_fields|
+    = render 'sort_fields', f: sort_fields
+  = link_to_add_fields "Add", f, :sorts, true

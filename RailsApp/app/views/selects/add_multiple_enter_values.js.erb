@@ -1,0 +1,6 @@
+//For updating the blanks tab
+active = "<%= (@select.has_ranges? or @select.has_values?) %>"
+$("#select_<%= @select.id %> #blanks-with-options").attr('data-active', active)
+
+$("#select_<%= @select.id %>").find(".select-options-summary").html('<%= @select.summary %>')
+$('#enter_value_<%= @select.id %>').val('<%=@values%>')

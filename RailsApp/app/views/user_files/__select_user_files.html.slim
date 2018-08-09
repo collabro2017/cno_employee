@@ -1,0 +1,12 @@
+table class="table table-hover"
+  tr.header-row
+    th.text-center
+      | Name
+    th.text-center
+      | Owner
+    th.text-center
+      | Uploaded
+  = render partial: "user_files/select_user_file", collection: @user_files, locals: {select: @select}
+div#paginate-wrapper
+  = will_paginate
+

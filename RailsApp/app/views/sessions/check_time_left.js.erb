@@ -1,0 +1,8 @@
+<% expiration_notice_time = CNO::RailsApp.config.custom.expiration.notice_seconds %>
+<% if @session_time_left <= expiration_notice_time %>
+  Paloma.locals.sessions.showExpireAlert(<%= @session_time_left %>)
+  Paloma.locals.sessions.checkTimeLeft(<%= @session_time_left %>)
+<% else %>
+  Paloma.locals.sessions.checkTimeLeft(
+    <%= @session_time_left %> - <%= expiration_notice_time %>)
+<% end %>

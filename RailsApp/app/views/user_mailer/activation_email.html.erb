@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <title>Registration</title>
+    <style type="text/css">
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Hi <%= @user.name.titleize %>,</h1>
+
+    <p>
+      Welcome to <%= CNO::RailsApp.config.custom.app_name.capitalize %>!
+      You have been invited to join <%= @user.company.name.capitalize %>'s <%= CNO::RailsApp.config.custom.app_name.capitalize %>.
+    </p>
+    <p>
+      Please confirm your invitation at: <%= @url %> where you should be prompted to set and confirm your password.
+    </p>
+    <p>
+      If clicking on the link does not work, then copy and paste the above URL in your browser.
+    </p>
+
+    <h2>What to Expect</h2>
+    
+    <p>
+      We are excited to bring our new count and order system to the marketplace with capabilities for future databases, additional functionality, and continual performance improvements.
+    </p>
+    <p>
+      As a newly registered user, you are one of the first ‘real’ users in the system. We know that you are most likely familiar with many of the count and order systems that exist and probably have experienced a wide range of performance and functionality.
+    </p>
+
+    <ul>
+      <li>
+        You will definitely see some major differences in the user interface that is designed to accommodate a lot of functionality as cleanly as possible.
+      </li>
+      <li>
+        There will be items you love and probably some items not so much – especially as you get used to the new approach.
+      </li>
+      <li>
+        There are some counts that will run fast, and others take longer as we adjust performance to the usage of the system and additional users.
+      </li>
+      <li>
+        Although we have done extensive testing, there may be some errors or bugs that you encounter along the way when choosing some combination of selects and functionality.
+      </li>
+    </ul>
+
+    <p>
+      As you become accustomed to our new system, please know that we welcome your feedback and support requests to continually improve.
+    </p>
+    <p>Watch for announcements of updates to the system and data!</p>
+      
+  </body>
+</html>

@@ -1,0 +1,17 @@
+div id="#{field}"
+  div class="controls controls-row"
+    div class="control-group"
+      = form.label field, class: "control-label span3"
+      div class="input-prepend input-block-level span6"
+        = yield
+      - if form.object.present? && form.object.errors[field].present?
+        div.span3
+          div class="mark-errors" data-field="##{field}"
+            = fa_icon "asterisk"
+  div class="controls controls-row adjust-height" id="#{field}_errors"
+    div class="span6 offset3"
+      div.message-errors
+        - if form.object.present? && form.object.errors[field].present?
+          ol
+            - form.object.errors[field].each do |msg|
+              li #{msg}

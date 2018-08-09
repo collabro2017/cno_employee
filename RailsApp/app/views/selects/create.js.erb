@@ -1,0 +1,30 @@
+concreteFieldId = <%= @select.concrete_field.id %>
+
+// Alerts for duplicates
+Paloma.locals.selects.inUse(concreteFieldId)
+
+//Adds select
+$('div#selects-drop').append('<%= j (render partial: "select", object: @select, locals: {values: []}) %>');
+
+select = $("#select_<%= @select.id %>");
+
+//Activates select options tab and content
+select.find("ul.nav-tabs>li:first").addClass("active");
+select.find("div.tab-content>div:first").addClass("active");
+
+//Select option dropdown
+select.find(".dropdown-toggle").dropdown();
+
+Paloma.locals.counts.datepickerSetup(select);
+
+// Show/hide link icons
+<% @select.count.selects.each do |s| %>
+  <% if s.can_link? %>
+    $('.can-link[data-select-id="<%= s.id %>"]').removeClass('hidden');
+  <% else %>
+    $('.can-link[data-select-id="<%= s.id %>"]').addClass('hidden');
+  <% end %>
+<% end %>
+
+// Update Tag in Concrete Fields Pane
+Paloma.locals.counts.addInUseTag(concreteFieldId, '.selectable')

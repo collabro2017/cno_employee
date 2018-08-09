@@ -1,0 +1,18 @@
+div class="dash-pad dash-border"
+  div.row-fluid
+    div.span12
+      div.dash-header
+        | Recent Orders
+  div
+    - if @user_orders.empty?
+      div No orders to display
+    - else
+      table.dash-table
+        tr
+          th 
+          th FTP
+          th S3
+          th Status
+          th 
+        - @user_orders.each do |user_order|
+          = render partial: 'users/user_order', locals: {order: user_order}

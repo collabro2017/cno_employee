@@ -1,0 +1,37 @@
+- provide :title, 'Sign in'
+
+div#content
+  div.row-fluid
+    div.span12
+      div.row-fluid
+        div.span4
+        div.span4          
+          div#signin-form class='signin-signup'
+            = form_for(:session, url: sessions_path) do |f|
+              div.form-element
+                - if flash[:error].present?
+                  div.sign-in-error
+                    = fa_icon "bell-o", text: "#{flash[:error]}"
+              div.form-element
+                = f.text_field :email, placeholder: "Username", class: 'form'
+              div.form-element
+                = f.password_field :password, placeholder: 'Password', class: 'form'
+              div.form-element
+                div
+                  = f.submit "Sign in", class: "btn-info btn-signin btn-new"
+              div.form-element
+                div.terms-wrapper
+                  = check_box_tag 'tos-checkbox', 'yes', true, class: 'terms-checkbox', data: checkbox_data
+                  | I agree with the 
+                  span id='terms-conditions-link'
+                    = link_to 'Terms and Conditions', '#terms-modal'
+
+          div id='password-reset-link'
+            = link_to 'Password reset', controller: 'sessions', action: 'reset_password'
+
+
+div id="terms-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="terms-modal-label" aria-hidden="true"
+  div class="modal-header"
+    h3 Terms and Conditions
+  div class="modal-body"
+    p #{@terms}

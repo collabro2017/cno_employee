@@ -1,0 +1,26 @@
+tr.header-row
+  th.text-center = sortable 'count_id', @filter_params[:sort_column], @filter_params[:sort_direction], 'Id'
+  
+  th.text-center = sortable 'name', @filter_params[:sort_column], @filter_params[:sort_direction]
+    div
+      = text_field_tag :name, @filter_params[:name], class: 'column-textfield', placeholder: 'Filter by name'
+      = fa_icon 'times', title: 'Clear text', class: 'clear-text-icon'
+
+  th.text-center Clone
+
+  th.text-center = sortable 'datasource_name', @filter_params[:sort_column], @filter_params[:sort_direction], 'Datasource'
+    div
+      = select_tag :datasource_name, options_from_collection_for_select(Datasource.with_deleted, :name, :name, selected: @filter_params[:datasource_caption]), {prompt: 'Filter by...', class: 'column-dropdown-menu'}
+
+  th.text-center Datasource Version
+
+  th.text-center = sortable 'user_name', @filter_params[:sort_column], @filter_params[:sort_direction], 'User'
+    div
+      - if current_user.sysadmin?
+        = select_tag :user_name, options_from_collection_for_select(User.all, :name, :name, selected: @filter_params[:user_name]), {prompt: 'Filter by...', class: 'column-dropdown-menu'}
+      - else
+        = select_tag :user_name, options_from_collection_for_select(User.by_company(current_user.company_id), :name, :name, selected: @filter_params[:user_name]), {prompt: 'Filter by...', class: 'column-dropdown-menu'}
+
+  th.text-center = sortable 'most_recent_job_updated_at', @filter_params[:sort_column], @filter_params[:sort_direction], 'Last run'
+
+  th.text-center = sortable 'result', @filter_params[:sort_column], @filter_params[:sort_direction]

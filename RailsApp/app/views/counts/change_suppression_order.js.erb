@@ -1,0 +1,6 @@
+<% if @count.jobs.any? %>
+  $('.completed-result>.dirty').removeClass('hidden')
+<% end %>
+
+Paloma.locals.counts.updateSuppressionBadge('orders', <%= @count.suppression_orders.count %>)
+

@@ -1,0 +1,383 @@
+full_name_of_member_1|Full Name of Member 1|Head of Household Full Name|["Uncategorized"]|false
+house_number_and_street_name|House Number and Street Name|Address - House number and street Name|["Uncategorized"]|false
+contact_phone_number|Contact Phone Number|Landline Phone Number|["HH"]|true
+phone_number_area_code|Phone Number Area Code|Phone Number Area Code|["Geo"]|true
+phone_number_without_area_code|Phone number without area code|Phone number not including Area Code|["Uncategorized"]|false
+city|City|Residence City|["Address"]|true
+state|State|Residence State|["Address"]|true
+zip|ZIP|Residence Zip Code|["Address"]|true
+zip_4|Zip + 4|Residence Zip dove plus 4 digit extension|["Address"]|true
+zip_4_delivery_point_bar_code|Zip + 4 + Delivery Point Bar Code|Residence Zip dove plus 4 digit extension and Delivery Point Bar Code|["Uncategorized"]|false
+delivery_point_bar_code|Delivery Point Bar Code|Delivery Point Bar Code Seperated from Zip Code|["Uncategorized"]|false
+carrier_route|Carrier Route|Postal Carrier Route|["Address"]|true
+county|County|Residence County|["Address"]|true
+metropolitan_statistical_area|Metropolitan Statistical Area|Residence Metrpolitan Statistical Are|["Address"]|true
+latitude|LATITUDE|LATITUDE|["Uncategorized"]|true
+longitude|LONGITUDE|LONGITUDE|["Uncategorized"]|true
+timezone|timezone|timezone|["Address"]|true
+census_tract|CENSUS TRACT|CENSUS TRACT|["Address"]|true
+census_block_group|CENSUS BLOCK GROUP|CENSUS BLOCK GROUP|["Address"]|true
+census_block|CENSUS BLOCK|CENSUS BLOCK|["Address"]|true
+first_name|First Name|Head of Household First Name|["Uncategorized"]|false
+last_name|Last Name|Head of Household Last Name|["Uncategorized"]|false
+gender|Gender|Head of Household Gender|["HH"]|true
+age|Age|Head of Household Age Range (See Sheet 2 for breakdown)|["HH"]|true
+member_2_full_name|Member 2 Full Name|Member 2 Full Name|["Uncategorized"]|false
+member_2_first_name|Member 2 First Name|Member 2 First Name|["Uncategorized"]|false
+member_2_last_name|Member 2 Last Name|Member 2 Last Name|["Uncategorized"]|false
+member_2_gender|Member 2 Gender|Member 2 Gender|["HH"]|true
+member_2_age|Member 2 Age|Member 2 Age|["HH"]|true
+member_3_full_name|Member 3 Full Name|Member 3 Full Name|["Uncategorized"]|false
+member_3_first_name|Member 3 First Name|Member 3 First Name|["Uncategorized"]|false
+member_3_last_name|Member 3 Last Name|Member 3 Last Name|["Uncategorized"]|false
+member_3_gender|Member 3 Gender|Member 3 Gender|["Uncategorized"]|false
+member_3_age|Member 3 Age|Member 3 Age|["Uncategorized"]|false
+member_4_full_name|Member 4 Full Name|Member 4 Full Name|["Uncategorized"]|false
+member_4_first_name|Member 4 First Name|Member 4 First Name|["Uncategorized"]|false
+member_4_last_name|Member 4 Last Name|Member 4 Last Name|["Uncategorized"]|false
+member_4_gender|Member 4 Gender|Member 4 Gender|["Uncategorized"]|false
+member_4_age|Member 4 Age|Member 4 Age|["Uncategorized"]|false
+member_5_full_name|Member 5 Full Name|Member 5 Full Name|["Uncategorized"]|false
+member_5_first_name|Member 5 First Name|Member 5 First Name|["Uncategorized"]|false
+member_5_last_name|Member 5 Last Name|Member 5 Last Name|["Uncategorized"]|false
+member_5_gender|Member 5 Gender|Member 5 Gender|["Uncategorized"]|false
+member_5_age|Member 5 Age|Member 5 Age|["Uncategorized"]|false
+member_6_full_name|Member 6 Full Name|Member 6 Full Name|["Uncategorized"]|false
+member_6_first_name|Member 6 First Name|Member 6 First Name|["Uncategorized"]|false
+member_6_last_name|Member 6 Last Name|Member 6 Last Name|["Uncategorized"]|false
+member_6_gender|Member 6 Gender|Member 6 Gender|["Uncategorized"]|false
+member_6_age|Member 6 Age|Member 6 Age|["Uncategorized"]|false
+member_7_full_name|Member 7 Full Name|Member 7 Full Name|["Uncategorized"]|false
+member_7_first_name|Member 7 First Name|Member 7 First Name|["Uncategorized"]|false
+member_7_last_name|Member 7 Last Name|Member 7 Last Name|["Uncategorized"]|false
+member_7_gender|Member 7 Gender|Member 7 Gender|["Uncategorized"]|false
+member_7_age|Member 7 Age|Member 7 Age|["Uncategorized"]|false
+member_8_full_name|Member 8 Full Name|Member 8 Full Name|["Uncategorized"]|false
+member_8_first_name|Member 8 First Name|Member 8 First Name|["Uncategorized"]|false
+member_8_last_name|Member 8 Last Name|Member 8 Last Name|["Uncategorized"]|false
+member_8_gender|Member 8 Gender|Member 8 Gender|["Uncategorized"]|false
+member_8_age|Member 8 Age|Member 8 Age|["Uncategorized"]|false
+generations_in_household|GENERATIONS IN HOUSEHOLD|Number of generations living at household|["HH"]|true
+marital_status_in_the_hhld|MARITAL STATUS IN THE HHLD|Marital status (Single, Married, Divorced)|["HH"]|true
+veteran_in_household|VETERAN IN HOUSEHOLD|Wartime veteran living in household|["HH"]|true
+young_adult_in_household|YOUNG ADULT IN HOUSEHOLD|Adult aged 18 - 25 living in household|["HH"]|true
+senior_adult_in_household|SENIOR ADULT IN HOUSEHOLD|Adult aged 65+ living in household|["HH"]|true
+christian_families|CHRISTIAN FAMILIES|Religious christian family|["General"]|true
+working_woman|WORKING WOMAN|Female holding management level and above position in the workplace|["General"]|true
+african_american_professionals|AFRICAN AMERICAN PROFESSIONALS|African American with management level and of above position in the work place|["General"]|true
+dwelling_type|Dwelling Type|Dwelling Definition (Single family, Multi family, etc…)|["HH"]|true
+property_type|PROPERTY TYPE|See Genearl Field Definitions|["General"]|true
+years_since_home_was_built|Years since home was built|Age of home structure|["HH"]|true
+estimated_home_value|Estimated Home Value|Home value (Based on Assessed value)|['HH','Financial']|true
+estimated_income|Estimated Income|Household Income (Derived from survey data. Both online and offline sourcing / Value Range)|['HH','Financial']|true
+net_worth|Net Worth|Net Worth (Derived from survey data and calculated based on known assets for validity / Value Range)|["Financial"]|true
+community_reinvestment_act|COMMUNITY REINVESTMENT ACT |CRA Classification Code -See sheet 2 for breakdown|["General"]|true
+infered_credit|Infered_Credit|Inferred Credit Rank (Values) |["Financial"]|true
+lines_of_credit|LINES OF CREDIT|Inferred lines of available credit (Numeric value 0 -10)|["Financial"]|true
+available_new_credit|AVAILABLE NEW CREDIT|Inferred availaible credit (Dollar Value in ranges)|["Financial"]|true
+membership_clubs|MEMBERSHIP CLUBS|Indicator Field (Populated with "X" if present)|["General"]|true
+american_express_gold_premium|AMERICAN EXPRESS GOLD/PREMIUM|Indicator Field (Populated with "X" if present)|["Financial"]|true
+american_express_regular|AMERICAN EXPRESS REGULAR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+discover_gold_premium|DISCOVER GOLD/PREMIUM|Indicator Field (Populated with "X" if present)|["Financial"]|true
+discover_regular|DISCOVER REGULAR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+gasoline_or_retail_card_gold_pre|GASOLINE OR RETAIL CARD GOLD/PREMIUM|Indicator Field (Populated with "X" if present)|["Financial"]|true
+gasoline_or_retail_card_regular|GASOLINE OR RETAIL CARD REGULAR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+mastercard_gold_premium|MASTERCARD GOLD/PREMIUM|Indicator Field (Populated with "X" if present)|["Financial"]|true
+mastercard_regular|MASTERCARD REGULAR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+visa_gold_premium|VISA GOLD/PREMIUM|Indicator Field (Populated with "X" if present)|["Financial"]|true
+visa_regular|VISA REGULAR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+bank_card_holder|BANK CARD HOLDER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+gas_department_retail_card_holde|GAS/DEPARTMENT/RETAIL CARD HOLDER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+travel_and_entertainment_card_ho|TRAVEL AND ENTERTAINMENT CARD HOLDER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+credit_card_holder_unknown_type|CREDIT CARD HOLDER - UNKNOWN TYPE|Indicator Field (Populated with "X" if present)|["Financial"]|true
+premium_card_holder|PREMIUM CARD HOLDER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+upscale_department_store_card_ho|UPSCALE (DEPARTMENT STORE) CARD HOLDER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+credit_card_user|CREDIT CARD USER|Indicator Field (Populated with "X" if present)|["Financial"]|true
+credit_card_new_issue|CREDIT CARD - NEW ISSUE|Indicator Field (Populated with "X" if present)|["Financial"]|true
+bank_card_presence_in_household|BANK CARD - PRESENCE IN HOUSEHOLD|Indicator Field (Populated with "X" if present)|["Financial"]|true
+ownership_rent|Ownership/Rent|Owner or Renter Indicator|["HH"]|true
+number_of_years_in_residence|Number of years in residence|Years of family in household|["HH"]|true
+air_conditioning|AIR CONDITIONING|Air Conditioning type - See Genearl Field Definitions|["Property"]|true
+fuel|Fuel|See Genearl Field Definitions|["Property"]|true
+sewer|SEWER|See Genearl Field Definitions|["Property"]|true
+water|WATER|See Genearl Field Definitions|["Property"]|true
+loan_to_value|LOAN TO VALUE |Loan to Value ratio of home (Value is based on assesed value)|["Property"]|true
+current_age_of_mortgage|Current age of mortgage|Years since mortgage started|["Property"]|true
+purchase_date|PURCHASE DATE  |Date of home purchase (CCYYMMDD)|["Property"]|true
+purchase_price|PURCHASE PRICE|Purchase price of home (Dollar amount)|["Property"]|true
+1st_mortgage_amount|1st MORTGAGE AMOUNT|First mortgage amount (Dollar Amount Range)|["Property"]|true
+2nd_mortgage_amount|2ND MORTGAGE AMOUNT|Second mortgage amount (Dollar Amount Range)|["Property"]|true
+1st_mortgage_date|1st MORTGAGE DATE|Date of first mortgage|["Property"]|true
+2nd_recent_mortgage_date|2ND RECENT MORTGAGE DATE|Date of second mortgage|["Property"]|true
+1st_mortgage_loan_type_code|1ST MORTGAGE LOAN TYPE CODE|See Genearl Field Definitions|["Property"]|true
+2nd_mortgage_loan_type_code|2ND MORTGAGE LOAN TYPE CODE|See Genearl Field Definitions|["Property"]|true
+1st_mortgage_loan_type_code|1ST MORTGAGE LOAN TYPE CODE|See Genearl Field Definitions|["Property"]|true
+2nd_mortgage_loan_type_code|2ND MORTGAGE LOAN TYPE CODE|See Genearl Field Definitions|["Property"]|true
+1st_lender_name|1ST LENDER NAME|Lender Name on Mortgage 1 - See Lender Descriptions Tab 5|["Property"]|true
+2nd_recent_lender_name|2ND RECENT LENDER NAME|Lender Name on Mortgage 2 - See Lender Descriptions Tab 5|["Property"]|true
+automotive_auto_parts_and_access|AUTOMOTIVE, AUTO PARTS AND ACCESSORIES |Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_womens|APPAREL - WOMEN'S|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_womens_petite|APPAREL - WOMEN'S - PETITE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_womens_plus_sizes|APPAREL - WOMEN'S - PLUS SIZES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+young_womens_apparel|YOUNG WOMEN'S APPAREL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_mens|APPAREL - MEN'S|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_mens_big_and_tall|APPAREL - MEN'S - BIG AND TALL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+young_mens_apparel|YOUNG MEN'S APPAREL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+apparel_hildrens|APPAREL HILDREN'S|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+health_and_beauty|HEALTH AND BEAUTY|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+beauty_cosmetics|BEAUTY/COSMETICS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+jewelry|JEWELRY|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+luggage|LUGGAGE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+books_and_magazines_magazines|BOOKS AND MAGAZINES - MAGAZINES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+books_and_music_books|BOOKS AND MUSIC - BOOKS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+books_and_music_books_audio|BOOKS AND MUSIC - BOOKS - AUDIO|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+reading_general|READING - GENERAL|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_religious_inspirational|READING - RELIGIOUS / INSPIRATIONAL|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_science_fiction|READING - SCIENCE FICTION|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_magazines|READING - MAGAZINES|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_audio_books|READING - AUDIO BOOKS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_financial_newsletter_sub|READING - FINANCIAL NEWSLETTER SUBSCRIBERS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+reading_grouping|READING GROUPING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+history_military|HISTORY / MILITARY|Indicator Field (Populated with "X" if present)|["Interests"]|true
+current_affairs_politics|CURRENT AFFAIRS / POLITICS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+religious_inspirational|RELIGIOUS / INSPIRATIONAL|Indicator Field (Populated with "X" if present)|["Interests"]|true
+science_space|SCIENCE / SPACE|Indicator Field (Populated with "X" if present)|["Interests"]|true
+magazines|MAGAZINES|Indicator Field (Populated with "X" if present)|["Interests"]|true
+home_living|HOME LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+diy_living|DIY LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+sporty_living|SPORTY LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+upscale_living|UPSCALE LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+cultural_artistic_living|CULTURAL/ARTISTIC LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+highbrow|HIGHBROW|Indicator Field (Populated with "X" if present)|["Interests"]|true
+high_tech_living|HIGH-TECH LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+common_living|COMMON LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+professional_living|PROFESSIONAL LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+broader_living|BROADER LIVING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+antiques|ANTIQUES|Indicator Field (Populated with "X" if present)|["Interests"]|true
+art|ART|Indicator Field (Populated with "X" if present)|["Interests"]|true
+theater_performing_arts|THEATER / PERFORMING ARTS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+arts|ARTS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+musical_instruments|MUSICAL INSTRUMENTS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+childrens_apparel_infants_and_to|CHILDREN'S APPAREL - INFANTS AND TODDLERS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+childrens_learning_and_activity_|CHILDREN'S LEARNING AND ACTIVITY TOYS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+childrens_products_general_baby_|CHILDREN'S PRODUCTS - GENERAL - BABY CARE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+childrens_products_general_back_|CHILDREN'S PRODUCTS - GENERAL - BACK-TO-SCHOOL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+childrens_products_general|CHILDREN'S PRODUCTS - GENERAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+childrens_interests|CHILDREN'S INTERESTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_general|COLLECTIBLES - GENERAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_stamps|COLLECTIBLES - STAMPS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_coins|COLLECTIBLES - COINS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_arts|COLLECTIBLES - ARTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_antiques|COLLECTIBLES - ANTIQUES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collector_avid|COLLECTOR - AVID|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_and_antiques_groupi|COLLECTIBLES AND ANTIQUES GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+collectibles_sports_memorabilia|COLLECTIBLES - SPORTS MEMORABILIA|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+military_memorabilia_weaponry|MILITARY MEMORABILIA/WEAPONRY|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+lifestyles_interests_and_passion|LIFESTYLES, INTERESTS AND PASSIONS COLLECTIBLES |Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+cooking_food_grouping|COOKING / FOOD GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+foods_natural|FOODS - NATURAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+food_wines|FOOD - WINES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+cooking_gourmet|COOKING - GOURMET|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+cooking_general|COOKING - GENERAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+computing_home_office_general|COMPUTING/HOME OFFICE - GENERAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+dvds_videos|DVDS/VIDEOS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+electronics_and_computing_tv_vid|ELECTRONICS AND COMPUTING - TV/VIDEO/MOVIE WATCHER|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+electronics_computing_and_home_o|ELECTRONICS, COMPUTING AND HOME OFFICE |Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+high_end_appliances|HIGH END APPLIANCES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+intend_to_purchase_hdtv_satellit|INTEND TO PURCHASE - HDTV/SATELLITE DISH|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+music_home_stereo|MUSIC - HOME STEREO|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+music_player|MUSIC PLAYER|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+music_collector|MUSIC COLLECTOR|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+music_avid_listener|MUSIC - AVID LISTENER|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+movie_collector|MOVIE COLLECTOR|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+tv_cable|TV - CABLE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+games_video_games|GAMES - VIDEO GAMES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+tv_satellite_dish|TV - SATELLITE DISH|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+computers|COMPUTERS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+games_computer_games|GAMES - COMPUTER GAMES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+consumer_electronics|CONSUMER ELECTRONICS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+movie_music_grouping|MOVIE / MUSIC GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+electronics_computers_grouping|ELECTRONICS / COMPUTERS GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+telecommunications|TELECOMMUNICATIONS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+travel_grouping|TRAVEL GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+travel|TRAVEL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+travel_domestic|TRAVEL - DOMESTIC|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+travel_international|TRAVEL - INTERNATIONAL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+travel_cruise_vacations|TRAVEL - CRUISE VACATIONS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_auto_motorcycle|SPECTATOR SPORTS - AUTO / MOTORCYCLE RACING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_tv_sports|SPECTATOR SPORTS - TV SPORTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_football|SPECTATOR SPORTS - FOOTBALL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_baseball|SPECTATOR SPORTS - BASEBALL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_basketball|SPECTATOR SPORTS - BASKETBALL|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_hockey|SPECTATOR SPORTS - HOCKEY|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+spectator_sports_soccer|SPECTATOR SPORTS - SOCCER|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+tennis|TENNIS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+golf|GOLF|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+snow_skiing|SNOW SKIING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+scuba_diving|SCUBA DIVING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+motorcycling|MOTORCYCLING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+nascar|NASCAR|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+boating_sailing|BOATING / SAILING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+sports_and_leisure|SPORTS AND LEISURE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+sports_grouping|SPORTS GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+online_purchasing_indicator|ONLINE PURCHASING INDICATOR|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+value_priced_general_merchandise|VALUE-PRICED GENERAL MERCHANDISE|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+sewing_knitting_needlework|SEWING / KNITTING / NEEDLEWORK|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+woodworking|WOODWORKING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+photography|PHOTOGRAPHY|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+aviation|AVIATION|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+house_plants|HOUSE PLANTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+crafts|CRAFTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+home_and_garden|HOME AND GARDEN|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+gardening|GARDENING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+gardening2|GARDENING2|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+home_improvement_grouping|HOME IMPROVEMENT GROUPING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+lifestyles_interests_and_passion|LIFESTYLES, INTERESTS AND PASSIONS RAFTS/HOBBIES |Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+photography_and_video_equipment|PHOTOGRAPHY AND VIDEO EQUIPMENT|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+home_furnishings_decorating|HOME FURNISHINGS / DECORATING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+home_improvement|HOME IMPROVEMENT|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+intend_to_purchase_home_improvem|INTEND TO PURCHASE - HOME IMPROVEMENT|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+gaming|GAMING|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+games_board_games_puzzles|GAMES - BOARD GAMES / PUZZLES|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+gaming_casino|GAMING - CASINO|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+sweepstakes_contests|SWEEPSTAKES / CONTESTS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+pets|PETS|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+equestrian|EQUESTRIAN|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+other_pet_owner|OTHER PET OWNER|Indicator Field (Populated with "X" if present)|["Purchasing"]|true
+donor_type1|Donor_Type1|See Genearl Field Definitions|["Financial"]|true
+donor_type2|Donor_Type2|See Genearl Field Definitions|["Financial"]|true
+donor_type3|Donor_Type3|See Genearl Field Definitions|["Financial"]|true
+donor_type4|Donor_Type4|See Genearl Field Definitions|["Financial"]|true
+donor_type5|Donor_Type5|See Genearl Field Definitions|["Financial"]|true
+donation_contribution|DONATION/CONTRIBUTION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+mail_order_donor|MAIL ORDER DONOR|Indicator Field (Populated with "X" if present)|["Financial"]|true
+charitable_donation|CHARITABLE  DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+animal_welfare_charitable_donati|ANIMAL WELFARE  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+arts_or_cultural_charitable_dona|ARTS OR CULTURAL CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+childrens_charitable_donation|CHILDREN'S  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+environment_or_wildlife_charitab|ENVIRONMENT OR WILDLIFE  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+environmental_issues_charitable_|ENVIRONMENTAL ISSUES  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+health_charitable_donation|HEALTH  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+international_aid_charitable_don|INTERNATIONAL AID  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+political_charitable_donation|POLITICAL  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+political_conservative_charitabl|POLITICAL - CONSERVATIVE  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+political_liberal_charitable_don|POLITICAL - LIBERAL  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+religious_charitable_donation|RELIGIOUS  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+veterans_charitable_donation|VETERAN'S  CHARITABLE DONATION|Indicator Field (Populated with "X" if present)|["Financial"]|true
+other_types_of_charitable_donati|OTHER TYPES OF CHARITABLE DONATIONS|Indicator Field (Populated with "X" if present)|["Financial"]|true
+community_charities|COMMUNITY / CHARITIES|Indicator Field (Populated with "X" if present)|["Financial"]|true
+ethnic|ETHNIC|See Ethnic Descriptions Sheet|["HH"]|true
+ethnic_confidence|ETHNIC-CONFIDENCE|See Ethnic Descriptions Sheet|["HH"]|true
+ethnic_group|Ethnic Group|See Ethnic Descriptions Sheet|["HH"]|true
+language|LANGUAGE|See Ethnic Descriptions Sheet|["HH"]|true
+religion|RELIGION|See Ethnic Descriptions Sheet|["HH"]|true
+hispanic_country_of_origin|HISPANIC COUNTRY OF ORIGIN|See Ethnic Descriptions Sheet|["HH"]|true
+assimilation|ASSIMILATION|See Ethnic Descriptions Sheet|["HH"]|true
+education|EDUCATION|See Ethnic Descriptions Sheet|["HH"]|true
+education_online|EDUCATION ONLINE|See Ethnic Descriptions Sheet|["HH"]|true
+occupation|OCCUPATION|See Occupation Sheet|["HH"]|true
+business_owner|BUSINESS OWNER|Indicator Field (Populated with "X" if present)|["General"]|true
+cellular_phone_number|Cellular Phone Number|Wireless Cellular Phone Number|["HH"]|true
+cellular_carrier|Cellular Carrier|Wireless Cellular Carrier|["HH"]|true
+auto_year1|Auto_Year1|Automobile Year of Vehicle 1|["HH"]|true
+auto_make1|Auto_Make1|Automobile Make of Vehicle 1|["HH"]|true
+auto_model1|Auto_Model1|Automobile Model of Vehicle 1|["HH"]|true
+auto_year2|Auto_Year2|Automobile Year of Vehicle 2|["HH"]|true
+auto_make2|Auto_Make2|Automobile Make of Vehicle 2|["HH"]|true
+auto_model2|Auto_Model2|Automobile Model of Vehicle 2|["HH"]|true
+auto_year3|Auto_Year3|Automobile Year of Vehicle 3|["HH"]|true
+auto_make3|Auto_Make3|Automobile Make of Vehicle 3|["HH"]|true
+auto_model3|Auto_Model3|Automobile Model of Vehicle 3|["HH"]|true
+auto_year4|Auto_Year4|Automobile Year of Vehicle 4|["HH"]|true
+auto_make4|Auto_Make4|Automobile Make of Vehicle 4|["HH"]|true
+auto_model4|Auto_Model4|Automobile Model of Vehicle 4|["HH"]|true
+auto_year5|Auto_Year5|Automobile Year of Vehicle 5|["HH"]|true
+auto_make5|Auto_Make5|Automobile Make of Vehicle 5|["HH"]|true
+auto_model5|Auto_Model5|Automobile Model of Vehicle 5|["HH"]|true
+moto_year|Moto_Year|Motorcycle Year|["HH"]|true
+moto_make|Moto_Make|Motorcycle Make|["HH"]|true
+moto_model|Moto_Model|Motorcycle Model|["HH"]|true
+mh_year|MH_Year|Mobile Home Year|["HH"]|true
+mh_class|MH_Class|Mobile Home Class|["HH"]|true
+pwc_year|PWC_Year|Personal Watercraft Year|["HH"]|true
+pwc_make|PWC_Make|Personal Watercraft Make|["HH"]|true
+pwc_model|PWC_Model|Personal Watercraft Model|["HH"]|true
+model_xdate|Model_Xdate|Modelled Insurance Expiration Date|["HH"]|true
+boat_man|Boat_Man|See Watercraft Sheet|["HH"]|true
+boat_year|Boat_Year|See Watercraft Sheet|["HH"]|true
+std_use|STD_Use|See Watercraft Sheet|["HH"]|true
+hull_shape|Hull_Shape|See Watercraft Sheet|["HH"]|true
+hull_mat|Hull_Mat|See Watercraft Sheet|["HH"]|true
+prop_type|Prop_Type|See Watercraft Sheet|["HH"]|true
+boat_fuel|Boat Fuel|See Watercraft Sheet|["HH"]|true
+boat_type|Boat_Type|See Watercraft Sheet|["HH"]|true
+size_class|Size_Class|See Watercraft Sheet|["HH"]|true
+comp_own|Comp_Own|Computer owned and in the Household|["General"]|true
+paydayapp|PayDayApp|Has applied for a Pay Day Loan in the last 180 days|["Financial"]|true
+home_based_business|Home Based Business|An Incorporated Business located at the Home Address|["General"]|true
+career_improvement|CAREER IMPROVEMENT|See General Field Definitions|["General"]|true
+career|CAREER|See General Field Definitions|["General"]|true
+college_student|College Student|College Student present within the household|["General"]|true
+debt_cons|Debt Cons|Has applied for a Debt Consolidation in the last 180 days|["General"]|true
+gamblers|Gamblers|Land Based or Online Gambler present within the household|["Interests"]|true
+health_enthusiast|Health Enthusiast|Health Enthusiast (Active Gym Member, Heathy Eater)|["Interests"]|true
+exercise_running_jogging|EXERCISE - RUNNING / JOGGING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+exercise_walking|EXERCISE - WALKING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+exercise_aerobic|EXERCISE - AEROBIC|Indicator Field (Populated with "X" if present)|["Interests"]|true
+dieting_weight_loss|DIETING / WEIGHT LOSS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+health_medical|HEALTH/MEDICAL|Indicator Field (Populated with "X" if present)|["Interests"]|true
+self_improvement|SELF IMPROVEMENT|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investments_personal|INVESTMENTS - PERSONAL|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investments_real_estate|INVESTMENTS - REAL ESTATE|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investments_stocks_bonds|INVESTMENTS - STOCKS / BONDS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investing_finance_grouping|INVESTING / FINANCE GROUPING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investments_foreign|INVESTMENTS - FOREIGN|Indicator Field (Populated with "X" if present)|["Interests"]|true
+investment_estimated_residential|INVESTMENT - ESTIMATED RESIDENTIAL PROPERTIES OWNED|Indicator Field (Populated with "X" if present)|["Interests"]|true
+money_seekers|MONEY SEEKERS|Indicator Field (Populated with "X" if present)|["Interests"]|true
+bizop|BizOp|Business Opportunity Seeker|["Interests"]|true
+outdoorsmen|Outdoorsmen|Hunter/Fisher/Camping in Household|["Interests"]|true
+hunting|HUNTING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+fishing|FISHING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+camping_hiking|CAMPING / HIKING|Indicator Field (Populated with "X" if present)|["Interests"]|true
+mag_subscriber|Mag Subscriber|Currently has a Magazine Subscription|["Interests"]|true
+diy_home|DIY_Home|Do-It Yourself Home - Household that does general home maintence rather than hiring a contractor|["Interests"]|true
+diy_auto|DIY_Auto|Do-It Yourself Auto - Handles general maintenance of vehicle rather than taking to a mechanic|["Interests"]|true
+ailment|Ailment|Chronic pain sufferer|["Interests"]|true
+presence_of_children|Presence_of_Children|Children under 18 years of age present in the household|["HH"]|true
+single_parent|SINGLE PARENT|Indicator Field (Populated with "X" if present)|["HH"]|true
+age_00_02_male|Age 00 - 02 Male|Number of children present in the household within age range|["HH"]|true
+age_00_02_female|Age 00 - 02 Female|Number of children present in the household within age range|["HH"]|true
+age_00_02_unknown_gender|Age 00 - 02 Unknown Gender|Number of children present in the household within age range|["HH"]|true
+age_03_05_male|Age 03 - 05 Male|Number of children present in the household within age range|["HH"]|true
+age_03_05_female|Age 03 - 05 Female|Number of children present in the household within age range|["HH"]|true
+age_03_05_unknown_gender|Age 03 - 05 Unknown Gender|Number of children present in the household within age range|["HH"]|true
+age_06_10_male|Age 06 - 10 Male|Number of children present in the household within age range|["HH"]|true
+age_06_10_female|Age 06 - 10 Female|Number of children present in the household within age range|["HH"]|true
+age_06_10_unknown_gender|Age 06 - 10 Unknown Gender|Number of children present in the household within age range|["HH"]|true
+age_11_15_male|Age 11 - 15 Male|Number of children present in the household within age range|["HH"]|true
+age_11_15_female|Age 11 - 15 Female|Number of children present in the household within age range|["HH"]|true
+age_11_15_unknown_gender|Age 11 - 15 Unknown Gender|Number of children present in the household within age range|["HH"]|true
+age_16_17_male|Age 16 - 17 Male|Number of children present in the household within age range|["HH"]|true
+age_16_17_female|Age 16 - 17 Female|Number of children present in the household within age range|["HH"]|true
+age_16_17_unknown_gender|Age 16 - 17 Unknown Gender|Number of children present in the household within age range|["HH"]|true
+grandchildren|GRANDCHILDREN|Grandchild present in household|["HH"]|true
+racing_enthusiast|Racing_Enthusiast|Has displayed interest in a form of racing (F1, NHRA, IHRA, NASCAR, etc…)|["Interests"]|true
+tobacco_user|Tobacco_User|Smoker in the household|["Interests"]|true
+alcohol_user|Alcohol_User|Alcohol Drinker in the household|["Interests"]|true
+vision_impaired|Vision_Impaired|Glasses/Contact user in the household|["Interests"]|true
+insurance_purchaser_flag|Insurance_Purchaser_Flag|Insurance policy holder (Does not include Home or Auto insurance) (This is a modeled field, using socio - economic status, Income/Net-worth, and Census Block ID) |["Financial"]|true
+vehicle_maintenance|Vehicle_Maintenance|Keeps regular maintenance of vehicle|["Interests"]|true
+online_ticket_purchaser|Online_Ticket_Purchaser|Has purchased tickets online within the last 18 months (Concerts, sporting Events, etc…)|["Interests"]|true
+movie_ticket_purchaser|Movie_Ticket_Purchaser|Has Purchased Movie tickets online within the last 18 months|["Interests"]|true
+technology_rank|Technology_Rank|Rank of 1 - 10 on how up to date a household is with technology |["Interests"]|true
+hh_exp_total|HH_Exp_Total|Total Houhold Expenditures - Modeled Field|["Interests"]|true
+hh_exp_utilities|HH_Exp_Utilities|Household Expenditures for Utilities|["Interests"]|true
+hh_exp_food|HH_Exp_Food|Household Expenditures for Food|["Interests"]|true
+hh_exp_alcohol|HH_Exp_Alcohol|Household Expenditures for Alcohol|["Interests"]|true
+hh_exp_apparel|HH_Exp_Apparel|Household Expenditures for Apparel|["Interests"]|true
+hh_exp_transportation|HH_Exp_Transportation|Household Expenditures for transportation|["Interests"]|true
+hh_exp_health_care|HH_Exp_Health_Care|Household Expenditures for Health Care|["Interests"]|true
+hh_exp_retail|HH_Exp_Retail|Household Expenditures for Retail|["Interests"]|true
+hh_exp_non_retail|HH_Exp_Non_Retail|Household Expenditures for Non Retail|["Interests"]|true
+hh_exp_gifts|HH_Exp_Gifts|Household Expenditures for Gifts|["Interests"]|true
+hh_exp_misc|HH_Exp_Misc|Household Expenditures for Misc|["Interests"]|true

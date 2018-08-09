@@ -1,0 +1,26 @@
+Description:
+    Generates migrations for creating, droping and altering database views.
+
+    It also generates sql files that contain the SELECT statement used for creating the views.
+
+
+Examples:
+    rails generate view_migration CreateConversationSummaries
+
+    This will create:
+        db/migrate/[TIMESTAMP]_create_converstation_summaries.rb
+        db/views/converstation_summaries/[TIMESTAMP]_converstation_summaries.sql
+
+
+    rails generate view_migration DropConversationSummaries
+
+    This will create:
+        db/migrate/[TIMESTAMP]_drop_converstation_summaries.rb
+
+
+    rails alter view_migration AlterConversationSummaries
+
+    This will create:
+        db/migrate/[TIMESTAMP]_alter_converstation_summaries.rb
+        db/views/converstation_summaries/[TIMESTAMP]_converstation_summaries.sql
+

@@ -1,0 +1,14 @@
+div.result-table
+  div.count-result-row
+    div.count-result-cell
+      - status = run_button_status(@count.last_count_job)
+
+      = button_to jobs_path(count_id: @count, type: 'count'), class: "btn btn-large bold-borders run-btn default-action", title: "Run a simple count", disabled: status, remote: true do
+        = fa_icon "play", class: 'run-btn-icon'
+
+      = button_to jobs_path(count_id: @count, type: 'breakdown'), class: "btn btn-large bold-borders run-btn breakdown-action hidden", title: 'Run a breakdown count', disabled: status, remote: true do
+        = fa_icon "play", class: 'run-btn-icon'
+
+    div#count-status-and-result class='count-result-cell'
+      = async_div_for("#{count_path(@count.id)}/__status_and_result", params: {}, spin: false)
+

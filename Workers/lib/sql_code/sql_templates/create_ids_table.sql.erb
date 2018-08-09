@@ -1,0 +1,10 @@
+CREATE TABLE "process"."<%= table_name %>" (id int);
+
+COPY "process"."<%= table_name %>"
+FROM '<%= filename %>'
+WITH BINARY;
+
+CREATE INDEX ON "process"."<%= table_name %>" (id);
+
+ANALYZE "process"."<%= table_name %>";
+

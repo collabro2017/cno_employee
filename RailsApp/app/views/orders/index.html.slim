@@ -1,0 +1,71 @@
+- provide(:title, 'All orders')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+        div#count-title
+          h3
+            | All orders&nbsp;
+
+div#content class="pad"
+  div.row-fluid
+    div class="span12 pad"
+      - if @orders.count == 0
+          div No orders to display
+      - else
+        table class="table table-hover"
+          tr
+            th.text-center Order
+            th.text-center PO #
+            th.text-center Count
+            th.text-center Datasource
+            th.text-center Datasource version
+            th.text-center
+              = current_user.sysadmin? ? 'User (Company)' : 'User'
+            th.text-center Download
+            th.text-center Created
+
+            - @orders.each do |order|
+              - allowed = order.allowed_for_user?(current_user.id)
+
+              tr
+                - if allowed
+                  td 
+                    = link_to order_path(order)
+                      = fa_icon('info-circle', title: 'Details')
+                    | &nbsp; &nbsp;Order #{order.id}
+                - else
+                  td
+                    = fa_icon('info-circle', title: 'Details')
+                    | &nbsp; &nbsp;Order #{order.id}
+                
+                td = order.po_number
+                
+                - if order.count_id
+                  - count = Count.find(order.count_id)
+                  td
+                    = allowed ? link_to(count.name, count_path(count.id)) : count.name
+                    = fa_icon('lock', title: 'Locked', class: 'lock')
+                - else
+                  td
+                
+                td = order.count.datasource.name
+                  - unless allowed
+                    = fa_icon('warning', title: 'Access to datasource is restricted', class: 'restricted-count-icon')
+                
+                td = order.count.datasource.version
+
+                td
+                  - if current_user.sysadmin? 
+                    = "#{order.user.name} (#{order.user.company.name})"
+                  - else
+                    = order.user.name
+
+                - if allowed
+                  td = order.s3_url ? link_to('Download', order.s3_url) : ''
+                - else
+                  td
+
+                td title="#{order.created_at}"
+                  = human_date(order.created_at)
+      = will_paginate

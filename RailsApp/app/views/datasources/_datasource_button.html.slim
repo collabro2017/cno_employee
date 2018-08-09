@@ -1,0 +1,11 @@
+= div_for(datasource_button, class: "btn select-datasource") do
+  div.row-fluid
+    div.span3
+      div.image = image_tag(image_url(datasource_button.image_location))
+  
+    div.span9
+      div.text
+        span.datasource-btn-title = datasource_button.caption
+        span.datasource-version
+          |&nbsp; ver: #{datasource_button.version}
+        div.datasource-btn-description = datasource_button.description

@@ -1,0 +1,16 @@
+- provide(:title, "#{@company.name.capitalize} details")
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div class="span12"
+      div class="count-header pad"
+        div.row-fluid
+          div.span4
+            h2
+              | #{@company.name.capitalize} details
+              
+div#content class="pad"
+  div class="row-fluid"
+
+    div
+      | #{@company.name.capitalize} with code: #{@company.code}

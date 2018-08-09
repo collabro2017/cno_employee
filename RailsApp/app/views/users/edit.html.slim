@@ -1,0 +1,49 @@
+- provide :title, 'Edit User'
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div#count-title
+        h3
+          | Edit an existing user
+
+div#content class="pad"
+  div.row-fluid
+    div.span12
+      div.row-fluid
+        div.span4
+        div.span4
+          div class='user-new-form'
+            = form_for(@user) do |f|
+              div.form-element
+                = f.label :first_name, 'First Name', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :first_name} do
+                  = f.text_field :first_name, class: 'form'
+              div.form-element
+                = f.label :last_name, 'Last Name', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :last_name} do
+                  = f.text_field :last_name, class: 'form'
+              div.form-element
+                = f.label :email, 'Email', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :email} do
+                  = f.text_field :email, class: 'form'
+              - if current_user.sysadmin?
+                div.form-element
+                  = f.label :company, 'Company', class: 'form'
+                  = render layout:"shared/error_messages", locals: {form: f, field: :company} do
+                    = collection_select(:user, :company_id, Company.all, :id, :name, :prompt => 'Please select company')
+              - if current_user.sysadmin?
+                div.form-element
+                  = f.label :status, 'Status', class: 'form'
+                  = render layout:"shared/error_messages", locals: {form: f, field: :status} do
+                    = collection_select(:user, :status, UserStatus.all, :status, :status_for_display)
+                  - if current_user.sysadmin? || current_user.admin?
+                    = resend_button(@user)
+              - if current_user.sysadmin? || current_user.admin?
+                div.form-element
+                  = f.label :admin?, class: 'checkbox'
+                    = f.check_box :admin?
+                    | Company Admin
+              div.form-element
+                = f.submit 'Save', class: 'btn btn-primary'
+

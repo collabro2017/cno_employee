@@ -1,0 +1,28 @@
+- provide(:title, "Edit #{@company.name.capitalize}")
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+      div#count-title
+        h3
+          | Edit company
+              
+div#content class="pad"
+  div.row-fluid
+    div.span12
+      div.row-fluid
+        div.span4
+        div.span4
+          div class='company-edit-form'
+            = form_for(@company, method: :patch) do |f|
+              div.form-element
+                = f.label :name, 'Name', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :name} do
+                  = f.text_field :name, placeholder: "#{@company.name}", class: 'form'
+              div.form-element
+                = f.label :code, 'Code', class: 'form'
+                = render layout:"shared/error_messages", locals: {form: f, field: :code} do
+                  = f.text_field :code, placeholder: "#{@company.code}", class: 'form'
+              
+              div.form-element
+                = f.submit 'Edit', class: 'btn btn-primary'

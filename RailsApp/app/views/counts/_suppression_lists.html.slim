@@ -1,0 +1,17 @@
+#supression-accordion.accordion
+  .accordion-group
+    .accordion-heading.suppression-orders-heading
+      a.accordion-toggle data-parent="#supression-accordion" data-toggle="collapse" href="#collapse-orders" 
+        .text-center Orders
+    #collapse-orders.accordion-body.collapse.in
+      .accordion-inner.suppression-orders-list
+        = async_div_for('__suppression_orders', params: {count_id: @count.id})
+
+  .accordion-group
+    .accordion-heading.suppression-files-heading
+      a.accordion-toggle data-parent="#supression-accordion" data-toggle="collapse" href="#collapse-files" 
+        .text-center Files
+    #collapse-files.accordion-body.collapse
+      .accordion-inner.suppression-files-list
+        = render partial: 'suppression_files'
+

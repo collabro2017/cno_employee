@@ -1,0 +1,61 @@
+source 'https://rubygems.org'
+ruby '2.2.1'
+
+gem 'rails', '~> 4.1.10'
+
+group :development, :test do
+    gem 'childprocess', '~> 0.5.3'
+    gem "rspec-rails", "~> 3.1.0"
+    gem 'shoulda-matchers', '~> 2.7.0'
+    gem 'pry-rails'
+    gem 'pry-rescue'
+    gem 'pry-byebug'
+end
+
+group :test do
+    gem 'capybara', '~> 2.3.0'
+    gem 'cucumber', '~> 1.3.15'
+    gem 'cucumber-rails', '~> 1.4.1', require: false
+    gem 'database_cleaner', '~> 1.3.0'
+    gem 'factory_girl_rails', '~> 4.4.1', require: false
+    gem 'libnotify', '~> 0.8.3'
+    gem 'poltergeist', '~> 1.5.1'
+    gem 'temping', '~> 3.2.0'
+end
+
+group :doc do
+      gem 'sdoc', '~> 0.4.0', require: false
+end
+
+gem 'aws-sdk', '~> 1.42.0'
+gem 'bcrypt', '~> 3.1.5'
+gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'bootstrap-switch-rails', '~> 2.0.2'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'browser-timezone-rails', '~> 0.0.8'
+gem 'classy_enum', '~> 3.4.0'
+gem 'chronic_duration', '~> 0.10.4'
+gem 'coffee-rails', '~> 4.0.1'
+gem 'deep_cloneable', '~> 2.0.0'
+gem 'font-awesome-rails', '4.2.0.0'
+gem 'jbuilder', '~> 2.0.7'
+gem "jquery-countdown-rails", "~> 2.0.0"
+gem 'jquery-rails', '~> 3.1.0'
+gem 'jquery-ui-rails', '~> 4.0.4'
+gem 'paloma', '~> 2.0.6'
+gem 'paranoia', '~> 2.0'
+gem 'passenger', '~> 5.0.6'
+gem 'pg', '~> 0.17.1' 
+gem 'recursive-open-struct', '~> 0.6.3'
+gem 'redis-session-store', '~>0.8.0'
+gem "resque", "~> 1.25.2"
+gem 'resque-status', '~> 0.4.3'
+gem 'sass-rails', '~>4.0.3'
+gem 'schema_plus', '~> 1.5.3'
+gem 'slim-rails', '~>2.1.4'
+gem 'titleize', '~> 1.3.0'
+gem 'turbolinks', '~> 2.2.2'
+gem 'uglifier', '~> 2.5.0'
+gem 'will_paginate', '~> 3.0.5'
+gem 'yell', '~> 2.0.5'
+gem "figaro"

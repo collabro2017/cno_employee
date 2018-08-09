@@ -1,0 +1,10 @@
+INNER JOIN "process"."<%= condition.count_values_table_name %>" ON (
+    "datafiles"."<%= field_values_table_name %>"."value" = "process"."<%= condition.count_values_table_name %>"."<%= condition.count_values_column_name %>"
+    OR (
+      "datafiles"."<%= field_values_table_name %>"."value" IS NULL
+      AND "process"."<%= condition.count_values_table_name %>"."<%= condition.count_values_column_name %>" IS NULL
+      )
+    )
+<% if condition.respond_to?(:select_id) %>
+  AND "process"."<%= condition.count_values_table_name %>"."select_id" = <%= condition.select_id %>
+<% end %>

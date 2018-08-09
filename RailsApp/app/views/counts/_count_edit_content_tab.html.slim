@@ -1,0 +1,51 @@
+ul#count-design-pane-tabs class="nav nav-tabs"
+  li#count-selects class="active"
+    a href="#select-tab"
+      | Select / Exclude
+  li#count-dedupe
+    a href="#dedupe-tab" id="dedupe-tab-link"
+      | Dedupe&nbsp;
+      = fa_icon "check"
+  li#count-suppress
+    a href="#suppress-tab"
+      | Suppress&nbsp;
+      - orders_count = @count.suppression_orders.count
+      - if orders_count > 0
+        span.badge.badge-orders title="#{pluralize(orders_count, 'order')}"
+          = orders_count
+      - else
+        span.badge.badge-orders.hidden
+      | &nbsp;
+      - files_count = @count.user_files.count
+      - if files_count > 0
+        span.badge.badge-files title="#{pluralize(files_count, 'file')}"
+          = files_count
+      - else
+        span.badge.badge-files.hidden
+  li#count-breakdown
+    a href="#breakdown-tab" id="breakdown-tab-link"
+      | Breakdown
+div.tab-content
+  div#select-tab class="count-tab-pane tab-pane active"
+    div#selects-drop class="target"
+      - @count.selects.loop_with_enumerator do |select, enum|
+        - if select.linked_to_next?
+          = render partial: 'selects/multi_column_select', locals: {enum: enum}
+        - else
+          = render partial: "selects/select", object: select
+    div#trash-can
+  div#dedupe-tab class="count-tab-pane tab-pane"
+    div#dedupe-drop class="target"
+      - @count.dedupes.each do |dedupe|
+        = render partial: "dedupes/dedupe", object: dedupe
+  div#suppress-tab class="count-tab-pane tab-pane"
+    div#suppression-lists
+      = render 'suppression_lists'
+  div#breakdown-tab class="count-tab-pane tab-pane"
+    div#breakdown-drop class="target"
+      - @count.breakdowns.each do |breakdown|
+        = render partial: "breakdowns/breakdown", object: breakdown
+    div#breakdown-result
+      = async_div_for("#{count_path(@count.id)}/__breakdown_result")
+  / div#info-tab class="count-tab-pane tab-pane"
+  /   = render 'info'

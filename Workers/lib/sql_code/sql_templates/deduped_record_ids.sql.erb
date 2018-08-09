@@ -1,0 +1,7 @@
+SELECT
+  min("process"."<%= node_dedupe_record_ids_table_name %>"."id") AS id,
+  "value_id"
+FROM "process"."<%= node_dedupe_record_ids_table_name %>"
+INNER JOIN "datafiles"."<%= node_field_table_name %>"
+ON "datafiles"."<%= node_field_table_name %>"."id" = "process"."<%= node_dedupe_record_ids_table_name %>"."id"
+GROUP BY "datafiles"."<%= node_field_table_name %>"."value_id"

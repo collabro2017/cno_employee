@@ -1,0 +1,18 @@
+div#cap-options class="pad"
+  div.row-fluid
+    div.span3
+      / Uncomment this when addding more cap options
+      / = f.label :cap_type, :value => 'total_cap', class: 'radio' do
+      / | Total Records:
+      /   = radio_button :order, :cap_type, 'total_cap'
+
+      | Total Records:
+    div.span6
+      span class='textbox'
+        = text_field :order, :total_cap, maxlength: 6, min: 1, max: (@order.max_total_cap), class: "range-input input-mini hide-spin-button", type: 'number'
+        span.accept-cancel-buttons
+          = fa_icon "check-circle", title: "Accept"
+          = fa_icon "times-circle", title: "Cancel"
+        span.pseudo 
+          |&nbsp;(Max: #{number_with_delimiter(@order.max_total_cap)})
+

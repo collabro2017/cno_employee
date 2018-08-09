@@ -1,0 +1,9 @@
+div.row-fluid
+  div class='span1 offset11'
+    div [
+        class="can-link #{select.can_link? ? '' : 'hidden'} align-center"
+        data-select-id="#{select.id}"
+      ]
+      a title='Click to combine with next' href='#'
+        = fa_icon 'link lg'
+

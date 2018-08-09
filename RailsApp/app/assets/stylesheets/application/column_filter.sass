@@ -1,0 +1,38 @@
+.header-form
+  margin: 0px !important
+
+.column-textfield
+  width: 180px
+  padding: 0% !important
+  margin-top: 1%
+
+.column-dropdown-menu
+  width: 180px
+  height: 20px
+  padding: 0% !important
+  margin-top: 1%
+
+th a.current
+  text-decoration: none
+  color: black
+
+  &.desc:after
+    font-family: FontAwesome
+    content: " \f0dd"
+    margin-right: 1px
+  &.asc:after
+    font-family: FontAwesome
+    content: " \f0de"
+    margin-right: 1px
+
+input + .clear-text-icon
+  display: none
+  margin-top: 8px
+  margin-left: -18px
+  position: fixed
+  color: rgba(200,0,0,0.3)
+  &.on
+    display: inline
+    &:hover
+      cursor: pointer
+      color: rgba(200,0,0,0.8)

@@ -1,0 +1,15 @@
+GLOBAL_VERSION_FILE = 'version.txt'
+VERSION_PATTERN = /^\s*VERSION = \"(.+)\"$/
+
+matcher = proc { |line| (m = VERSION_PATTERN.match(line)) ? m[1] : nil }
+
+read_version do
+  parse_file GLOBAL_VERSION_FILE, matcher
+end
+
+write_version do |oldVersion, newVersion|
+  version_files = Dir.glob('{RailsApp,Workers}/**/version.rb')
+  version_files << GLOBAL_VERSION_FILE
+  update_files version_files, matcher, oldVersion, newVersion
+end
+

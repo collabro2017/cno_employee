@@ -1,0 +1,46 @@
+CREATE UNLOGGED TABLE "process"."<%= temporary_table_name %>" TABLESPACE mem_ts AS
+SELECT row_number() OVER (
+<% unless formatted_sorts.nil? || formatted_sorts.empty? %>
+  ORDER BY <%= formatted_sorts %>
+<% end %>
+) as rnum,
+"process"."<%= order_table %>".id
+<% unless outputs.nil? || outputs.empty? %>
+  , <%= outputs %>
+<% end %>
+<% unless record_key_fields.nil? || record_key_fields.empty? %>
+  , <%= record_key_fields %>
+<% end %>
+FROM "datafiles"."<%= full_file_table %>"
+  INNER JOIN "process"."<%= order_table %>"
+  ON "datafiles"."<%= full_file_table %>".id = "process"."<%= order_table %>".id
+<% if has_radius? %>
+  LEFT JOIN "process"."<%= count_values_table %>" AS cv ON cv.integer_value = "datafiles"."<%= full_file_table %>".zip5
+    AND cv.select_id IN (<%= active_selects.map(&:select_id).join(',') %>)
+  LEFT JOIN "datafiles"."<%= zip5_distance_table %>" AS zd ON zd.to_zip5 = cv.integer_value
+    AND cv.lookup_params->>'centroid' = zd.from_zip5::TEXT
+    AND cv.input_method = 'zip5_distance'
+<% end %>
+<% unless total_cap.nil? %>
+  LIMIT <%= total_cap %>
+<% end %>;
+
+
+COPY(
+  SELECT <%= formatted_outputs %> FROM "process"."<%= temporary_table_name %>"
+  ORDER BY 
+  <% if has_pii? %>
+    id
+  <% else %>
+    rnum
+  <% end %>
+  <% unless total_cap.nil? %>
+    LIMIT <%= total_cap %>
+  <% end %>
+)
+TO '<%= filename %>'
+WITH(
+  FORMAT 'csv',
+  HEADER,
+  DELIMITER ','
+);

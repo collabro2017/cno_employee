@@ -1,0 +1,3 @@
+fieldset id="output_fieldset_#{id_or_object_id(f.object)}" 
+  - [:concrete_field_id, :position, :_destroy].each do |attr|
+    = f.hidden_field attr, class: attr

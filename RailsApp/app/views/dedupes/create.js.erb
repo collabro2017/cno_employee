@@ -1,0 +1,7 @@
+concreteFieldId = <%= @dedupe.concrete_field.id %>
+
+$('div#dedupe-drop').append('<%= j render partial: "dedupe", object: @dedupe %>')
+$('#dedupe-tab').find('.switch-mini[data-loaded="false"]')
+  .bootstrapSwitch()
+  .attr('data-loaded', 'true')
+Paloma.locals.counts.addInUseTag(concreteFieldId, '.dedupe')

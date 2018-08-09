@@ -1,0 +1,33 @@
+- provide(:title, 'All companies')
+
+- content_for :header do
+  = render layout:"layouts/header" do
+    div.span12
+        div#count-title
+          h3
+            | All companies&nbsp;
+
+div#content class="pad"
+  div class="row-fluid"
+    div class="span12 pad"
+      = button_to "Create new", { action: "new" }, method: "get", class: "btn-primary"
+
+      - if @companies.count == 0
+          div No companies to display
+      - else
+        table class="table table-hover"
+          tr
+            th
+            th.text-center Code
+            th.text-center Name
+
+            - @companies.each do |company|
+              tr
+                td 
+                  = link_to "Show", company
+                  | &nbsp; &nbsp;
+                  = link_to "Edit", edit_company_path(company)
+
+                td = company.code
+                td = company.name
+      = will_paginate

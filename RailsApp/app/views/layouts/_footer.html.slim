@@ -1,0 +1,14 @@
+footer class="footer pad"
+  div class="row-fluid"
+    div class="span5"
+      div class="footer-text-wrapper"
+        div class="footer-text"
+          | v.#{Application::VERSION}
+          - unless Rails.env.production?
+            | &nbsp;(#{Rails.env.capitalize})
+          span.pseudo
+            | &nbsp;- powered by&nbsp
+
+          | DPD &reg;
+    div class="pull-right"
+      = image_tag("footer.png", height: '64', width: '128')

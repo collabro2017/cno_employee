@@ -1,0 +1,19 @@
+div class='row-fluid upload-file-header'
+  div class='span1'
+    span class="btn btn-success fileinput-button"
+      = fa_icon 'upload'
+      input [
+        name="file"
+        type="file"
+        title="Click to upload a new file"
+        class="file-upload"
+        data-url="#{current_user_s3_direct_post.url}"
+        data-host="#{current_user_s3_direct_post.url.host}"
+        data-form-data="#{current_user_s3_direct_post.fields.to_json}"
+      ]
+  div class='span11 progress-bar hidden'
+    div.progress
+      div.bar
+div.user-files-list
+   = async_div_for("/counts/#{@count.id}/user_files/__suppression_user_files", params: {per_page: 8})
+

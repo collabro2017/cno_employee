@@ -1,0 +1,18 @@
+div.checkbox-columns
+  - @lookups.each do |lookup|
+    - value = lookup.send(lookup.class.value_column)
+    
+    label.select-option title=lookup.display_text
+      input[
+          class="checkbox"
+          type="checkbox"
+          value=value
+          checked=@saved.include?(value)
+        ]
+      | &nbsp;
+      span.select-option-text
+        = lookup.display_text
+div.row-fluid
+  div.span12
+    div#paginate-wrapper
+      = will_paginate

@@ -1,0 +1,55 @@
+- if count.result.present?
+  div class="show-count-header"
+    | Count Information
+  div class="show-count-content"
+    div
+      | Result: #{count.result}&nbsp;
+      - if count.dirty?
+          = fa_icon "warning", title: "Count has changed"
+      - else
+          = fa_icon "check", title: "Count is updated"
+    div
+      | Last run: #{last_run_at(count)}
+
+div class="show-count-header"
+  | Selects
+div class="show-count-content"
+  - count.selects.active.loop_with_enumerator do |select, enum|
+    - if select.linked_to_next?
+      div class="header simple"
+        | Multi-Column-Select
+      div class='sub-query'
+        | Summary:
+        ul
+        - enum.continue_each do |select|
+          li
+            | #{select.caption} = #{select.summary}
+          - break unless select.linked_to_next?
+    - else
+      div class="header simple"
+        | #{select.caption}
+      div class='query'
+        div class='sub-query'
+          | Summary: #{select.summary}
+
+div class="show-count-header"
+  | Breakdowns
+div class="show-count-content"
+  - if count.breakdowns.any?
+    - count.breakdowns.each do |breakdown|
+      div class="header breakdown"
+        | #{breakdown.caption}
+  - else
+    div
+      | No breakdowns selected
+
+div class="show-count-header"
+  | Dedupes
+div class="show-count-content"
+  - if count.dedupes.any?
+    - count.dedupes.each do |dedupe|
+      div class="header dedupe"
+        | #{dedupe.caption}
+  - else
+    div
+      | No dedupes selected
